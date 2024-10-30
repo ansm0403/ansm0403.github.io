@@ -151,6 +151,7 @@ button:focus{
 
 #home{
   background-color: var(--color-primary);
+  position: relative;
   color : var(--color-text);
   padding: 5rem 1rem;
   padding-top: 7rem;
@@ -190,6 +191,27 @@ button:focus{
   outline : 2px solid var(--color-accent)
 }
 
+.home__divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.home__divider svg {
+  position: relative;
+  display: block;
+  width: calc(118% + 1.3px);
+  height: 84px;
+}
+
+.home__divider .shape-fill {
+  fill: #FFFFFF;
+}
+
 /* ABOUT */
 
 .majors {
@@ -225,9 +247,32 @@ button:focus{
   transform: rotate(-15deg) scale(1.2);
 }
 
+.about__divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.about__divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 52px;
+}
+
+.about__divider .shape-fill {
+  fill: #FFFFFF;
+}
+
+
 /* SKILL */
 
 #skill {
+  position: relative;
   background-color: var(--color-primary-variant);
   color: var(--color-text);
 }
@@ -263,6 +308,27 @@ button:focus{
   padding : 1rem;
   background-color: var(--color-primary);
   filter: brightness(150%);
+}
+
+.skill__divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.skill__divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 52px;
+}
+
+.skill__divider .shape-fill {
+  fill: var(--color-primary);
+  filter: brightness(130%);
 }
 
 /* WORK */
