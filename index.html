@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>안상문 · Frontend Engineer Portfolio</title>
+<link rel="icon" href="public/images/favicon.ico" sizes="any">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="brand">안상문<span>.</span></div>
+    <nav>
+      <a href="#about" class="hide-sm">소개</a>
+      <a href="#competency">역량</a>
+      <a href="#stack" class="hide-sm">기술</a>
+      <a href="#projects">프로젝트</a>
+      <a href="https://github.com/ansm0403" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="about">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="hero-main">
+        <div class="eyebrow">Frontend Engineer · Portfolio 2026</div>
+        <div class="name-row">
+          <h1 class="name">안상문</h1>
+          <ul class="contact-info">
+            <li><span class="ci-k">전화</span><span>010-4165-0073</span></li>
+            <li><span class="ci-k">이메일</span><a href="mailto:tkdans312@gmail.com">tkdans312@gmail.com</a></li>
+            <li><span class="ci-k">학력</span><span>부경대학교 컴퓨터공학과</span></li>
+            <li><span class="ci-k">학점</span><span>3.75 / 4.5</span></li>
+          </ul>
+        </div>
+        <div class="role">신입 프론트엔드 개발자</div>
+        <p class="tag">문제를 정의·분석·해결하는 과정을 코드와 측정으로 증명하는 프론트엔드 개발자입니다.</p>
+        <p class="intro">인증/보안 동시성, 결제 정합성, GPU 메모리 누수처럼 원인을 근거 있게 파고들어야 하는 문제를 직접 해결해 왔습니다. 새로운 도메인은 문서로 정리해 학습을 자산으로 남기고, 모든 성과는 측정 방법과 함께 기록합니다.</p>
+        <div class="links">
+          <a class="btn dark" href="https://github.com/ansm0403" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            GitHub</a>
+          <a class="btn soft" href="#projects">프로젝트 보기 ↓</a>
+          <a class="btn" href="https://velog.io/@tkdans312/posts" target="_blank" rel="noopener noreferrer">상세 과정 (블로그) ↗</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-ph">
+          <img src="public/images/안상문_이력서.png" alt="안상문 프로필 사진"/>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="v">4개</div><div class="l">대표 프로젝트 (단독 개발)</div></div>
+      <div class="stat"><div class="v">98.8 · 93</div><div class="l">Lighthouse 성능</div></div>
+      <div class="stat"><div class="v">−91%</div><div class="l">홈 LCP (33.7s→3.0s)</div></div>
+      <div class="stat"><div class="v">누적 0</div><div class="l">GPU 메모리 누수</div></div>
+      <div class="stat"><div class="v">99개</div><div class="l">단위 테스트 (순수함수)</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="divider" id="competency">
+  <div class="wrap">
+    <h2 class="sec">핵심 역량 / Core Competencies</h2>
+    <div class="comp">
+      <div><div class="t"><span class="num">01</span>문제 해결력 (PAAR)</div><div class="d">동시성·정합성·메모리 누수 같은 비자명한 문제를 재현 → 분석 → 방어 → 회귀 테스트까지 닫습니다.</div></div>
+      <div><div class="t"><span class="num">02</span>측정 기반 성과</div><div class="d">홈 LCP 33.7s→3.0s(−91%), GPU geometry 누수 49→누적 0 등 모든 결과를 측정 방법과 함께 기록합니다.</div></div>
+      <div><div class="t"><span class="num">03</span>프론트엔드 깊이</div><div class="d">TanStack Query · Three.js · Next.js를 핵심으로, 선택 이유를 설명할 수 있는 수준까지 다뤘습니다. strict TypeScript 기반.</div></div>
+      <div><div class="t"><span class="num">04</span>AI 워크플로우 통합</div><div class="d">tsc 훅 · 서브에이전트 병렬화 · Playwright MCP 시각 검증을 실제 프로젝트에 적용했습니다.
+  단순한 작업 단순화 도구뿐 아니라, 설계 → 체크리스트 → 구현 → 검증 → 문서화 워크플로우를 수립하여
+  개발 사이클 전반을 체계적으로 운영한 경험도 있습니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="divider" id="stack">
+  <div class="wrap">
+    <h2 class="sec">기술 스택 / Tech Stack</h2>
+    <div class="tech-row"><div class="cat">Frontend</div><div class="val"><span class="techs">React · Next.js (App Router) · TypeScript(strict) · Tailwind+CVA · Emotion</span><span class="desc">RSC/Client 분리, 컴포넌트·custom hook 분리, API 응답·props 타입 정의, 반응형 레이아웃</span></div></div>
+    <div class="tech-row"><div class="cat">상태 · 데이터</div><div class="val"><span class="techs">TanStack Query · Zustand · Recoil · Redux Toolkit</span><span class="desc">서버 상태 캐싱·loading/error 처리·staleTime 차등, 여러 뷰의 단일 선택 상태 공유, 상태 성격에 맞는 도구 분리</span></div></div>
+    <div class="tech-row"><div class="cat">3D · 시각화</div><div class="val"><span class="techs">Three.js · React Three Fiber · drei · ECharts · @visx · SVG</span><span class="desc">포인트클라우드·wireframe bbox 렌더, GPU 메모리 dispose 관리, 차트·SVG 오버레이 좌표 매핑</span></div></div>
+    <div class="tech-row"><div class="cat">인증 · 보안 (직접 설계)</div><div class="val"><span class="techs">JWT 회전(메모리 access / httpOnly refresh) · BroadcastChannel · CSP</span><span class="desc">라이브러리 없이 토큰 회전·401 큐·멀티탭 동기화를 직접 구현</span></div></div>
+    <div class="tech-row"><div class="cat">테스트</div><div class="val"><span class="techs">Vitest</span><span class="desc">순수 함수 단위 테스트 — 엣지케이스 문서와 1:1 매핑</span></div></div>
+    <div class="tech-row"><div class="cat">백엔드 · 인프라 (보조)</div><div class="val"><span class="techs">NestJS · PostgreSQL+TypeORM · Firebase(Firestore) · Docker · Vercel · Git</span><span class="desc">도메인 모듈 분리, 빌드·배포 파이프라인 직접 구축·운영, 브랜치·PR·CI — 핵심 개념 이해·코드 리뷰 가능 수준(풀스택 학습 범위)</span></div></div>
+  </div>
+</section>
+
+<section class="divider" id="projects">
+  <div class="wrap">
+    <h2 class="sec">프로젝트 / Projects — 카드를 누르면 펼쳐지고, 탭으로 내용을 전환합니다</h2>
+
+    <!-- PROJECT 1 -->
+    <details class="proj">
+      <summary>
+        <div class="sum-top">
+          <span class="sum-num">01</span>
+          <span class="sum-name">E-커머스 쇼핑몰</span>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="sum-one">구매자·판매자·관리자 3개 역할로 분리한 멀티 셀러 오픈마켓 풀스택 — 인증/결제 정합성을 설계 단계부터 직접 해결.</div>
+        <div class="sum-meta">
+          <span class="pill">Next.js</span><span class="pill">TanStack Query</span><span class="pill">JWT 인증 설계</span>
+          <span class="kpi">홈 LCP <b>33.7s→3.0s (−91%)</b></span>
+        </div>
+        <div class="expand-hint">▾ 클릭해서 개요 · 기능 · 트러블슈팅 · 성능 펼쳐 보기</div>
+      </summary>
+
+      <div class="body">
+        <div class="tabs" role="tablist" aria-label="E-커머스 쇼핑몰 상세">
+          <button class="tab-btn active" role="tab" type="button">개요</button>
+          <button class="tab-btn" role="tab" type="button">기능</button>
+          <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
+          <button class="tab-btn" role="tab" type="button">성능 · 결과</button>
+        </div>
+        <div class="panels">
+
+          <div class="panel active" role="tabpanel">
+            <div class="blk">
+              <div class="h">Overview</div>
+              <p class="lead">여러 판매자가 한 플랫폼에 입점하는 <b>멀티 셀러 오픈마켓</b>입니다. 판매자가 등록한 상품을 관리자가 승인해야 노출되고, 한 주문에 여러 판매자 상품이 섞이므로 <b>배송과 정산을 판매자별로 분리</b>해야 합니다. 여기에 PortOne V2 결제·정산·관리자 KPI 대시보드까지 이커머스 전체 흐름을 1인 풀스택(프론트·백·인프라)으로 구현했습니다. <span style="color:var(--hint)">본 포트폴리오는 프론트엔드 직무 기준으로 서술하며, 백엔드·인프라는 보조로 둡니다.</span></p>
+            </div>
+            <div class="blk">
+              <div class="h">시스템 구조</div>
+              <p class="lead">프론트(Vercel·Next.js)는 <b>Vercel rewrites 프록시</b>를 거쳐 백엔드(EC2·NestJS)를 같은 출처처럼 호출합니다 — cross-domain 쿠키 문제와 App Router의 <span class="kpi">cookies().set()</span> 제약을 동시에 우회하기 위한 선택입니다. 인증은 <b>Access=메모리 / Refresh=httpOnly 쿠키 회전</b>에 <b>Edge → Server → Client 3중 방어</b>를 적용했고, 데이터는 RSC에서 prefetch → dehydrate → HydrationBoundary로 넘긴 뒤 TanStack Query가 캐시·무효화를 담당합니다.</p>
+              <figure class="arch">
+                <img src="public/images/architec/E-commerce_아키텍쳐_요약.png" alt="E-커머스 시스템 아키텍처 요약도" data-full="public/images/architec/E-commerce_아키텍쳐.png" data-caption="E-커머스 쇼핑몰 — 상세 아키텍처">
+                <figcaption>🔍 클릭하면 상세 아키텍처를 크게 볼 수 있습니다</figcaption>
+              </figure>
+            </div>
+            <div class="meta">
+              <div class="mi"><div class="k">PERIOD</div><div class="v">2025.11 ~ 2026.04 </div></div>
+              <div class="mi"><div class="k">ROLE</div><div class="v">1인 단독 (기획·설계·구현·배포)</div></div>
+              <div class="mi"><div class="k">STACK</div><div class="v">Next.js · TanStack Query · NestJS · postgreSQL · Nx</div></div>
+              <div class="mi"><div class="k">DEPLOY</div><div class="v">Vercel(FE) · AWS EC2 t3.small(BE)</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="feat">
+              <div class="card">
+                <div class="ph-img media"><img src="public/images/func/E-commerce_dashboard_screenshot.gif" alt="관리자 KPI 대시보드 — KPI 카드 + 이중 Y축 라인 + Funnel" data-full="public/images/E-commerce_dashboard_screenshot.gif" data-caption="관리자 KPI 대시보드 — ECharts 4종 + staleTime 차등"></div>
+                <div class="ft">관리자 KPI 대시보드</div>
+                <div class="fd">매출·주문·전환 펀넬 등 운영 지표를 한 화면에서 봅니다.</div>
+                <ul>
+                  <li>ECharts <b>4종</b>(이중 Y축 라인·3-line stack·Funnel·KPI 카드)</li>
+                  <li>차트별 <b>staleTime 4단계 차등</b>(KPI 1분·주문/보안 5분·펀넬 10분) — 변경 빈도에 맞춰 재요청·백엔드 부하 절감</li>
+                  <li><b>dynamic(ssr:false)</b> 코드 스플리팅 — 대시보드 First Load JS 138kB(홈 145kB보다 가벼움)</li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="ph-img media"><img src="public/images/func/E-commerce-login-sync.gif" alt="두 탭 → 한쪽 로그아웃 시 양쪽 동기화" data-full="public/images/E-commerce-login-sync.gif" data-caption="JWT 인증 — 멀티탭 로그아웃 동기화 (BroadcastChannel)"></div>
+                <div class="ft">JWT 인증 + 멀티탭 동기화</div>
+                <div class="fd">토큰을 메모리에만 둬도 새 탭에서 로그인이 유지됩니다.</div>
+                <ul>
+                  <li><b>Access=메모리 / Refresh=httpOnly</b> 회전 — XSS로 access 탈취 방지 + refresh JS 접근 차단</li>
+                  <li><b>BroadcastChannel</b>로 새 탭이 다른 탭에 토큰 요청(REQUEST/RESPONSE) → 세션 인계, 로그아웃은 전 탭 전파</li>
+                  <li>컴포넌트 axios 직접 호출 <b>0건</b> — public/auth 클라이언트 분리로 공개 호출에 토큰 누출 방지</li>
+                </ul>
+              </div>
+            </div>
+            <div class="feat-more">
+              <div class="row"><div class="ft">3역할 멀티 셀러 오픈마켓</div><div class="fd">구매자·판매자·관리자를 Route Group 3개((auth) / (main) / (admin))로 분리. 상품 등록 → 관리자 승인 검수 → 노출, 한 주문의 여러 판매자 상품을 배송 단위로 분리.</div></div>
+              <div class="row"><div class="ft">SSR/ISR + React Query Hydration</div><div class="fd">상품 상세는 ISR(revalidate)로 TTFB를 낮추고, isServer 분기 QueryClient + prefetch → dehydrate → HydrationBoundary로 초기 로딩 깜빡임 제거. queryOptions 팩토리로 쿼리 키·옵션을 한 곳에서 관리.</div></div>
+              <div class="row"><div class="ft">통합 검색 (키워드 + 카테고리 + 정렬)</div><div class="fd">태그가 M:N으로 연결된 상품 검색에서 JOIN 행 중복을 DISTINCT로 제거하고, 정렬 컬럼을 addSelect로 끌어와 정렬과 distinct를 양립. 페이지네이션은 커서 방식.</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="ts-case">
+              <div class="ts-title">① axios 401 race condition → 강제 로그아웃 <span class="tag">프론트 시그니처</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>일정 시간 뒤 마이페이지를 새로고침하면 사용자가 갑자기 로그인 페이지로 튕겼습니다. 여러 API(주문·장바구니·유저)가 동시에 401을 받고 각자 <span class="kpi">/auth/refresh</span>를 중복 호출 → 1회용 Refresh Token 회전 정책과 충돌해 "재사용 시도"로 판정 → 세션 전체 무효화.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>"세션 만료"가 아니라 "동시 401을 하나의 refresh로 합치지 못한 인터셉터 동기화 부재"라고 가설을 세우고, Network 탭에서 refresh가 실제 여러 번 나가는 것을 확인. 대안(각자 refresh / 큐 직렬화 / 선제 갱신) 중 추가 인프라가 필요 없는 큐 직렬화 선택.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>모듈 전역 <span class="kpi">isRefreshing</span> 플래그와 공유 <span class="kpi">refreshPromise</span>로 refresh를 1회만 호출하고, 나머지 401은 같은 Promise를 await한 뒤 새 토큰으로 재시도. <span class="kpi">_retry</span> 카운터로 무한 재시도 차단, <span class="kpi">isLoggingOut</span>로 로그아웃 중 루프 차단.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">동시 401이 다발로 발생해도 <b>/auth/refresh는 1회만</b> 호출되고, 강제 로그아웃이 재현되지 않음(Network 탭 검증). </div>
+                  <div class="reflect"><b>배운 점</b> · 정상 흐름만 보면 멀쩡한 코드도 동시 요청이라는 경계 조건에서 깨진다. 클라이언트도 race condition을 설계 대상으로 다뤄야 한다.</div>
+                </div>
+                <div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드 스니펫: 401 응답 인터셉터]</div>
+                    <pre><code class="language-tsx">// 이미 refresh 중이면 기존 Promise 반환
+if (isRefreshing && refreshPromise) {
+  return refreshPromise;
+}
+isRefreshing = true;
+refreshPromise = (async () => {
+  try {
+    const response =
+      await publicClient.post(REFRESH_API_ENDPOINT);
+
+// 새 토큰으로 원래 요청 재시도
+Return authClient(originalRequest);</code></pre>
+                  </div>
+                  <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/main/frontend/src/lib/axios/axios-http-client.ts#L59-L107" target="_blank" rel="noopener noreferrer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                    <span class="code-src-file">axios-http-client.ts</span>
+                    <span class="code-src-lines">L59–107</span>
+                    <span class="code-src-arr">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-case">
+              <div class="ts-title">② 결제 동시성 "유령 결제" 방어 <span class="tag">도메인 깊이</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>결제 완료(verify/웹훅)와 주문 취소가 같은 결제건을 동시에 건드리면 "결제는 PAID인데 주문은 CANCELLED"인 모순 상태가 생길 수 있었습니다. 결제는 사후 복구 비용이 사전 방어 비용보다 커, 확률이 낮아도 방어가 필수인 영역입니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>DB 트랜잭션은 한 트랜잭션 내부 원자성만 보장할 뿐 두 트랜잭션의 동시 쓰기 충돌은 못 막는다고 판단 → 명시적 락 필요. <span class="kpi">Promise.all</span>로 결제 완료·취소를 동시 호출해 모순 상태를 실제로 재현한 뒤 방어를 설계.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>① 진입 전 멱등 체크 + 외부 PG(PortOne) 호출은 트랜잭션 외부로 빼 락 보유 시간 최소화 ② <span class="kpi">setLock('pessimistic_write')</span>(SELECT FOR UPDATE)로 직렬화 후 상태 재검증 ③ 이벤트는 실제 상태 전이일 때만 발행, 리스너도 SELECT FOR UPDATE로 재고 중복 차감 차단.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">반복 재현에서 <b>모순 상태가 사라짐</b>, 회귀 방지 테스트 추가.</div>
+                  <div class="reflect"><b>배운 점</b> · 정상 흐름뿐 아니라 중복·순서 뒤바뀜·동시 요청까지 멱등하게 설계해야 한다(재현 → 락 → 재검증).</div>
+                </div>
+                <div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드 스니펫: 결제 확정 트랜잭션]</div>
+                    <pre><code class="language-tsx">// 수정 전:  update 만 호출 -> verify와 webhook이 동시 PAID 처리
+// 수정 후: 락 + 재검증으로 한 번만 PAID
+const updated = await this.dataSource.transaction(
+  async (manager) => {
+    const locked = await manager
+      .createQueryBuilder(PaymentEntity, 'p')
+      .setLock('pessimistic_write')
+      .where('p.id = :id', { id: payment.id })
+      .getOne();
+    // 트랜잭션 내 재검증: 웹훅이 먼저 처리했을 수 있음
+    if (locked.status === PaymentStatus.PAID)
+      return null;
+                    </code></pre>
+                  </div>
+                  <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/main/backend/src/payment/payment.service.ts#L205-L222" target="_blank" rel="noopener noreferrer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                    <span class="code-src-file">payment.service.ts</span>
+                    <span class="code-src-lines">L205–222</span>
+                    <span class="code-src-arr">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="blk">
+              <div class="h">대표 성과 — 홈 LCP 최적화</div>
+              <p class="lead">Lighthouse 점검 중 홈만 LCP가 Slow 4G에서 33.7s(Performance 66)임을 발견 → <span class="kpi">lcp-discovery-insight</span>로 CSS background-image의 2.9MB PNG 히어로 배경을 병목으로 특정(FCP 2s vs LCP 35s 격차가 곧 이미지 다운로드 시간) → sharp로 WebP 변환 + next/image fill priority로 교체해 preload fetchpriority 자동 적용.</p>
+            </div>
+            <div class="metrics">
+              <div class="m"><div class="mv">66 → 93</div><div class="ml">Lighthouse Performance</div><div class="mh">Chrome DevTools, 모바일 Slow 4G 실측</div></div>
+              <div class="m"><div class="mv">33.7s → 3.0s</div><div class="ml">홈 LCP (−91%)</div><div class="mh">동일 측정</div></div>
+              <div class="m"><div class="mv">−96.5%</div><div class="ml">배너 페이로드</div><div class="mh">7,090KB→246KB · fs.statSync</div></div>
+              <div class="m"><div class="mv">~80ms</div><div class="ml">상품 상세 TTFB (ISR)</div><div class="mh">curl 3회, x-vercel-cache HIT</div></div>
+            </div>
+            <div class="blk">
+              <div class="h">규모 · 구조 (실측)</div>
+              <ul class="factlist">
+                <li>모노레포 약 <b>32500줄</b> (frontend 9,424 / backend 22,092 / shared 989)</li>
+                <li>frontend/src <b>TypeScript 100%</b> (.js/.jsx 0개), Next.js <b>34페이지</b>를 3 route group으로 분리</li>
+                <li>컴포넌트 axios 직접 호출 <b>0건</b>(service 10개 모듈 경유), staleTime 4단계 차등, First Load JS ≤ 183kB</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="links" style="margin-top:26px;">
+          <a class="btn dark" href="https://github.com/ansm0403/Shopping-mall" target="_blank" rel="noopener noreferrer">GitHub README →</a>
+          <a class="btn soft" href="https://shopping-mall-frontend-dusky.vercel.app" target="_blank" rel="noopener noreferrer">배포 데모 ↗</a>
+          <!-- <a class="btn" href="#"><span class="ph">상세 과정 (블로그) — [링크]</span></a> -->
+        </div>
+      </div>
+    </details>
+
+    <!-- PROJECT 2 -->
+    <details class="proj teal">
+      <summary>
+        <div class="sum-top">
+          <span class="sum-num">02</span>
+          <span class="sum-name">AI Object Detection Viewer</span>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="sum-one">AI 객체 탐지(COCO) 결과를 2D·3D에서 동시에 탐색하고, 4개 뷰가 단일 선택 상태를 공유하는 멀티뷰 동기화 시각화 뷰어.</div>
+        <div class="sum-meta">
+          <span class="pill">Three.js + R3F</span><span class="pill">Zustand</span><span class="pill">Vitest</span>
+          <span class="kpi">GPU 누수 <b>49 → 누적 0</b></span>
+        </div>
+        <div class="expand-hint">▾ 클릭해서 개요 · 기능 · 트러블슈팅 · 성능 펼쳐 보기</div>
+      </summary>
+
+      <div class="body">
+        <div class="tabs" role="tablist" aria-label="AID 상세">
+          <button class="tab-btn active" role="tab" type="button">개요</button>
+          <button class="tab-btn" role="tab" type="button">기능</button>
+          <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
+          <button class="tab-btn" role="tab" type="button">성능 · 결과</button>
+        </div>
+        <div class="panels">
+
+          <div class="panel active" role="tabpanel">
+            <div class="blk">
+              <div class="h">Overview</div>
+              <p class="lead">객체 탐지 결과(COCO)를 보통 2D 박스로만 보는 것과 달리, 같은 결과를 <b>2D 이미지와 3D 공간에서 동시에</b> 탐색합니다. 한 객체를 어느 뷰에서 선택하든 <b>4개 뷰(2D·3D·리스트·분석)가 동시에</b> 같은 객체를 가리키도록 설계했습니다. <span style="color:var(--hint)">데이터 소스가 정적 JSON 1개인 클라이언트 SPA입니다 — R3F Canvas가 SSR 불가라 전 페이지 클라이언트 렌더.</span></p>
+            </div>
+            <div class="blk">
+              <div class="h">시스템 구조</div>
+              <p class="lead">정적 COCO JSON → <b>lib/ 순수 함수 계층</b>(parser·estimator·selector)이 외부 입력을 <span class="kpi">unknown</span>으로 받아 <span class="kpi">isCocoDataset</span> 타입 술어로 검증 후 내부 <span class="kpi">Frame[]</span>로 변환 → <b>Zustand store</b>(단일 선택 상태)를 4뷰가 각자 필요한 slice만 구독. lib/와 components/를 분리해 React 밖에서 JSDOM 없이 테스트하고 변경 영향을 격리했습니다.</p>
+              <figure class="arch">
+                <img src="public/images/architec/AID_아키텍쳐_요약.png" alt="AID 시스템 아키텍처 요약도" data-full="public/images/architec/AID_아키텍쳐.png" data-caption="AID — 상세 아키텍처">
+                <figcaption>🔍 클릭하면 상세 아키텍처를 크게 볼 수 있습니다</figcaption>
+              </figure>
+            </div>
+            <div class="meta">
+              <div class="mi"><div class="k">PERIOD</div><div class="v">2026.04 ~ 2026.05 </div></div>
+              <div class="mi"><div class="k">ROLE</div><div class="v">1인 단독 (기획·설계·구현·배포)</div></div>
+              <div class="mi"><div class="k">STACK</div><div class="v">Three.js+R3F · Zustand · Vitest · TS(strict)</div></div>
+              <div class="mi"><div class="k">TYPE</div><div class="v">클라이언트 SPA (정적 COCO JSON)</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="feat">
+              <div class="card">
+                <div class="ph-img media"><img src="public/images/func/AID_source_of_truth.gif" alt="한 객체 선택 시 4뷰 동시 하이라이트" data-full="public/images/func/AID_source_of_truth.gif" data-caption="4뷰 단일 source of truth 동기화 — selectedObjectId 공유"></div>
+                <div class="ft">4뷰 단일 source of truth 동기화</div>
+                <div class="fd">선택 상태를 4개로 나누지 않고 한 필드로 통일했습니다.</div>
+                <ul>
+                  <li>store의 <b>selectedObjectId 한 필드</b>를 4뷰가 공유</li>
+                  <li>각 뷰는 <b>slice selector</b>로 필요한 상태만 구독 → 불필요한 리렌더 최소화</li>
+                  <li>프레임 전환 시 handleSelectFrame: 같은 id면 no-op, 다르면 frame set + 선택 null (page 레이어 합성)</li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="ph-img media"><img src="public/images/func/AID_3D_viewer.gif" alt="3D 뷰 — bbox + 포인트클라우드, 카메라 회전" data-full="public/images/func/AID_3D_viewer.gif" data-caption="3D 공간 렌더링 — Three.js + R3F, OrbitControls"></div>
+                <div class="ft">3D 공간 렌더링 (Three.js + R3F)</div>
+                <div class="fd">라이브러리 기본 동작이 의도와 어긋나는 부분을 직접 오버라이드.</div>
+                <ul>
+                  <li>drei <b>&lt;Grid&gt; raycast를 no-op 오버라이드</b> — 그리드가 클릭을 가로채지 않게</li>
+                  <li>불가시 mesh + <b>THREE.DoubleSide</b>로 내부 시점 raycast 보강</li>
+                  <li>useFrame sin 펄스로 선택 강조 · Canvas key로 OrbitControls 리셋</li>
+                </ul>
+              </div>
+            </div>
+            <div class="feat-more">
+              <div class="row"><div class="ft">2D SVG 뷰어 (bbox 클릭)</div><div class="fd">원본 이미지 위에 SVG로 bbox를 그리고 클릭 선택. SVG는 z-index를 무시하고 paint order로 hit-test하므로, detections를 면적 오름차순 정렬해 시각적으로 앞에 보이는 객체가 선택되게 했습니다.</div></div>
+              <div class="row"><div class="ft">COCO 파서 (안전한 외부 경계)</div><div class="fd">외부 입력을 unknown으로 받아 isCocoDataset 타입 술어로 검증하고, image 단위 Frame[]로 변환. 깨진 항목은 전체 throw 대신 skip+warn — 외부 데이터 깨짐은 흔하고, 전체 실패보다 부분 손실이 낫다는 판단.</div></div>
+              <div class="row"><div class="ft">분석 패널 + confidence 필터</div><div class="fd">클래스 필터·신뢰도 슬라이더로 보이는 객체를 좁혀 분석. 필터 상태도 store slice로 관리(이 필터 반복 조작 경로가 GPU 누수를 드러낸 지점).</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="ts-case">
+              <div class="ts-title">① Three.js GPU 메모리 누수 audit <span class="tag">시그니처</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>같은 프레임을 고정한 채 클래스 필터·confidence 슬라이더를 반복 조작하면 GPU geometry가 정상 12개 대비 <b>49개까지 단조 증가</b>하는 WebGL 메모리 누수를 발견. 단일 프레임에선 타입당 1건이라 체감이 없었지만, 필터 조작이 잦은 후속 단계에서 누적 위험으로 식별.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>WebGL 버퍼는 JS GC가 회수하지 못한다는 점이 출발점. R3F는 <b>JSX 자식으로 선언한 geometry만 자동 dispose</b>하고, 명령형으로 만들어 prop으로 주입한 것은 사용자 책임이라는 비자명한 경계를 파악. Canvas remount가 프레임 전환 시 GPU를 정리하므로 누수는 "같은 Canvas 안 geometry 교체" 경로에서만 관찰됨을 실측으로 보정.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span><span class="kpi">WebGLRenderer.info.memory.geometries</span>를 1초 간격 콘솔로 직접 측정해 누적을 확인 → BBox3D·PointCloud에 useEffect cleanup으로 <span class="kpi">geometry.dispose()</span> 추가.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">geometry 누적 <b>49 → dispose 후 4~12로 안정(누적 0)</b>. (WebGLRenderer.info 콘솔 1초 간격 측정 · 순수함수 테스트로 못 잡는 영역이라 콘솔 수동 측정으로 대체)</div>
+                  <div class="reflect"><b>배운 점</b> · WebGL 리소스는 GC가 회수하지 않아 명시적 dispose가 필요하고, 프레임워크의 자동 정리 경계(JSX 자식 vs prop)를 정확히 알아야 한다.</div>
+                </div>
+                <div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드 스니펫: dispose cleanup]</div>
+                    <pre><code class="language-tsx">// PointCloud.tsx — 명령형 BufferGeometry는 R3F 자동 dispose 대상이 아님
+                      // (JSX 자식이 아니라 prop 주입).
+const geometry = useMemo(() => {
+  const geom = new THREE.BufferGeometry();
+  geom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  return geom;
+}, [visiblePoints]); 
+// 필터(visibleIds) 변경 → geometry 재생성 
+// → 이전 인스턴스가 GPU에 잔존
+
+// WebGL 버퍼는 JS GC가 회수 못 함 
+// → cleanup에서 명시 해제. 누적 12→49가 4~12로 안정.
+useEffect(() => () => geometry.dispose(), [geometry]);
+
+return <points geometry={geometry}><pointsMaterial size={size} color={color} /></points>;</code></pre>
+                  </div>
+                  <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/main/apps/ai_detection_viewer_client/src/components/viewer-3d/PointCloud.tsx#L22-L43" target="_blank" rel="noopener noreferrer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                    <span class="code-src-file">PointCloud.tsx</span>
+                    <span class="code-src-lines">L22–43</span>
+                    <span class="code-src-arr">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-case">
+              <div class="ts-title">② 겹친 2D bbox 클릭 우선순위 제어 <span class="tag">렌더링 규칙 활용</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>겹친 영역을 클릭하면 시각적으로 앞에 보이는 객체가 아니라 annotation 배열의 마지막 객체가 선택되어 사용자 직관과 어긋났습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>SVG는 CSS z-index를 무시하고 <b>paint order(배열 순서)</b>대로 hit-test하며 <span class="kpi">fill="transparent"</span>도 클릭을 받는다는 점을 확인. 그렇다면 정렬 순서만 바꾸면 이벤트 핸들러를 늘리지 않고 해결할 수 있다고 판단.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>detections를 <b>bbox 면적 오름차순 정렬</b>(<span class="kpi">.slice().sort()</span>)해 큰 bbox가 마지막에 paint → hit-test 최상단이 되게 함.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">겹침 영역에서 <b>시각적으로 앞에 보이는(큰) 객체가 선택</b>되도록 정상화. estimator의 "큰 면적=가까운 z"와 같은 proxy라 2D/3D가 단일 깊이 모델을 공유하는 일관성도 확보.</div>
+                  <div class="reflect"><b>배운 점</b> · DOM/SVG의 렌더링 규칙(paint order)을 정확히 알면, 로직을 늘리지 않고 데이터 정렬 한 번으로 푸는 최소 침습 해법이 보인다.</div>
+                </div>
+                <div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드 스니펫: 면적 정렬 hit-test]</div>
+                    <pre><code class="language-tsx">// SVG는 CSS z-index 무시 -> paint order = hit-test 순서
+// 면적 오름차순 정렬 -> 큰 bbox가 마지막에 paint -> 클릭 우선
+const detections = (
+  visibleIds
+    ? frame.detections2D.filter(
+        (d) => visibleIds.has(d.id))
+    : frame.detections2D
+)
+  .slice()
+  .sort(
+    (a, b) =>
+      a.bbox.width * a.bbox.height
+      - b.bbox.width * b.bbox.height,
+  );</code></pre>
+                  </div>
+                  <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/main/apps/ai_detection_viewer_client/src/components/viewer-2d/Viewer2D.tsx#L25-L34" target="_blank" rel="noopener noreferrer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                    <span class="code-src-file">Viewer2D.tsx</span>
+                    <span class="code-src-lines">L25–34</span>
+                    <span class="code-src-arr">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="metrics">
+              <div class="m"><div class="mv">98.8</div><div class="ml">Lighthouse Performance</div><div class="mh">모바일 Slow 4G, 5회 평균</div></div>
+              <div class="m"><div class="mv">0.8s</div><div class="ml">LCP</div><div class="mh">Lighthouse Diagnostics</div></div>
+              <div class="m"><div class="mv">테스트</div><div class="ml">단위 테스트 (순수함수)</div><div class="mh">엣지케이스 문서와 1:1 매핑 · 9개 파일</div></div>
+              <div class="m"><div class="mv">100%</div><div class="ml">TypeScript 비율</div><div class="mh">src 50개 파일, JS 0건</div></div>
+            </div>
+            <div class="blk">
+              <div class="h">차별점</div>
+              <ul class="factlist">
+                <li>테스트 코드가 프로덕션 코드와 거의 <b>동량(34.5% · 1,021/2,962줄)</b></li>
+                <li>그 테스트가 <span class="kpi">docs/edgecases/Edge_#N.md</span> 문서와 <b>1:1로 매핑</b> — 발견한 엣지케이스가 잊히지 않는 시스템</li>
+                <li>GPU geometry 누수 <b>49 → 누적 0</b> (WebGLRenderer.info 콘솔 1초 간격 측정)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="links" style="margin-top:26px;">
+          <a class="btn dark" href="https://github.com/ansm0403/AI_Object_Detection_Viewer" target="_blank" rel="noopener noreferrer">GitHub README →</a>
+          <a class="btn soft" style="background:var(--tl);color:var(--td);" href="https://ai-object-detection-viewer-ai-detec.vercel.app" target="_blank" rel="noopener noreferrer">배포 데모 ↗</a>
+          <!-- <a class="btn" href="#"><span class="ph">상세 과정 (블로그) — [링크]</span></a> -->
+        </div>
+      </div>
+    </details>
+
+    <!-- PROJECT 3 -->
+    <details class="proj">
+      <summary>
+        <div class="sum-top">
+          <span class="sum-num">03</span>
+          <span class="sum-name">JAPAN HOTEL RESERVATION</span>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="sum-one">일본 호텔을 둘러보고 날짜·인원·객실을 선택해 예약까지 진행하는 웹앱 — "예약 흐름의 내부 상태"가 궁금해서 직접 구현.</div>
+        <div class="sum-meta">
+          <span class="pill">React</span><span class="pill">React Query</span><span class="pill">Recoil + Redux</span>
+          <span class="kpi">번들 <b>4.7MB→1.5MB</b> · LCP <b>→1.60s</b></span>
+        </div>
+        <div class="expand-hint">▾ 클릭해서 개요 · 기능 · 트러블슈팅 · 성능 펼쳐 보기</div>
+      </summary>
+
+      <div class="body">
+        <div class="tabs" role="tablist" aria-label="JAPAN HOTEL RESERVATION 상세">
+          <button class="tab-btn active" role="tab" type="button">개요</button>
+          <button class="tab-btn" role="tab" type="button">기능</button>
+          <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
+          <button class="tab-btn" role="tab" type="button">성능 · 결과</button>
+        </div>
+        <div class="panels">
+
+          <div class="panel active" role="tabpanel">
+            <div class="blk">
+              <div class="h">Overview</div>
+              <p class="lead">"가장 많이 써봤지만 한 번도 직접 만들어 본 적 없는 기능"인 <b>호텔 예약</b>을 주제로, 날짜·인원·객실 선택부터 예약 요약·완료까지의 흐름을 혼자 구현하며 React 기반 프론트엔드 개발 흐름을 정리한 프로젝트입니다. <span style="color:var(--hint)">결제(PG 연동)는 권한 이슈로 미구현 — 현재는 "예약 완료" 페이지까지 동작합니다.</span></p>
+            </div>
+            <div class="blk">
+              <div class="h">설계 포인트</div>
+              <p class="lead"><b>상태 성격에 맞춰 도구를 분리</b>한 것이 핵심입니다 — 검색어·내비 같은 가벼운 전역 값은 <b>Recoil</b>, 예약처럼 단계별로 묶이는 상태는 <b>Redux Toolkit</b>, 서버 데이터(호텔·객실·리뷰·예약)는 <b>React Query</b>로 나눴습니다. 컴포넌트가 Firebase를 직접 부르지 않도록 <span class="kpi">remote → hooks(React Query) → components</span> 3계층으로 흐르게 구성했습니다.</p>
+            </div>
+            <div class="meta">
+              <div class="mi"><div class="k">PERIOD</div><div class="v">2025.04 ~ 2025.06</div></div>
+              <div class="mi"><div class="k">ROLE</div><div class="v">1인 단독</div></div>
+              <div class="mi"><div class="k">STACK</div><div class="v">React · TS · React Query · Recoil+Redux · Firebase</div></div>
+              <div class="mi"><div class="k">DEPLOY</div><div class="v">Vercel</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="feat">
+              <div class="card">
+                <div class="ph-img media"><img src="public/images/func/hotel_reservation.gif" alt="예약 플로우 — 날짜·인원·객실 선택 → 요약" data-full="public/images/func/hotel_reservation.gif" data-caption="예약 플로우 — 날짜·인원·객실 선택 → 요약 → 완료"></div>
+                <div class="ft">예약 플로우</div>
+                <div class="fd">날짜 → 인원 → 객실 → 요약 → 완료까지 단계별 흐름.</div>
+                <ul>
+                  <li>단계별로 묶이는 예약 상태를 <b>Redux Toolkit</b>으로 관리</li>
+                  <li>새로고침·직접 진입 대비 null 가드 + sessionStorage 동기화</li>
+                  <li>달력·인원·객실 선택 UI를 도메인 컴포넌트로 분리</li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="ph-img media"><img src="public/images/func/hotel_detail.gif" alt="호텔 상세 — 사진 캐러셀 + 지도 + 객실/리뷰" data-full="public/images/func/hotel_detail.gif" data-caption="호텔 상세 — 사진 캐러셀 + 지도 + 객실/리뷰"></div>
+                <div class="ft">호텔 상세 페이지</div>
+                <div class="fd">사진·위치·객실·리뷰를 한 화면에서.</div>
+                <ul>
+                  <li>사진 캐러셀 · 별점 · 지도 · 객실 목록 · 추천 호텔 · 리뷰</li>
+                  <li>하단 추가 요청 영역은 뷰포트 진입 시 호출(React Query <b>enabled</b>)</li>
+                  <li>상세 데이터는 remote → useHotel(hook) → Contents 순으로 흐름</li>
+                </ul>
+              </div>
+            </div>
+            <div class="feat-more">
+              <div class="row"><div class="ft">인증 (Google 소셜 로그인)</div><div class="fd">Firebase Auth 기반 Google 로그인, PrivateRoute로 비로그인 사용자 접근 제한.</div></div>
+              <div class="row"><div class="ft">검색 (디바운스)</div><div class="fd">키워드 입력에 디바운스를 적용해 불필요한 요청을 줄이고, 검색 결과 페이지로 연결.</div></div>
+              <div class="row"><div class="ft">찜 · 마이페이지</div><div class="fd">호텔 찜하기와 찜 목록 일괄 관리, 마이페이지에서 내 정보·예약 내역·찜 목록 진입.</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="ts-case">
+              <div class="ts-title">① Firebase 인증 구독이 매 렌더마다 재등록 <span class="tag">렌더/부수효과 경계</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>전역 AuthGuard에서 페이지를 오갈 때마다 로그인 정보가 미세하게 깜빡이고, 라우트를 전환할수록 불필요한 리렌더가 늘었다. React DevTools로 보면 인증 리스너가 컴포넌트가 리렌더될 때마다 하나씩 늘어나 정리되지 않았다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span><span class="kpi">onAuthStateChanged</span>는 "한 번 등록하고 cleanup해야 하는 구독(subscribe) API"인데, useEffect 없이 컴포넌트 본문에서 직접 호출되고 있었다. 그 결과 렌더마다 새 리스너가 등록되고 이전 리스너는 해제되지 않아 누적됐고, 누적된 리스너들이 인증 상태 변화마다 각각 setUser를 호출해 중복 리렌더와 깜빡임을 일으켰다. 반환된 unsubscribe를 아무도 쓰지 않는다는 점이 결정적 단서였다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>구독을 <span class="kpi">useEffect</span>  내부로 옮기고 반환된 unsubscribe를 cleanup으로 등록해 마운트 시 1회 등록 · 언마운트 시 해제되도록 했다. 재발 방지로 react-hooks/exhaustive-deps 규칙을 warning에서 error로 승격해, deps 배열 누락 시 빌드가 막히도록 했다.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">페이지 전환 시 유저 정보 깜빡임이 사라지고, 리스너가 항상 1개로 고정되어 누적·중복 setState로 인한 불필요한 리렌더와 잠재적 메모리 누수가 제거됐다.</div>
+                  <div class="reflect"><b>배운 점</b> · 외부 구독은 렌더가 아니라 **라이프사이클(useEffect)**에서 관리해야 한다. cleanup 미등록은 리스너 누적·다중 setState를 부른다. 구독 API가 반환하는 unsubscribe를 쓰지 않고 있다면 거의 항상 잘못된 위치에서 호출되고 있다는 신호다.</div>
+                </div>
+                <div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드: AuthGuard.tsx:12-26]</div>
+                    <pre><code class="language-tsx">function AuthGuard({ children }: { children: React.ReactNode }) {
+  const [initialize, setInitialize] = useState(false)
+  const setUser = useSetRecoilState(userAtom)
+
+  // ❌ 구독 API를 렌더 본문에서 직접 호출 → 매 렌더 새 리스너 등록
+  //    반환된 unsubscribe를 아무도 쓰지 않음 → cleanup 불가, 리스너 누적
+  onAuthStateChanged(auth, (user) => {
+    if (user == null) {
+      setUser(null)
+    } else {
+      setUser({ uid: user.uid, email: user.email ?? '', /* ... */ })
+    }
+    setInitialize(true)
+  })
+
+  if (initialize === false) return null
+  return <>{children}</>
+}</code></pre>
+                  </div>
+                  <a class="code-src" href="https://github.com/ansm0403/Hotel_Reservation_App/blob/main/src/components/auth/AuthGuard.tsx#L12-L26" target="_blank" rel="noopener noreferrer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                    <span class="code-src-file">AuthGuard.tsx</span>
+                    <span class="code-src-lines">L12–26</span>
+                    <span class="code-src-arr">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-case">
+              <div class="ts-title">② 예약 중 새로고침하면 화면이 빈 채 크래시 <span class="tag">상태 휘발성</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>결제 정보 입력 페이지(/reservation)에서 새로고침하거나 URL로 직접 진입하면 화면이 비고 런타임 에러가 발생했다. 버튼으로 정상 진입하면 잘 동작해 재현 조건을 특정하기 까다로웠다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>예약 정보를 담은 Recoil <span class="kpi">bookingAtom</span>은 메모리에만 존재 → 새로고침 시 null로 초기화된다. 코드가 null 검사 없이 곧바로 구조분해(bookingData as BookingData)해 Cannot destructure property 'from' of null 에러가 났다. history.back() 가드 effect가 있었지만, 그 effect가 실행되기 전에 구조분해가 먼저 터지는 실행 순서 문제라 무력했다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>1차로 모든 Hook 호출 이후에 <b>null 가드</b>(<span class="kpi">&lt;Navigate&gt;</span>)를 두어 크래시를 막고 홈으로 안전하게 리다이렉트했다 — 가드를 Hook 사이가 아닌 끝에 배치해 Rules of Hooks("Rendered fewer hooks" 에러) 위반을 피했다. 2차로 새로고침에도 플로우가 유지되도록 bookingAtom을 effects_UNSTABLE로 <b>sessionStorage와 동기화</b>했다(Date 필드는 복원 시 reviver로 되살림).</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">새로고침·URL 직접 진입에도 크래시 없이 동작하고, 진행 중이던 예약 정보가 복원된다.</div>
+                  <div class="reflect"><b>배운 점</b> · SPA의 전역 상태는 휘발된다. 영속화(sessionStorage)/URL 복원 중 <b>데이터 성격에 맞는 방식</b>을 골라야 한다. 결제 정보는 일시적·민감해 탭을 닫으면 사라지는 sessionStorage를 택했다. 또한 조기 return(가드)은 항상 모든 Hook 호출 이후에 둬야 Hook 순서가 깨지지 않는다는 점을 체득했다.</div>
+                </div>
+                <div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드: Reservation.tsx:22-26]</div>
+                    <pre><code class="language-tsx">const { data, isLoading, makeReservation } = useReservation({
+  hotelId: bookingData?.hotelId ?? '',
+  roomId: bookingData?.roomId ?? '',
+})
+
+// bookingAtom은 Recoil(메모리) 상태
+// → 새로고침/직접진입 시 null로 초기화
+// 모든 Hook "이후"에 null 가드를 둬 홈으로 안전 리다이렉트
+// (Hook 사이에 두면 "Rendered fewer hooks than expected" 에러)
+if (bookingData == null) {
+  return <Navigate to="/" replace={true} />
+}
+
+if (data == null || isLoading === true) {
+  return null
+}
+
+// 가드 통과 → bookingData가 non-null로 좁혀져
+// as 단언 없이 안전하게 구조분해
+const { from: startDate, to: endDate, nights, roomId, hotelId }
+// = bookingData</code></pre>
+                  </div>
+                  <a class="code-src" href="https://github.com/ansm0403/Hotel_Reservation_App/blob/main/src/pages/Reservation.tsx#L22-L30" target="_blank" rel="noopener noreferrer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                    <span class="code-src-file">Reservation.tsx</span>
+                    <span class="code-src-lines">L22–30</span>
+                    <span class="code-src-arr">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="blk">
+              <div class="h">측정하며 최적화한 기록</div>
+              <p class="lead">"동작은 하지만 느릴 수 있겠다"고 느낀 부분을 직접 지표를 재며 개선했습니다.</p>
+            </div>
+            <div class="metrics">
+              <div class="m"><div class="mv">2.1s → 1.81s</div><div class="ml">캐러셀 이미지 지연 로딩</div><div class="mh">보이는 2개만 로딩(20개 중) · LCP</div></div>
+              <div class="m"><div class="mv">4.7MB → 1.5MB</div><div class="ml">번들 사이즈 (코드 스플리팅)</div><div class="mh">라우트 React.lazy · react-icons 분리</div></div>
+              <div class="m"><div class="mv">1s → 0.3s</div><div class="ml">번들 다운로드 시간</div><div class="mh">위 코드 스플리팅 효과</div></div>
+              <div class="m"><div class="mv">→ 1.60s</div><div class="ml">최종 LCP</div><div class="mh">옵저버 → 컴포넌트 스플리팅 전환</div></div>
+            </div>
+            <div class="blk">
+              <div class="h">최적화 판단</div>
+              <ul class="factlist">
+                <li>Intersection Observer로 상세 데이터 호출을 미뤘더니(LCP 1.90→1.74s) <b>스크롤 중 스켈레톤이 떠 UX가 어색</b>해짐</li>
+                <li>"수치보다 사용자 경험이 먼저"라 판단해 일부 영역은 옵저버 대신 <b>컴포넌트 스플리팅</b>으로 전환 → LCP <b>1.60s</b></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="links" style="margin-top:26px;">
+          <a class="btn dark" href="https://github.com/ansm0403/Hotel_Reservation_App" target="_blank" rel="noopener noreferrer">GitHub README →</a>
+          <a class="btn soft" href="https://hotels-app-sage.vercel.app" target="_blank" rel="noopener noreferrer">배포 데모 ↗</a>
+          <!-- <a class="btn" href="#"><span class="ph">상세 과정 (블로그) — [링크]</span></a> -->
+        </div>
+      </div>
+    </details>
+
+    <!-- PROJECT 4 -->
+    <!-- <details class="proj teal">
+      <summary>
+        <div class="sum-top">
+          <span class="sum-num">04</span>
+          <span class="sum-name">Bank Accounts (모바일 뱅킹)</span>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="sum-one">모바일 뱅킹 앱의 사용자 흐름(계좌·이체·거래내역·카드)을 직접 구현한 학습용 프로젝트 — Next.js App Router로 재작성.</div>
+        <div class="sum-meta">
+          <span class="pill">Next.js 14</span><span class="pill">React Query</span><span class="pill">@visx</span>
+          <span class="kpi">거래내역 조회 <b>280ms→132ms (약 53%↓)</b></span>
+        </div>
+        <div class="expand-hint">▾ 클릭해서 개요 · 기능 · 트러블슈팅 · 성능 펼쳐 보기</div>
+      </summary>
+
+      <div class="body">
+        <div class="tabs" role="tablist" aria-label="Bank Accounts 상세">
+          <button class="tab-btn active" role="tab" type="button">개요</button>
+          <button class="tab-btn" role="tab" type="button">기능</button>
+          <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
+          <button class="tab-btn" role="tab" type="button">성능 · 결과</button>
+        </div>
+        <div class="panels">
+
+          <div class="panel active" role="tabpanel">
+            <div class="blk">
+              <div class="h">Overview</div>
+              <p class="lead">토스·카카오뱅크 같은 모바일 뱅킹 앱의 화면 구성과 흐름이 어떻게 구현되는지 궁금해 직접 만든 <b>학습용 프로젝트</b>입니다. Pages Router로 시작했다가 <b>App Router로 재작성</b>하며 Server/Client Component 구분을 학습했습니다. <span style="color:var(--hint)">프론트엔드 직무 기준으로 서술하며, 데이터는 Firebase Firestore를 사용했습니다.</span></p>
+            </div>
+            <div class="blk">
+              <div class="h">설계 포인트</div>
+              <p class="lead">컴포넌트가 데이터 소스에 종속되지 않도록 <span class="kpi">remote(Firestore 접근) → hook(React Query 래핑) → components(화면)</span> 3계층으로 분리했습니다. 서버 상태는 React Query, 여러 페이지에서 함께 쓰는 클라이언트 상태(로그인 사용자·계좌 요약)는 Recoil로 책임을 나눴습니다.</p>
+            </div>
+            <div class="meta">
+              <div class="mi"><div class="k">PERIOD</div><div class="v">2025.01 ~ 2025.03</div></div>
+              <div class="mi"><div class="k">ROLE</div><div class="v">1인 단독 (학습용)</div></div>
+              <div class="mi"><div class="k">STACK</div><div class="v">Next.js 14 · React Query · Recoil · @visx</div></div>
+              <div class="mi"><div class="k">DATA</div><div class="v">Firebase Firestore</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="feat">
+              <div class="card">
+                <div class="ph-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>[이미지: 거래 내역 — 무한 스크롤 + 월별/카테고리 차트]</div>
+                <div class="ft">거래 내역 (무한 스크롤 + 차트)</div>
+                <div class="fd">거래를 끊김 없이 탐색하고 통계로 본다.</div>
+                <ul>
+                  <li>무한 스크롤 리스트(react-infinite-scroll-component)</li>
+                  <li>입금/출금/기간별 필터링</li>
+                  <li>월별·카테고리별 통계 차트(<b>@visx</b>)</li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="ph-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>[이미지: 로그인 + 보호된 페이지 접근 제어]</div>
+                <div class="ft">인증 · 라우트 접근 제어</div>
+                <div class="fd">로그인 여부에 따라 화면·접근을 분기.</div>
+                <ul>
+                  <li><b>NextAuth</b>(Firebase Adapter) 기반 로그인</li>
+                  <li><b>AuthGuard</b> 컴포넌트로 보호된 페이지 접근 제어</li>
+                  <li><b>withAuth HOC</b>로 클라이언트 컴포넌트 단위 인증 검증</li>
+                </ul>
+              </div>
+            </div>
+            <div class="feat-more">
+              <div class="row"><div class="ft">계좌 개설 / 조회</div><div class="fd">약관 동의 → 계좌 생성까지 단계별 폼, 심사 중·보유·미보유 상태에 따른 화면 분기.</div></div>
+              <div class="row"><div class="ft">입출금 / 이체</div><div class="fd">잔액에 따른 입·출금, 다른 계좌로 이체(잔액 검증), 거래 발생 시 트랜잭션 기록 자동 생성.</div></div>
+              <div class="row"><div class="ft">카드 신청·검색 / 신용 점수</div><div class="fd">카드 목록 + 디바운스 검색 → 신청 흐름, 신용 점수 그래프 시각화(비로그인은 안내 화면).</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="ts-case">
+              <div class="ts-title">① 페이지 전환마다 캐시가 사라지고 다시 로딩 <span class="tag">인스턴스 안정성</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>prefetch 데이터가 있는데도 페이지를 전환하면 캐시가 사라진 듯 로딩 스켈레톤이 다시 뜨고 재요청 발생. React Query 캐싱이 거의 효과 없어 보였습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>QueryClientProvider에 넘기는 client를 컴포넌트 <b>본문에서 직접 생성</b> → 리렌더마다 <span class="kpi">new QueryClient()</span>가 새로 만들어지며 이전 캐시·진행 중 요청·SSR HydrationBoundary로 받은 prefetch까지 폐기. "캐시가 안 되는" 게 아니라 "캐시를 담는 그릇이 매번 새로 만들어지던" 것.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>QueryClient를 <span class="kpi">useState(() => new QueryClient())</span> lazy initializer로 감싸 마운트 시 1회만 생성, 이후 같은 인스턴스 재사용.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">페이지 전환 시 캐시 유지 → 불필요한 재요청·로딩 깜빡임 제거, prefetch 데이터가 빈 상태 없이 즉시 표시.</div>
+                  <div class="reflect"><b>배운 점</b> · Provider에 넘기는 값을 렌더마다 새로 만들면 안 된다 — React에서 반복되는 "인스턴스 안정성" 원리.</div>
+                </div>
+                <div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드: ClientProvider.tsx]</div>
+                    <pre><code class="language-tsx">// before — 매 렌더 새 인스턴스
+const client = new QueryClient();
+// after — 1회만 생성
+const [client] = useState(() =>
+  new QueryClient());</code></pre>
+                  </div>
+                  <div class="code-cap">README의 "React Query 캐싱 전략"과 직접 연결되는 사례.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-case">
+              <div class="ts-title">② Firestore onSnapshot 구독이 해제되지 않는 누수 <span class="tag">리소스 정리</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>실시간 계좌 정보를 위해 onSnapshot 구독을 React Query 안에 통합했는데, 페이지 이동·언마운트 후에도 listener가 살아남음 → 로그아웃 후에도 이전 사용자 계좌 구독, 사라진 컴포넌트에 setQueryData 경고, 오래 쓸수록 listener 누적.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>queryFn의 Promise executor 안에서 <span class="kpi">return () => unsubscribe()</span> 했지만, <b>Promise 생성자는 executor 반환값을 무시</b>한다. 게다가 React Query queryFn은 cleanup을 받는 API가 아니라, 구독 시작 경로는 있으나 해제 경로가 어디에도 연결되지 않은 상태였음.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>구독 생명주기를 React Query가 아니라 <span class="kpi">useEffect cleanup</span>에 맡기도록 분리 — React Query는 캐시 보관, useEffect는 구독/해제만 담당.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">Firestore 에뮬레이터에서 <span class="kpi">Promise.allSettled</span>로 여러 진입을 동시에 출발시켜 검증 → 페이지를 오가도 <b>활성 listener가 1개로 유지</b>되고 setQueryData 경고·누수 사라짐.</div>
+                  <div class="reflect"><b>배운 점</b> · Promise executor의 반환값은 cleanup이 아니다. React의 cleanup은 useEffect가 반환한 함수에서만 동작한다.</div>
+                </div>
+                <div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드: useAccount.ts]</div>
+                    <pre><code class="language-tsx">useEffect(() => {
+  if (!user) return;
+  const unsub = onSnapshot(q, (snap) =>
+    queryClient.setQueryData(key, map(snap)));
+  return () => unsub();
+}, [user?.id]);</code></pre>
+                  </div>
+                  <div class="code-cap">검증: 에뮬레이터 + Promise.allSettled 동시 출발 → listener 1개 유지 확인.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="blk">
+              <div class="h">대표 성과 — Firestore N+1 쿼리를 비정규화로 개선</div>
+              <p class="lead">거래내역을 User 하위 컬렉션에 <b>DocumentReference(참조)</b>로 저장해, 목록을 그리려면 참조 목록 1회 + 건당 getDoc N회가 필요했습니다(10건 = 11요청, 약 280ms). "관계형은 정규화, NoSQL은 읽기 패턴에 맞춘 <b>비정규화</b>"임을 자료로 확인하고, 거래내역 문서 자체를 하위 컬렉션에 <b>복제 저장</b>해 <span class="kpi">getDocs</span> 1회로 정렬·limit까지 처리하도록 바꿨습니다.</p>
+            </div>
+            <div class="metrics">
+              <div class="m"><div class="mv">280ms → 132ms</div><div class="ml">거래내역 조회 (약 53%↓)</div><div class="mh">직접 측정 (참조목록 + 건당 getDoc)</div></div>
+              <div class="m"><div class="mv">11 → 1</div><div class="ml">요청 횟수 (N+1 → 1)</div><div class="mh">Firestore 읽기 비용도 감소</div></div>
+              <div class="m"><div class="mv">App Router</div><div class="ml">Server/Client 분리 학습</div><div class="mh">Pages Router → App Router 재작성</div></div>
+              <div class="m"><div class="mv">staleTime ∞</div><div class="ml">React Query 캐싱 전략</div><div class="mh">자주 안 변하는 데이터 재요청 차단</div></div>
+            </div>
+            <div class="blk">
+              <div class="h">트레이드오프 판단</div>
+              <ul class="factlist">
+                <li>복제의 리스크는 <b>무결성</b>인데, 거래내역은 한 번 생성 후 <b>수정되지 않는 불변 데이터</b>라 사실상 리스크가 낮다고 판단</li>
+                <li>"모든 경우에 복제가 정답은 아니다 — 쓰기가 잦고 자주 바뀌면 동기화 비용이 커 불리"라는 한계까지 정리</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="links" style="margin-top:26px;">
+          <a class="btn dark" href="https://github.com/ansm0403/mobile_bank_account_app" target="_blank" rel="noopener noreferrer">GitHub README →</a>
+          <a class="btn" href="#"><span class="ph">배포 — [준비 중]</span></a>
+           <a class="btn" href="#"><span class="ph">상세 과정 (블로그) — [링크]</span></a>
+        </div>
+      </div>
+    </details> -->
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <div class="big" style="margin-top:10px;">함께 만들고 싶습니다.</div>
+    <p class="note">상세한 결정은 각 프로젝트의 GitHub README와 블로그에 정리되어 있습니다. 편하게 연락 주세요.</p>
+    <div class="contact-line"><b>[이메일]</b> &nbsp;·&nbsp; <a href="https://github.com/ansm0403" style="color:var(--p);font-weight:600;">github.com/ansm0403</a> &nbsp;·&nbsp; <b>[블로그 링크]</b><a href="https://velog.io/@tkdans312/posts" style="color:var(--p);font-weight:600;"> · velog.io/@tkdans312</a></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="script.js" defer></script>
+
+</body>
+</html>
