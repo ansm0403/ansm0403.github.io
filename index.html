@@ -120,6 +120,7 @@
           <button class="tab-btn" role="tab" type="button">기능</button>
           <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
           <button class="tab-btn" role="tab" type="button">성능 · 결과</button>
+          <button class="tab-btn" role="tab" type="button">회고</button>
         </div>
         <div class="panels">
 
@@ -132,7 +133,7 @@
               <div class="h">시스템 구조</div>
               <p class="lead">프론트(Vercel·Next.js)는 <b>Vercel rewrites 프록시</b>를 거쳐 백엔드(EC2·NestJS)를 같은 출처처럼 호출합니다 — cross-domain 쿠키 문제와 App Router의 <span class="kpi">cookies().set()</span> 제약을 동시에 우회하기 위한 선택입니다. 인증은 <b>Access=메모리 / Refresh=httpOnly 쿠키 회전</b>에 <b>Edge → Server → Client 3중 방어</b>를 적용했고, 데이터는 RSC에서 prefetch → dehydrate → HydrationBoundary로 넘긴 뒤 TanStack Query가 캐시·무효화를 담당합니다.</p>
               <figure class="arch">
-                <img src="public/images/architec/E-commerce_아키텍쳐_요약.png" alt="E-커머스 시스템 아키텍처 요약도" data-full="public/images/architec/E-commerce_아키텍쳐.png" data-caption="E-커머스 쇼핑몰 — 상세 아키텍처">
+                <img src="public/images/architec/E-commerce_아키텍쳐_요약.svg" alt="E-커머스 시스템 아키텍처 요약도" data-full="public/images/architec/E-commerce_아키텍쳐.svg" data-caption="E-커머스 쇼핑몰 — 상세 아키텍처">
                 <figcaption>🔍 클릭하면 상세 아키텍처를 크게 볼 수 있습니다</figcaption>
               </figure>
             </div>
@@ -274,6 +275,35 @@ const updated = await this.dataSource.transaction(
             </div>
           </div>
 
+          <div class="panel" role="tabpanel">
+            <div class="retro">
+              <div class="retro-col">
+                <div class="retro-h good">잘한 점</div>
+                <ul>
+                  <li>결제·인증의 <b>동시성·보안 문제를 재현→분석→방어→회귀 테스트</b>까지 닫음</li>
+                  <li>모든 성능 수치를 <b>측정 방법과 함께 기록</b></li>
+                </ul>
+              </div>
+              <div class="retro-col">
+                <div class="retro-h bad">아쉬운 점</div>
+                <ul>
+                  <li>프론트 테스트가 얇음 (<b>FE 1 vs BE 21</b>)</li>
+                  <li>접근성이 기본 ARIA 수준</li>
+                  <li>dynamic import 전후 번들 정량 비교 미측정</li>
+                  <li>Nginx 미도입으로 Next.js 프록시 사용</li>
+                </ul>
+              </div>
+              <div class="retro-col">
+                <div class="retro-h next">지금 더 한다면</div>
+                <ul>
+                  <li><b>401 인터셉터·결제 멱등</b> 등 동시성 경계 코드부터 테스트로 박제</li>
+                  <li>디자인 토큰을 <b>Storybook 카탈로그</b>로 정리</li>
+                  <li>Nginx 도입으로 리버스 프록시 계층 분리</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <div class="links" style="margin-top:26px;">
@@ -306,6 +336,7 @@ const updated = await this.dataSource.transaction(
           <button class="tab-btn" role="tab" type="button">기능</button>
           <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
           <button class="tab-btn" role="tab" type="button">성능 · 결과</button>
+          <button class="tab-btn" role="tab" type="button">회고</button>
         </div>
         <div class="panels">
 
@@ -317,8 +348,8 @@ const updated = await this.dataSource.transaction(
             <div class="blk">
               <div class="h">시스템 구조</div>
               <p class="lead">정적 COCO JSON → <b>lib/ 순수 함수 계층</b>(parser·estimator·selector)이 외부 입력을 <span class="kpi">unknown</span>으로 받아 <span class="kpi">isCocoDataset</span> 타입 술어로 검증 후 내부 <span class="kpi">Frame[]</span>로 변환 → <b>Zustand store</b>(단일 선택 상태)를 4뷰가 각자 필요한 slice만 구독. lib/와 components/를 분리해 React 밖에서 JSDOM 없이 테스트하고 변경 영향을 격리했습니다.</p>
-              <figure class="arch">
-                <img src="public/images/architec/AID_아키텍쳐_요약.png" alt="AID 시스템 아키텍처 요약도" data-full="public/images/architec/AID_아키텍쳐.png" data-caption="AID — 상세 아키텍처">
+              <figure class="arch" style="max-width:470px;">
+                <img src="public/images/architec/AID_아키텍쳐_요약.svg" alt="AID 시스템 아키텍처 요약도" data-full="public/images/architec/AID_아키텍쳐.svg" data-caption="AID — 상세 아키텍처">
                 <figcaption>🔍 클릭하면 상세 아키텍처를 크게 볼 수 있습니다</figcaption>
               </figure>
             </div>
@@ -460,6 +491,35 @@ const detections = (
             </div>
           </div>
 
+          <div class="panel" role="tabpanel">
+            <div class="retro">
+              <div class="retro-col">
+                <div class="retro-h good">잘한 점</div>
+                <ul>
+                  <li>GPU 메모리 누수를 직접 측정·audit해 <b>누적 0</b>으로 (README·Edge·커밋 3중 기록)</li>
+                  <li>4뷰 선택을 <b>단일 source of truth</b>로 설계</li>
+                  <li><b>순수 함수 분리</b>로 테스트성·변경 격리 확보</li>
+                </ul>
+              </div>
+              <div class="retro-col">
+                <div class="retro-h bad">아쉬운 점</div>
+                <ul>
+                  <li>단일 source of truth라면서 <b>키보드 객체 선택 불가</b>(접근성 모순)</li>
+                  <li>자주 고친 page.tsx·Viewer2D에 <b>RTL 테스트 0</b></li>
+                  <li>데이터 수천 개면 eager-enrich 블로킹 · 가상화/InstancedMesh 부재</li>
+                </ul>
+              </div>
+              <div class="retro-col">
+                <div class="retro-h next">지금 더 한다면</div>
+                <ul>
+                  <li><b>지금 당장</b>: Error Boundary·키보드 선택 / <b>데이터 커지면</b>: lazy enrich·InstancedMesh·가상화 (우선순위 구분)</li>
+                  <li>자주 바뀌는 <b>page.tsx·Viewer2D부터 RTL 테스트</b>로 보강</li>
+                  <li>KITTI 데이터셋 연동</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <div class="links" style="margin-top:26px;">
@@ -492,6 +552,7 @@ const detections = (
           <button class="tab-btn" role="tab" type="button">기능</button>
           <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
           <button class="tab-btn" role="tab" type="button">성능 · 결과</button>
+          <button class="tab-btn" role="tab" type="button">회고</button>
         </div>
         <div class="panels">
 
@@ -503,6 +564,10 @@ const detections = (
             <div class="blk">
               <div class="h">설계 포인트</div>
               <p class="lead"><b>상태 성격에 맞춰 도구를 분리</b>한 것이 핵심입니다 — 검색어·내비 같은 가벼운 전역 값은 <b>Recoil</b>, 예약처럼 단계별로 묶이는 상태는 <b>Redux Toolkit</b>, 서버 데이터(호텔·객실·리뷰·예약)는 <b>React Query</b>로 나눴습니다. 컴포넌트가 Firebase를 직접 부르지 않도록 <span class="kpi">remote → hooks(React Query) → components</span> 3계층으로 흐르게 구성했습니다.</p>
+              <figure class="arch">
+                <img src="public/images/architec/hotel_아키텍쳐_요약.svg" alt="JAPAN HOTEL RESERVATION 시스템 아키텍처 요약도" data-full="public/images/architec/hotel_아키텍쳐.svg" data-caption="JAPAN HOTEL RESERVATION — 상세 아키텍처">
+                <figcaption>🔍 클릭하면 상세 아키텍처를 크게 볼 수 있습니다</figcaption>
+              </figure>
             </div>
             <div class="meta">
               <div class="mi"><div class="k">PERIOD</div><div class="v">2025.04 ~ 2025.06</div></div>
@@ -652,6 +717,35 @@ const { from: startDate, to: endDate, nights, roomId, hotelId }
                 <li>Intersection Observer로 상세 데이터 호출을 미뤘더니(LCP 1.90→1.74s) <b>스크롤 중 스켈레톤이 떠 UX가 어색</b>해짐</li>
                 <li>"수치보다 사용자 경험이 먼저"라 판단해 일부 영역은 옵저버 대신 <b>컴포넌트 스플리팅</b>으로 전환 → LCP <b>1.60s</b></li>
               </ul>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="retro">
+              <div class="retro-col">
+                <div class="retro-h good">잘한 점</div>
+                <ul>
+                  <li><b>remote → hooks → UI</b> 단방향 책임 분리 (아키텍처 설계)</li>
+                  <li>성능 <b>직접 측정·기록</b> (번들 <b>4.7→1.5MB</b>, LCP <b>2.1→1.60s</b>)</li>
+                  <li>상태 <b>성격별 도구 분리</b> (RQ / Recoil / Redux)</li>
+                </ul>
+              </div>
+              <div class="retro-col">
+                <div class="retro-h bad">아쉬운 점</div>
+                <ul>
+                  <li>예약 생성 <b>트랜잭션 미적용</b> → <b>오버부킹</b> 가능</li>
+                  <li><b>테스트 코드 0</b></li>
+                  <li><b>라이브러리 이원화 잔재</b> (RQ v3+v5, Recoil+Redux)</li>
+                </ul>
+              </div>
+              <div class="retro-col">
+                <div class="retro-h next">지금 더 한다면</div>
+                <ul>
+                  <li>예약 생성/취소 <span class="kpi">runTransaction</span> 원자화</li>
+                  <li>가격 계산 <b>순수함수 추출</b> + Jest 테스트</li>
+                  <li>RQ <b>v5 일원화</b> + 단일 SSOT</li>
+                </ul>
+              </div>
             </div>
           </div>
 

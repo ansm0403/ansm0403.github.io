@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>회고 - JAPAN HOTEL RESERVATION</title>
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #2b2b2b;
+    padding: 48px 56px;
+  }
+
+  /* ── Heading ── */
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 56px;
+  }
+  .title .square {
+    width: 26px;
+    height: 26px;
+    background: #2f6b4f;
+    border-radius: 4px;
+  }
+  .title h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    border-bottom: 3px solid #2f6b4f;
+    padding-bottom: 4px;
+  }
+
+  /* ── Card grid ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .card {
+    border: 1px solid #e6e6e6;
+    border-radius: 16px;
+    padding: 24px 22px 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    min-height: 560px;
+  }
+
+  .card-header {
+    text-align: center;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 13px 0;
+    border-radius: 28px;
+    margin-bottom: 26px;
+  }
+
+  .header-good { background: #dff0e6; color: #2f7d4f; }
+  .header-bad  { background: #fbe6d2; color: #c9831f; }
+  .header-next { background: #f1eef0; color: #6a5d8a; }
+
+  ul { list-style: none; }
+  li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 22px;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #333;
+  }
+  li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #9a9a9a;
+  }
+  li b { font-weight: 700; color: #1f1f1f; }
+  .metric { color: #2f7d4f; font-weight: 700; }
+  .warn   { color: #c9831f; font-weight: 700; }
+  code {
+    font-family: 'D2Coding', Consolas, monospace;
+    background: #f4f4f4;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <div class="title">
+    <span class="square"></span>
+    <h1>회고</h1>
+  </div>
+
+  <div class="grid">
+    <!-- 잘한 점 -->
+    <div class="card">
+      <div class="card-header header-good">잘한 점</div>
+      <ul>
+        <li><b>remote → hooks → UI</b> 단방향 책임 분리로 컴포넌트가 Firebase를 직접 호출하지 않도록 설계 (DAL 계층화)</li>
+        <li>성능을 <b>직접 측정·기록</b> — 코드 스플리팅으로 번들 <span class="metric">4.7MB → 1.5MB</span>, LCP <span class="metric">2.1s → 1.48s</span></li>
+        <li>상태를 <b>성격에 맞춰</b> 분리 — 서버상태 React Query · 가벼운 전역 Recoil · 단계형 예약 흐름 Redux Toolkit</li>
+        <li>인증 구독 누수(<code>onAuthStateChanged</code>)를 발견해 <b>useEffect + cleanup</b>으로 수정하고 문서로 회수</li>
+        <li>TypeScript로 도메인 모델(Hotel·Room·Reservation·Review·User)을 <b>선설계</b>해 확장에도 안정적</li>
+      </ul>
+    </div>
+
+    <!-- 아쉬운 점 -->
+    <div class="card">
+      <div class="card-header header-bad">아쉬운 점</div>
+      <ul>
+        <li><b>테스트 코드 0</b> — 가격 계산이 <code>SubmitButton</code> 컴포넌트에 혼재돼 단위 테스트가 불가능</li>
+        <li>예약 생성이 <span class="warn">트랜잭션 미적용</span> — read→check→write가 분리돼 마지막 1실에서 <b>오버부킹</b> 가능</li>
+        <li><b>라이브러리 이원화 잔재</b> — react-query v3 + @tanstack v5 공존, Recoil + Redux 혼용(미사용 슬라이스)</li>
+        <li>에러/로딩 UI가 비일관 — <code>ErrorBoundary</code> · 404 · catch-all 라우트 부재 (Suspense fallback이 빈 화면)</li>
+        <li>새로고침 시 예약 상태(Recoil)가 <b>휘발</b>되어 직접 진입 시 크래시 위험, 접근성(a11y) 거의 미고려</li>
+      </ul>
+    </div>
+
+    <!-- 지금 더 한다면 -->
+    <div class="card">
+      <div class="card-header header-next">지금 더 한다면</div>
+      <ul>
+        <li><b>결제 임팩트 큰 것부터</b>: 예약 생성/취소를 <code>runTransaction</code>으로 원자화해 오버부킹 제거 (에뮬레이터 동시성 테스트)</li>
+        <li>가격 계산을 <b>순수 함수로 추출</b> 후 Jest로 인원·객실 경계 검증 → 핵심 흐름부터 테스트 도입</li>
+        <li>라이브러리 정리: react-query <b>v5로 일원화</b>, 전역 상태를 단일 SSOT로 통합</li>
+        <li>공통 <b>ErrorBoundary + 3-state(loading/empty/error) + NotFound</b> 표준화</li>
+        <li>예약 상태를 <b>sessionStorage·URL 쿼리스트링</b>으로 복원 가능하게 만들어 새로고침 안전성 확보</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
