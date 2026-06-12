@@ -152,6 +152,11 @@
   .ph-img svg{width:26px;height:26px;opacity:.5;margin-bottom:6px;}
   .ph-img.media{padding:0; min-height:0; border:1px solid var(--line); background:#fff; overflow:hidden; cursor:zoom-in;}
   .ph-img.media img{display:block; width:100%; height:auto;}
+  /* 풀폭 카드: 한 행 전체 차지. 내부는 상(GIF)/하(텍스트) 2분할 — 좌/우로 바꾸려면 .card-inner를 grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);로만 변경  */
+  .feat .card.wide{grid-column:1 / -1;}
+  .feat .card.wide .card-inner{ grid-template-columns:1fr;display:grid; gap:18px; align-items:start;}
+  .feat .card.wide .ph-img.media{align-self:start;}
+  @media(max-width:720px){.feat .card.wide .card-inner{grid-template-columns:1fr;}}
   .feat-more{margin-top:16px;}
   .feat-more .row{padding:12px 0; border-top:1px solid var(--line);}
   .feat-more .row .ft{font-size:14.5px;}

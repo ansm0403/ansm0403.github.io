@@ -368,9 +368,10 @@ const updated = await this.dataSource.transaction(
                 <div class="ft">4뷰 단일 source of truth 동기화</div>
                 <div class="fd">선택 상태를 4개로 나누지 않고 한 필드로 통일했습니다.</div>
                 <ul>
-                  <li>store의 <b>selectedObjectId 한 필드</b>를 4뷰가 공유</li>
-                  <li>각 뷰는 <b>slice selector</b>로 필요한 상태만 구독 → 불필요한 리렌더 최소화</li>
-                  <li>프레임 전환 시 handleSelectFrame: 같은 id면 no-op, 다르면 frame set + 선택 null (page 레이어 합성)</li>
+                  <li><b> 단일 source of truth — 선택 상태를 쪼개지 않음</b>2D·3D 뷰별로 selected2D/3DObjectId를 따로 두지 않고 store의 selectedObjectId 한 필드를 4뷰가 공유 — 어느 뷰에서 클릭해도 나머지가 같은 객체를 하이라이트</li>
+                  <li><b> slice selector 구독 — 불필요한 리렌더 차단</b>각 뷰가 useViewerStore((s) => s.필드)로 자기가 쓰는 슬라이스만 구독 → 무관한 상태(필터·프레임 등)가 바뀌어도 해당 뷰는 리렌더되지 않음
+</li>
+                  <li><b>프레임 전환 합성은 page 레이어에서</b>handleSelectFrame: 같은 id면 early-return(no-op), 다르면 프레임 set — 추적이 없는 COCO만 선택 해제, 추적되는 nuScenes는 선택 유지. store 액션은 단일 책임으로 두고 "언제 지울지"만 page가 합성</li>
                 </ul>
               </div>
               <div class="card">
@@ -378,10 +379,26 @@ const updated = await this.dataSource.transaction(
                 <div class="ft">3D 공간 렌더링 (Three.js + R3F)</div>
                 <div class="fd">라이브러리 기본 동작이 의도와 어긋나는 부분을 직접 오버라이드.</div>
                 <ul>
-                  <li>drei <b>&lt;Grid&gt; raycast를 no-op 오버라이드</b> — 그리드가 클릭을 가로채지 않게</li>
-                  <li>불가시 mesh + <b>THREE.DoubleSide</b>로 내부 시점 raycast 보강</li>
-                  <li>useFrame sin 펄스로 선택 강조 · Canvas key로 OrbitControls 리셋</li>
+                  <li><b>drei &lt;Grid&gt; raycast를 no-op 오버라이드</b> — infiniteGrid는 실제론 거대한 plane mesh라 raycast가 항상 그리드에 맞아 onPointerMissed가 안 터짐 → 마운트 시 grid.raycast = () => {}로 덮어써 빈 공간 클릭 → 선택 해제 계약을 복구</li>
+                  <li><b>불가시 mesh + THREE.DoubleSide로 내부 시점 raycast 보강</b> — 박스를 선(line segments)만으론 클릭하기 어려워, opacity 0인 꽉 찬 mesh를 겹쳐 raycast 타깃 확보 — THREE.DoubleSide로 카메라가 박스 안으로 들어와도 내부 시점에서 클릭이 등록됨</li>
+                  <li><b>useFrame sin 펄스로 선택 강조</b> — 선택된 박스를 1 + sin(t·freq)·amp 스케일로 매 프레임 맥동시켜 시선을 유도 — 별도 애니메이션 루프 없이 R3F 렌더 틱에 얹어 비용 없이 처리</li>
                 </ul>
+              </div>
+              <div class="card wide">
+                <div class="card-inner">
+                  <div class="ph-img media"><img src="public/images/func/AID_sequence_play.gif" alt="프레임 시퀀스 재생 — nuScenes 추적 + 키프레임 보간" data-full="public/images/func/AID_sequence_play.gif" data-caption="프레임 시퀀스 재생 — nuScenes 추적 + 키프레임 보간"></div>
+                  <div class="card-body">
+                    <div class="ft">프레임 시퀀스 재생 (nuScenes 추적 + 키프레임 보간)</div>
+                    <div class="fd">정지된 키프레임 묶음을 "실제로 움직이는 시퀀스"처럼 보이게 만드는 게 핵심이었습니다. 데이터의 진짜 측정 간격(0.5초)과 화면 렌더링 속도(60fps) 사이의 간극을 메우면서도, 보간으로 만들어낸 중간값을 실측값처럼 속이지 않도록 설계했습니다.</div>
+                    <ul>
+                      <li><b>재생 로직을 React 밖 순수 함수로 분리</b> — 다음 프레임 인덱스를 계산하는 nextFrameIndex는 React·store·Three.js를 일절 모르는 순수 함수로 빼서 단위 테스트로 검증. 빈 시퀀스·범위를 벗어난 stale 인덱스도 방어해 타이머가 배열 밖을 가리키는 일이 없게 처리.</li>
+                      <li><b>stale closure 회피</b> — setInterval(500ms ≈ 실제 nuScenes 2Hz 주기)이 매 tick마다 클로저에 갇힌 값 대신 store.getState()로 현재 프레임을 직접 읽음. 프레임이 진행돼도 타이머가 낡은 상태를 참조하지 않음.</li>
+                      <li><b>2계층 시계 — 키프레임 스냅 위에 부드러운 보간</b> — 0.5초 간격 키프레임을 매번 끊어 보여주는 대신, useFrame으로 현재→다음 키프레임 pose를 보간. 위치는 lerp, 회전은 최단 호를 따르는 slerp로 블렌딩해 박스가 자연스럽게 이동.</li>
+                      <li><b>"측정값"의 정직성 유지</b> — 보간된 중간 pose는 실측이 아니므로, tween은 재생 중에만 동작하고 일시정지·스크럽 시엔 정확한 키프레임(t=0/t=1에서 끝점 그대로)을 표시. "Measured" 뱃지는 항상 실측 키프레임만 가리킴.</li>
+                      <li><b>추적이 성립하는 데이터에만 재생 UI 노출</b> — nuScenes는 instance id가 프레임 간 유지(track id)되어 재생이 진짜 움직임이 되지만, COCO는 프레임이 서로 독립이라 재생이 무의미한 슬라이드쇼. 그래서 재생/팔로우 컨트롤은 nuScenes에서만 렌더링하고, 진행 시에도 추적 중인 selectedObjectId를 유지(COCO의 프레임 전환과 달리 선택을 초기화하지 않음).</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="feat-more">
