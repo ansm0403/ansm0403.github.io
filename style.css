@@ -156,7 +156,9 @@
   .feat .card.wide{grid-column:1 / -1;}
   .feat .card.wide .card-inner{ grid-template-columns:1fr;display:grid; gap:18px; align-items:start;}
   .feat .card.wide .ph-img.media{align-self:start;}
-  @media(max-width:720px){.feat .card.wide .card-inner{grid-template-columns:1fr;}}
+  /* .lr: 이 풀폭 카드만 좌(GIF)/우(텍스트) 2분할 (E-커머스 결제). 기본 .wide는 상/하 유지 */
+  .feat .card.wide.lr .card-inner{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);}
+  @media(max-width:720px){.feat .card.wide .card-inner,.feat .card.wide.lr .card-inner{grid-template-columns:1fr;}}
   .feat-more{margin-top:16px;}
   .feat-more .row{padding:12px 0; border-top:1px solid var(--line);}
   .feat-more .row .ft{font-size:14.5px;}

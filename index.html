@@ -152,9 +152,10 @@
                 <div class="ft">관리자 KPI 대시보드</div>
                 <div class="fd">매출·주문·전환 펀넬 등 운영 지표를 한 화면에서 봅니다.</div>
                 <ul>
-                  <li>ECharts <b>4종</b>(이중 Y축 라인·3-line stack·Funnel·KPI 카드)</li>
-                  <li>차트별 <b>staleTime 4단계 차등</b>(KPI 1분·주문/보안 5분·펀넬 10분) — 변경 빈도에 맞춰 재요청·백엔드 부하 절감</li>
-                  <li><b>dynamic(ssr:false)</b> 코드 스플리팅 — 대시보드 First Load JS 138kB(홈 145kB보다 가벼움)</li>
+                  <li><b>ECharts 4종</b> — 이중 Y축 라인(주문수·결제금액) · 3-line stack(보안) · Funnel(결제전환) · KPI 카드로 핵심 지표 시각화.</li>
+                  <li><b>staleTime 4단계 차등</b> — KPI 1분 · 주문/보안 5분 · 펀넬 10분 + 포커스 재요청 차단으로, 변경 빈도에 맞춰 재요청·부하절감</li>
+                  <li><b>단일 SQL 다중 집계</b> — KPI 6개 지표를 서브쿼리로 묶어 DB 라운드트립 1회로 처리.</li>
+                  <li><b>dynamic(ssr:false) 코드 스플리팅</b> — window/canvas 의존 ECharts를 서버 번들에서 제외해 SSR 에러 차단 + 대시보드 First Load JS 138kB(홈 145kB보다 가벼움).</li>
                 </ul>
               </div>
               <div class="card">
@@ -162,14 +163,31 @@
                 <div class="ft">JWT 인증 + 멀티탭 동기화</div>
                 <div class="fd">토큰을 메모리에만 둬도 새 탭에서 로그인이 유지됩니다.</div>
                 <ul>
-                  <li><b>Access=메모리 / Refresh=httpOnly</b> 회전 — XSS로 access 탈취 방지 + refresh JS 접근 차단</li>
-                  <li><b>BroadcastChannel</b>로 새 탭이 다른 탭에 토큰 요청(REQUEST/RESPONSE) → 세션 인계, 로그아웃은 전 탭 전파</li>
-                  <li>컴포넌트 axios 직접 호출 <b>0건</b> — public/auth 클라이언트 분리로 공개 호출에 토큰 누출 방지</li>
+                  <li><b>Access=메모리 / Refresh=httpOnly 쿠키 회전</b> — access는 탭 단위 격리(rememberMe 시 localStorage), refresh는 JS 접근 차단으로 XSS 탈취 방지.</li>
+                  <li><b>BroadcastChannel 세션 인계</b> — 새 탭이 REQUEST_TOKEN을 보내면 기존 탭이 TOKEN_RESPONSE로 토큰을 넘겨 재로그인 없이 세션 동기화.</li>
+                  <li><b>전 탭 동시 로그아웃</b> — 로그아웃을 브로드캐스트해 모든 탭을 동시 종료(보안 ↔ UX 트레이드오프).</li>
+                  <li><b>컴포넌트 axios 직접 호출 0건</b> — public/auth 클라이언트 분리로 공개 호출에 토큰 누출 방지</li>
                 </ul>
+              </div>
+              <div class="card wide lr">
+                <div class="card-inner">
+                  <div class="ph-img media"><img src="public/images/func/E-commerce-payment.gif" alt="결제 흐름 — PortOne V2 결제창 + 서버 금액 검증 + 재고 동기화" data-full="public/images/func/E-commerce-payment.gif" data-caption="PortOne V2 결제 — 서버 검증 + 재고 동기화 + 자동 환불">결제 도중 정지되어있는 화면이 gif 파일 오류라고 생각하실까봐 마우스를 움직였습니다.</div>
+                  <div class="card-body">
+                    <div class="ft">PortOne V2 결제 — 서버 검증 + 재고 동기화 + 자동 환불</div>
+                    <div class="fd">장바구니에서 주문을 생성하면 PortOne V2 SDK가 결제창을 열고, 결제 완료 후 서버가 PortOne API를 직접 호출해 금액·상태를 검증합니다. 결제 성공 시 주문이 확정되고 재고가 차감되며, 실패·취소·30분 초과 시 자동으로 재고가 복원됩니다.</div>
+                    <ul>
+                      <li><b>3단계 결제 흐름</b> — 주문 생성(Order PENDING_PAYMENT + Payment READY) → PortOne SDK 결제창 → 서버 검증(POST /payments/verify) 순서로 처리. 프론트와 백엔드가 각각 독립적으로 결제 사실을 확인.</li>
+                      <li><b>금액 위변조 방지</b> — verifyPayment에서 DB에 저장된 주문 금액과 PortOne API 조회 결과를 비교. 불일치 시 즉시 PortOne에 취소 요청을 보내고 BadRequestException 반환.</li>
+                      <li><b>주문 자동 만료 Cron</b> — 10분마다 실행. 30분 이상 PENDING_PAYMENT인 주문을 CANCELLED로 전환하고 재고를 복원. 이후 웹훅이 뒤늦게 도착해도 자동 환불 로직이 처리.</li>
+                      <li><b>자동 환불</b> — 웹훅 도착 시점에 주문이 이미 만료·취소 상태이면 PortOne 취소 API를 즉시 호출해 유령 결제를 차단. 금액 위변조 감지 시에도 동일 경로로 자동 취소.</li>
+                      <br><br>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="feat-more">
-              <div class="row"><div class="ft">3역할 멀티 셀러 오픈마켓</div><div class="fd">구매자·판매자·관리자를 Route Group 3개((auth) / (main) / (admin))로 분리. 상품 등록 → 관리자 승인 검수 → 노출, 한 주문의 여러 판매자 상품을 배송 단위로 분리.</div></div>
+              <div class="row"><div class="ft">3-Role(역할) 멀티 셀러 오픈마켓</div><div class="fd">구매자·판매자·관리자를 Route Group 3개((auth) / (main) / (admin))로 분리. 상품 등록 → 관리자 승인 검수 → 노출, 한 주문의 여러 판매자 상품을 배송 단위로 분리.</div></div>
               <div class="row"><div class="ft">SSR/ISR + React Query Hydration</div><div class="fd">상품 상세는 ISR(revalidate)로 TTFB를 낮추고, isServer 분기 QueryClient + prefetch → dehydrate → HydrationBoundary로 초기 로딩 깜빡임 제거. queryOptions 팩토리로 쿼리 키·옵션을 한 곳에서 관리.</div></div>
               <div class="row"><div class="ft">통합 검색 (키워드 + 카테고리 + 정렬)</div><div class="fd">태그가 M:N으로 연결된 상품 검색에서 JOIN 행 중복을 DISTINCT로 제거하고, 정렬 컬럼을 addSelect로 끌어와 정렬과 distinct를 양립. 페이지네이션은 커서 방식.</div></div>
             </div>
