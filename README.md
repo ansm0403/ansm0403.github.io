@@ -56,7 +56,6 @@ portfolio_page/
             ├── hotel_reservation.gif
             └── hotel_detail.gif
 ```
-
 ---
 
 
