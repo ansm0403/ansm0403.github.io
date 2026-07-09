@@ -42,7 +42,7 @@ portfolio_page/
 └── public/
     └── images/
         ├── favicon.ico
-        ├── 안상문_이력서.png
+        ├── 안상문_이력서사진.png
         ├── architec/               # 프로젝트 아키텍처 다이어그램
         │   ├── E-commerce_아키텍쳐.png
         │   ├── E-commerce_아키텍쳐_요약.png
