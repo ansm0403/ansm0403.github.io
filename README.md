@@ -48,6 +48,8 @@ portfolio_page/
         │   ├── E-commerce_아키텍쳐_요약.png
         │   ├── AID_아키텍쳐.png
         │   └── AID_아키텍쳐_요약.png
+        │   ├── hotel_reservation_아키텍쳐.png
+        │   └── hotel_reservation_아키텍쳐_요약.png
         └── func/                   # 기능 GIF 스크린샷
             ├── E-commerce_dashboard_screenshot.gif
             ├── E-commerce-login-sync.gif
