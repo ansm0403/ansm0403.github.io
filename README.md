@@ -61,7 +61,6 @@ portfolio_page/
 ```
 ---
 
-
 ## 색상 변수 (CSS Custom Properties)
 
 | 변수 | 값 | 용도 |
