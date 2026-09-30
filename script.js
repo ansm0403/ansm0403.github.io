@@ -32,7 +32,7 @@
     var navLinks = Array.from(document.querySelectorAll('.nav nav a')).filter(function (a) { return a.getAttribute('href').charAt(0) === '#'; });
     var map = {};
     navLinks.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
-    var sectionIds = ['about', 'competency', 'stack', 'projects'];
+    var sectionIds = ['about', 'competency', 'stack', 'projects', 'ai'];
     var headerEl = document.querySelector('header.nav');
     function syncActiveNav() {
       var headerH = headerEl ? headerEl.offsetHeight : 0;

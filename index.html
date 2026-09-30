@@ -22,6 +22,7 @@
       <a href="#competency">역량</a>
       <a href="#stack" class="hide-sm">기술</a>
       <a href="#projects">프로젝트</a>
+      <a href="#ai">AI 활용</a>
       <a href="https://github.com/ansm0403" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
   </div>
@@ -42,8 +43,8 @@
           </ul>
         </div>
         <div class="role">신입 프론트엔드 개발자</div>
-        <p class="tag">"왜 이렇게 동작할까"를 쉽게 넘기지 못해, 원인까지 따라가 보는 프론트엔드 개발자입니다.</p>
-        <p class="intro">인증 동시성·결제 정합성·GPU 메모리 누수처럼 그냥 지나칠 수도 있던 문제를 들여다본 기록이 조금씩 쌓였습니다. 새로운 도메인은 문서로 정리해 다음에 볼 사람도 이해할 수 있게 남기고, 성과는 '얼마나'보다 '어떻게 측정했는지'를 함께 적어두려 합니다.</p>
+        <p class="tag">읽기 어려운 데이터를 판단할 수 있는 화면으로 옮기는 프론트엔드 개발자입니다.</p>
+        <p class="intro">좌표·숫자·에러 스택처럼 사람이 바로 읽기 어려운 데이터를 판단할 수 있는 화면으로 옮깁니다. AI 탐지 결과를 2D·3D로 탐색하는 뷰어, 3개 역할이 같은 데이터를 각자의 시점으로 보는 이커머스, 그 운영 에러를 AI가 분석하고 사람이 폰에서 채점하는 앱을 직접 만들어 배포·운영 중입니다. 배포한 다음에는 일부러 깨뜨려 보며 정말 동작하는지 확인하고, AI 산출물도 검증 장치를 먼저 세운 뒤에만 믿습니다.</p>
         <div class="links">
           <a class="btn dark" href="https://github.com/ansm0403" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
@@ -59,25 +60,23 @@
       </div>
     </div>
     <div class="stats">
-      <div class="stat"><div class="v">3개</div><div class="l">대표 프로젝트 (단독 개발, <br> 포트폴리오에 작성한 수)</div></div>
-      <div class="stat"><div class="v">98.8 · 93</div><div class="l">Lighthouse 성능</div></div>
-      <div class="stat"><div class="v">−91%</div><div class="l">홈 LCP (33.7s→3.0s)</div></div>
-      <div class="stat"><div class="v">누적 0</div><div class="l">GPU 메모리 누수</div></div>
-      <div class="stat"><div class="v">99개</div><div class="l">단위 테스트 (순수함수)</div></div>
+      <div class="stat"><div class="v">33.7s → 3.0s</div><div class="l">홈 LCP<br>(모바일 Slow 4G)</div></div>
+      <div class="stat"><div class="v">0 → 6/6</div><div class="l">API 장애가 Sentry에<br>도착한 비율</div></div>
+      <div class="stat"><div class="v">24 → 0</div><div class="l">구매 흐름<br>접근성 위반 (axe)</div></div>
+      <div class="stat"><div class="v">49 → 4~12</div><div class="l">GPU geometry 누적<br>(누적 0으로 안정)</div></div>
+      <div class="stat"><div class="v">98.8 · 93</div><div class="l">Lighthouse 성능<br>(AI 뷰어 · E-커머스 홈)</div></div>
     </div>
   </div>
 </section>
 
 <section class="divider" id="competency">
   <div class="wrap">
-    <h2 class="sec">핵심 역량 / Core Competencies</h2>
+    <h2 class="sec">핵심 역량 / Core Competencies — 만들고, 깨뜨려 보고, 숫자로 확인합니다</h2>
     <div class="comp">
-      <div><div class="t"><span class="num">01</span>문제 해결력 (PAAR)</div><div class="d">동시성·정합성·메모리 누수 같은 비자명한 문제를 재현 → 분석 → 방어 → 회귀 테스트까지 닫습니다.</div></div>
-      <div><div class="t"><span class="num">02</span>측정 기반 성과</div><div class="d">홈 LCP 33.7s→3.0s(−91%), GPU geometry 누수 49→누적 0 등 모든 결과를 측정 방법과 함께 기록합니다.</div></div>
-      <div><div class="t"><span class="num">03</span>프론트엔드 깊이</div><div class="d">TanStack Query · Three.js · Next.js를 핵심으로, 선택 이유를 설명할 수 있는 수준까지 다뤘습니다. strict TypeScript 기반.</div></div>
-      <div><div class="t"><span class="num">04</span>AI 워크플로우 통합</div><div class="d">tsc 훅 · 서브에이전트 병렬화 · Playwright MCP 시각 검증을 실제 프로젝트에 적용했습니다.
-  단순한 작업 단순화 도구뿐 아니라, 설계 → 체크리스트 → 구현 → 검증 → 문서화 워크플로우를 수립하여
-  개발 사이클 전반을 체계적으로 운영한 경험도 있습니다.</div></div>
+      <div><div class="t"><span class="num">01</span>화면 설계 — 상태를 어디에 둘지부터 정합니다</div><div class="d">AI 뷰어에서는 4개 뷰가 선택 상태 하나(selectedObjectId)를 공유하게 설계했고, 관리자 대시보드는 차트마다 "이 차트가 답할 질문"부터 정한 뒤 그렸습니다. 운영 앱의 스와이프 채점은 서버 응답을 기다리지 않고 넘기되, 실패하면 목록 전체가 아니라 <b>실패한 카드 한 장만</b> 되돌립니다.</div></div>
+      <div><div class="t"><span class="num">02</span>측정과 재현 — 고치기 전에 깨지는 것부터 기록합니다</div><div class="d">Sentry에 장애가 안 잡히는 원인을 대조군 실험(A/B/C)으로 특정했고, 접근성은 수정 전후를 같은 스크립트로 재서 axe 위반 24→0을 확인했습니다. 화면 버그는 재현 스크립트로 <b>수정 전 5/5 깨짐</b>을 먼저 찍어 두고, 고친 뒤 5/5 정상으로 증명했습니다.</div></div>
+      <div><div class="t"><span class="num">03</span>운영 — 배포한 뒤에 일부러 깨뜨려 봅니다</div><div class="d">백엔드를 16분 내려 보는 장애 실험, 운영 결제 7건에서 웹훅과 verify의 경합 실측(nginx 밀리초 로그·백엔드 로그·감사 로그 대조), 에러가 폰 푸시로 도착하기까지의 경로 연결을 직접 해 봤습니다. 프론트는 Vercel, API는 EC2의 nginx/HTTPS 뒤에서 운영 중입니다.</div></div>
+      <div><div class="t"><span class="num">04</span>AI 검증 — 검증 장치를 세운 뒤에만 믿습니다</div><div class="d">사내 데이터 LLM은 골든셋 평가 스크립트로 도구 선택 16/17→17/17을 확인했고, 승인 14/14라는 좋은 숫자를 의심해 채점 도구 자체를 고쳤습니다. Claude Code와 협업한 과정은 같은 형식의 기록 6건으로 남겼습니다(<a href="#ai" style="color:var(--p);font-weight:600;">AI 활용 ↓</a>).</div></div>
     </div>
   </div>
 </section>
@@ -85,12 +84,14 @@
 <section class="divider" id="stack">
   <div class="wrap">
     <h2 class="sec">기술 스택 / Tech Stack</h2>
-    <div class="tech-row"><div class="cat">Frontend</div><div class="val"><span class="techs">React · Next.js (App Router) · TypeScript(strict) · Tailwind+CVA · Emotion</span><span class="desc">RSC/Client 분리, 컴포넌트·custom hook 분리, API 응답·props 타입 정의, 반응형 레이아웃</span></div></div>
-    <div class="tech-row"><div class="cat">상태 · 데이터</div><div class="val"><span class="techs">TanStack Query · Zustand · Recoil · Redux Toolkit</span><span class="desc">서버 상태 캐싱·loading/error 처리·staleTime 차등, 여러 뷰의 단일 선택 상태 공유, 상태 성격에 맞는 도구 분리</span></div></div>
-    <div class="tech-row"><div class="cat">3D · 시각화</div><div class="val"><span class="techs">Three.js · React Three Fiber · drei · ECharts · @visx · SVG</span><span class="desc">포인트클라우드·wireframe bbox 렌더, GPU 메모리 dispose 관리, 차트·SVG 오버레이 좌표 매핑</span></div></div>
-    <div class="tech-row"><div class="cat">인증 · 보안 (직접 설계)</div><div class="val"><span class="techs">JWT 회전(메모리 access / httpOnly refresh) · BroadcastChannel · CSP</span><span class="desc">라이브러리 없이 토큰 회전·401 큐·멀티탭 동기화를 직접 구현</span></div></div>
-    <div class="tech-row"><div class="cat">테스트</div><div class="val"><span class="techs">Vitest</span><span class="desc">순수 함수 단위 테스트 — 엣지케이스 문서와 1:1 매핑</span></div></div>
-    <div class="tech-row"><div class="cat">백엔드 · 인프라 (보조)</div><div class="val"><span class="techs">NestJS · PostgreSQL+TypeORM · Firebase(Firestore) · Docker · Vercel · Git</span><span class="desc">도메인 모듈 분리, 빌드·배포 파이프라인 직접 구축·운영, 브랜치·PR·CI — 핵심 개념 이해·코드 리뷰 가능 수준(풀스택 학습 범위)</span></div></div>
+    <div class="tech-row"><div class="cat">Frontend</div><div class="val"><span class="techs">React · Next.js 15/16 (App Router) · TypeScript(strict) · Zod · Tailwind+CVA</span><span class="desc">상품 상세를 RSC + prefetch + ISR로 바꿔 LCP·TTFB 개선, z.infer로 검증과 타입을 한 곳에서 관리, CVA variants 9종으로 UI 토큰화, 390px 기준 9개 라우트 넘침 0</span></div></div>
+    <div class="tech-row"><div class="cat">모바일</div><div class="val"><span class="techs">React Native (Expo) · Expo Router · Reanimated · Gesture Handler</span><span class="desc">푸시·딥링크·생체 잠금·스와이프 제스처처럼 웹으로는 안 되는 것만 앱에 담음. Stack.Protected로 로그인 분기, 같은 RN 코드의 웹 빌드로 체험판 제공</span></div></div>
+    <div class="tech-row"><div class="cat">상태 · 데이터</div><div class="val"><span class="techs">TanStack Query 5 · Zustand 5</span><span class="desc">staleTime을 데이터가 바뀌는 빈도에 맞춰 차등, 서버 상태는 Query·나머지는 로컬 상태로 충분하면 전역 라이브러리를 쓰지 않음, 4개 뷰가 공유하는 76줄 단일 스토어</span></div></div>
+    <div class="tech-row"><div class="cat">3D · 시각화</div><div class="val"><span class="techs">Three.js · React Three Fiber · drei · ECharts · SVG</span><span class="desc">포인트클라우드·wireframe bbox 렌더, GPU geometry dispose 관리, ECharts next/dynamic 분리(598→261 kB), 요소가 적은 차트는 SVG·CSS로 직접</span></div></div>
+    <div class="tech-row"><div class="cat">인증 · 보안 (직접 설계)</div><div class="val"><span class="techs">JWT 회전(메모리 access / httpOnly refresh) · BroadcastChannel · BFF · CSP</span><span class="desc">회전과 401 큐를 직접 다루려고 인증 라이브러리 없이 구현, 새 탭 세션 인계·전 탭 로그아웃, 브라우저는 Vercel rewrites로 같은 출처 호출</span></div></div>
+    <div class="tech-row"><div class="cat">관측 · AI</div><div class="val"><span class="techs">Sentry · LLM 도구 호출(Tool use) · SSE 스트리밍 · LLM-judge 평가</span><span class="desc">프론트·백엔드·앱 3개 Sentry 프로젝트와 소스맵, 처리된 API 에러 직접 보고, 기존 서비스 6종을 LLM 도구로 노출, 골든셋 20문항 평가 러너</span></div></div>
+    <div class="tech-row"><div class="cat">테스트 · 접근성</div><div class="val"><span class="techs">Jest · Vitest · Playwright · axe-core · NVDA</span><span class="desc">동시 401·모달 포커스 단위 테스트, 순수 함수 203개 테스트, page.route로 응답만 깨뜨리는 재현 스크립트, axe + 키보드 스크립트로 수정 전후 동일 측정</span></div></div>
+    <div class="tech-row"><div class="cat">백엔드 · 인프라 (보조)</div><div class="val"><span class="techs">NestJS · PostgreSQL+TypeORM · Redis · Nx+Yarn 4 · Docker · nginx+Let's Encrypt · Vercel · AWS EC2</span><span class="desc">결제 트랜잭션·비관적 락, 마이그레이션으로만 스키마 변경, 프론트·백엔드 타입 공유와 바뀐 프로젝트만 CI — 핵심 개념 이해·코드 리뷰 가능 수준(풀스택 학습 범위)</span></div></div>
   </div>
 </section>
 
@@ -103,19 +104,19 @@
       <summary>
         <div class="sum-top">
           <span class="sum-num">01</span>
-          <span class="sum-name">E-커머스 쇼핑몰</span>
+          <span class="sum-name">멀티 셀러 E-커머스</span>
           <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </div>
-        <div class="sum-one">구매자·판매자·관리자 3개 역할로 분리한 멀티 셀러 오픈마켓 풀스택 — 인증/결제 정합성을 설계 단계부터 직접 해결.</div>
+        <div class="sum-one">구매자·판매자·관리자 3개 역할이 상품 등록 → 승인 → 결제 → 정산 흐름을 나눠 쓰는 오픈마켓. 배포 후 운영하면서 깨진 것을 재현하고 고쳤습니다 — 사내 데이터 LLM · Sentry 무음 장애 · 결제 경합. <b style="color:var(--p);">운영 중</b></div>
         <div class="sum-meta">
-          <span class="pill">Next.js</span><span class="pill">TanStack Query</span><span class="pill">JWT 인증 설계</span>
-          <span class="kpi">홈 LCP <b>33.7s→3.0s (−91%)</b></span>
+          <span class="pill">Next.js 15</span><span class="pill">TanStack Query</span><span class="pill">JWT 인증 설계</span><span class="pill">Sentry</span><span class="pill">nginx/HTTPS</span>
+          <span class="kpi">홈 LCP <b>33.7s→3.0s</b> · Sentry 도달 <b>0→6/6</b> · axe <b>24→0</b></span>
         </div>
         <div class="expand-hint">▾ 클릭해서 개요 · 기능 · 트러블슈팅 · 성능 펼쳐 보기</div>
       </summary>
 
       <div class="body">
-        <div class="tabs" role="tablist" aria-label="E-커머스 쇼핑몰 상세">
+        <div class="tabs" role="tablist" aria-label="멀티 셀러 E-커머스 상세">
           <button class="tab-btn active" role="tab" type="button">개요</button>
           <button class="tab-btn" role="tab" type="button">기능</button>
           <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
@@ -127,147 +128,271 @@
           <div class="panel active" role="tabpanel">
             <div class="blk">
               <div class="h">Overview</div>
-              <p class="lead">여러 판매자가 한 플랫폼에 입점하는 <b>멀티 셀러 오픈마켓</b>입니다. 판매자가 등록한 상품을 관리자가 승인해야 노출되고, 한 주문에 여러 판매자 상품이 섞이므로 <b>배송과 정산을 판매자별로 분리</b>해야 합니다. 여기에 PortOne V2 결제·정산·관리자 KPI 대시보드까지 이커머스 전체 흐름을 1인 풀스택(프론트·백·인프라)으로 구현했습니다. <span style="color:var(--hint)">본 포트폴리오는 프론트엔드 직무 기준으로 서술하며, 백엔드·인프라는 보조로 둡니다.</span></p>
+              <p class="lead">여러 판매자가 한 플랫폼에 입점하는 <b>멀티 셀러 오픈마켓</b>입니다. 판매자가 등록한 상품은 관리자가 승인해야 게시되고, 한 주문에 여러 판매자 상품이 섞이므로 <b>배송과 정산을 판매자별로 분리</b>해야 합니다. 상품 등록 → 관리자 승인 = 게시 → 주문 → 결제 → 판매자별 배송 → 구매 확정 → 정산까지 이커머스 전체 흐름을 1인 풀스택으로 구현했고, <b>배포 후 실제로 운영하면서</b> 관리자 AI 어시스턴트(사내 데이터 LLM), Sentry 관측, nginx/HTTPS, 접근성 개선을 더했습니다. <span style="color:var(--hint)">본 포트폴리오는 프론트엔드 직무 기준으로 서술하며, 백엔드·인프라는 보조로 둡니다.</span></p>
             </div>
             <div class="blk">
-              <div class="h">시스템 구조</div>
-              <p class="lead">프론트(Vercel·Next.js)는 <b>Vercel rewrites 프록시</b>를 거쳐 백엔드(EC2·NestJS)를 같은 출처처럼 호출합니다 — cross-domain 쿠키 문제와 App Router의 <span class="kpi">cookies().set()</span> 제약을 동시에 우회하기 위한 선택입니다. 인증은 <b>Access=메모리 / Refresh=httpOnly 쿠키 회전</b>에 <b>Edge → Server → Client 3중 방어</b>를 적용했고, 데이터는 RSC에서 prefetch → dehydrate → HydrationBoundary로 넘긴 뒤 TanStack Query가 캐시·무효화를 담당합니다.</p>
+              <div class="h">시스템 구조 — 브라우저는 같은 출처로, 앱과 웹훅은 직접</div>
+              <p class="lead">브라우저가 EC2를 직접 부르면 도메인이 달라 refresh 쿠키가 어긋납니다. 그래서 브라우저는 <b>Vercel rewrites로 /api/*를 같은 출처처럼</b> 부르고, 로그인·갱신·로그아웃은 Next.js BFF가 쿠키를 처리합니다. API는 <b>EC2의 nginx(TLS 종료·Let's Encrypt) 뒤</b>에서 NestJS로 운영하며, nginx/HTTPS를 도입할 때도 브라우저 경로는 그대로 두었습니다. PortOne 결제 웹훅(웹훅 경로만 IP 허용)과 React Native 운영 앱(쿠키 없이 토큰)은 nginx로 직접 들어옵니다. 이 구조 때문에 <b>브라우저 경로가 한 홉 더 길어</b> 결제 확정에서 경합이 기본값이 되었고, 이를 트러블슈팅 ③에서 다룹니다. 인증은 <b>Access=메모리 / Refresh=httpOnly 쿠키 회전</b>, 데이터는 RSC에서 prefetch → dehydrate → HydrationBoundary로 넘긴 뒤 TanStack Query가 캐시·무효화를 담당합니다.</p>
               <figure class="arch">
-                <img src="public/images/architec/E-commerce_아키텍쳐_요약.svg" alt="E-커머스 시스템 아키텍처 요약도" data-full="public/images/architec/E-commerce_아키텍쳐.svg" data-caption="E-커머스 쇼핑몰 — 상세 아키텍처">
+                <img src="public/images/architec/E-commerce_아키텍쳐_요약.svg" alt="E-커머스 시스템 아키텍처 요약도 — 브라우저, Vercel, nginx·EC2, NestJS, PostgreSQL·Redis, PortOne, 운영 앱, Sentry" data-full="public/images/architec/E-commerce_아키텍쳐.svg" data-caption="멀티 셀러 E-커머스 — 상세 아키텍처">
                 <figcaption>🔍 클릭하면 상세 아키텍처를 크게 볼 수 있습니다</figcaption>
               </figure>
             </div>
+            <div class="blk">
+              <div class="h">기술 선택 — 기술마다 먼저 풀어야 할 문제가 있었습니다</div>
+              <ul class="factlist">
+                <li><b>Next.js 15 App Router</b> — 상품 상세를 RSC + prefetch + ISR로 바꿔 LCP와 TTFB를 함께 개선</li>
+                <li><b>TanStack Query 5</b> — 무효화가 잦은 도메인. staleTime을 데이터가 바뀌는 빈도에 맞춰 차등</li>
+                <li><b>TypeScript strict + Zod</b> — z.infer로 검증과 타입을 한 곳에서 관리</li>
+                <li><b>Tailwind + CVA</b> — variants 9종으로 UI를 토큰화해 빠르게 반복</li>
+                <li><b>JWT 직접 설계 · BroadcastChannel</b> — 회전과 401 큐를 직접 다루려고 인증 라이브러리 없이 구현, 메모리에만 있는 토큰을 새 탭에 전달</li>
+                <li><b>Sentry</b> — 프론트·백엔드·앱 3개 프로젝트, 소스맵으로 원본 줄 번호 확인</li>
+                <li><b>NestJS · PostgreSQL · Redis / Nx + Yarn 4</b> — 도메인이 많고 결제에서 트랜잭션 제어가 필요. 모노레포로 프론트·백엔드 타입 공유, 바뀐 프로젝트만 CI</li>
+                <li><b>쓰지 않은 것 · 클라이언트 상태 라이브러리</b> — 서버 상태는 Query, 나머지는 로컬 상태로 충분했습니다</li>
+              </ul>
+            </div>
             <div class="meta">
-              <div class="mi"><div class="k">PERIOD</div><div class="v">2025.11 ~ 2026.04 </div></div>
-              <div class="mi"><div class="k">ROLE</div><div class="v">1인 단독 (기획·설계·구현·배포)</div></div>
-              <div class="mi"><div class="k">STACK</div><div class="v">Next.js · TanStack Query · NestJS · postgreSQL · Nx</div></div>
-              <div class="mi"><div class="k">DEPLOY</div><div class="v">Vercel(FE) · AWS EC2 t3.small(BE)</div></div>
+              <div class="mi"><div class="k">PERIOD</div><div class="v">2025.10 ~ 2026.09 (운영 중)</div></div>
+              <div class="mi"><div class="k">ROLE</div><div class="v">1인 · 프론트 주력 풀스택</div></div>
+              <div class="mi"><div class="k">STACK</div><div class="v">Next.js · TanStack Query · NestJS · PostgreSQL · Redis · Nx</div></div>
+              <div class="mi"><div class="k">DEPLOY</div><div class="v">Vercel(FE) · EC2 + Docker · nginx/HTTPS · Sentry</div></div>
             </div>
           </div>
 
           <div class="panel" role="tabpanel">
             <div class="feat">
               <div class="card">
-                <div class="ph-img media"><img src="public/images/func/E-commerce_dashboard_screenshot.gif" alt="관리자 KPI 대시보드 — KPI 카드 + 이중 Y축 라인 + Funnel" data-full="public/images/E-commerce_dashboard_screenshot.gif" data-caption="관리자 KPI 대시보드 — ECharts 4종 + staleTime 차등"></div>
+                <div class="ph-img media"><img src="public/images/func/E-commerce_dashboard_screenshot.gif" alt="관리자 KPI 대시보드 — KPI 카드 + 주문 추이 + 이중 Y축 보안 차트 + 결제 전환 퍼널" data-full="public/images/func/E-commerce_dashboard_screenshot.gif" data-caption="관리자 KPI 대시보드 — 차트마다 답할 질문을 먼저 정함"></div>
                 <div class="ft">관리자 KPI 대시보드</div>
-                <div class="fd">매출·주문·전환 펀넬 등 운영 지표를 한 화면에서 봅니다.</div>
+                <div class="fd">차트마다 "이 차트가 답할 질문"을 먼저 정했습니다.</div>
                 <ul>
-                  <li><b>ECharts 4종</b> — 이중 Y축 라인(주문수·결제금액) · 3-line stack(보안) · Funnel(결제전환) · KPI 카드로 핵심 지표 시각화.</li>
-                  <li><b>staleTime 4단계 차등</b> — KPI 1분 · 주문/보안 5분 · 펀넬 10분 + 포커스 재요청 차단으로, 변경 빈도에 맞춰 재요청·부하절감</li>
-                  <li><b>단일 SQL 다중 집계</b> — KPI 6개 지표를 서브쿼리로 묶어 DB 라운드트립 1회로 처리.</li>
-                  <li><b>dynamic(ssr:false) 코드 스플리팅</b> — window/canvas 의존 ECharts를 서버 번들에서 제외해 SSR 에러 차단 + 대시보드 First Load JS 138kB(홈 145kB보다 가벼움).</li>
+                  <li><b>KPI 카드 4장</b> — "오늘은 어제 같은 시각보다 나은가". 주문은 생성 시각, 매출은 결제 시각 기준으로 세고, 실패율이 10%를 넘으면 ⚠ 표시.</li>
+                  <li><b>주문 추이</b> — "주문·결제·취소가 날마다 어떻게 변하나". 빈 날은 0으로 채워 x축을 유지하고 직전 기간을 겹쳐 비교.</li>
+                  <li><b>보안 · 이중 Y축</b> — "로그인 실패가 건수로도 비율로도 늘었나". 막대 = 실패 + 잠금, 선 = 실패율. 잠금은 결과라 분모에서 제외.</li>
+                  <li><b>결제 전환 퍼널</b> — "기간 안의 주문이 어느 단계에서 빠지나". 한 묶음(코호트)의 단계별 도달·이탈률, 취소는 퍼널 밖 별도 박스.</li>
+                  <li><b>캐시 · 필터 · 번들 · 모바일</b> — staleTime KPI 1분 · 추이·보안 5분 · 퍼널 10분 / 필터는 차트 3종에만, 조건은 URL 쿼리에 최대 90일 / ECharts를 next/dynamic으로 분리해 First Load JS <b>598 → 261 kB</b> / 칩 줄·표 가로 스크롤로 390px 9개 라우트 넘침 0.</li>
                 </ul>
               </div>
               <div class="card">
-                <div class="ph-img media"><img src="public/images/func/E-commerce-login-sync.gif" alt="두 탭 → 한쪽 로그아웃 시 양쪽 동기화" data-full="public/images/E-commerce-login-sync.gif" data-caption="JWT 인증 — 멀티탭 로그아웃 동기화 (BroadcastChannel)"></div>
+                <div class="ph-img media"><img src="public/images/func/E-commerce-login-sync.gif" alt="두 탭 → 한쪽 로그아웃 시 양쪽 동기화" data-full="public/images/func/E-commerce-login-sync.gif" data-caption="JWT 인증 — 새 탭 세션 인계와 전 탭 로그아웃 (BroadcastChannel)"></div>
                 <div class="ft">JWT 인증 + 멀티탭 동기화</div>
-                <div class="fd">토큰을 메모리에만 둬도 새 탭에서 로그인이 유지됩니다.</div>
+                <div class="fd">새 탭에서도 로그인 유지, 로그아웃은 모든 탭에.</div>
                 <ul>
-                  <li><b>Access=메모리 / Refresh=httpOnly 쿠키 회전</b> — access는 탭 단위 격리(rememberMe 시 localStorage), refresh는 JS 접근 차단으로 XSS 탈취 방지.</li>
-                  <li><b>BroadcastChannel 세션 인계</b> — 새 탭이 REQUEST_TOKEN을 보내면 기존 탭이 TOKEN_RESPONSE로 토큰을 넘겨 재로그인 없이 세션 동기화.</li>
-                  <li><b>전 탭 동시 로그아웃</b> — 로그아웃을 브로드캐스트해 모든 탭을 동시 종료(보안 ↔ UX 트레이드오프).</li>
-                  <li><b>컴포넌트 axios 직접 호출 0건</b> — public/auth 클라이언트 분리로 공개 호출에 토큰 누출 방지</li>
+                  <li><b>토큰 저장</b> — access는 메모리에만, refresh는 httpOnly 쿠키로 회전. 스크립트가 꺼낼 수 있는 저장소에 토큰을 두지 않습니다.</li>
+                  <li><b>새 탭</b> — 메모리가 비어 있는 새 탭은 BroadcastChannel로 다른 탭에 REQUEST_TOKEN을 보내고 TOKEN_RESPONSE를 받아 세션을 이어받습니다. 로그아웃도 같은 채널로 모든 탭에 전파.</li>
+                  <li><b>동시 401</b> — refresh가 진행 중이면 같은 Promise를 돌려주고, 아니면 플래그를 세우고 공유 Promise를 만듭니다. 동시에 401을 받아도 refresh는 1회(트러블슈팅 ④).</li>
+                  <li><b>테스트</b> — axios 어댑터만 mock한 Jest spec 5케이스. 동시 401 두 건에서 refresh 1회, 원 요청 2 + 재시도 2 = 4회를 단언.</li>
+                  <li><b>컴포넌트 axios 직접 호출 0건</b> — public/auth 클라이언트 분리로 공개 호출에 토큰 누출 방지.</li>
                 </ul>
               </div>
               <div class="card wide lr">
                 <div class="card-inner">
-                  <div class="ph-img media"><img src="public/images/func/E-commerce-payment.gif" alt="결제 흐름 — PortOne V2 결제창 + 서버 금액 검증 + 재고 동기화" data-full="public/images/func/E-commerce-payment.gif" data-caption="PortOne V2 결제 — 서버 검증 + 재고 동기화 + 자동 환불">결제 도중 정지되어있는 화면이 gif 파일 오류라고 생각하실까봐 마우스를 움직였습니다.</div>
+                  <div class="ph-img media"><img src="public/images/func/E-commerce-payment.gif" alt="결제 흐름 — PortOne V2 결제창 + 서버 금액 검증 + 재고 동기화" data-full="public/images/func/E-commerce-payment.gif" data-caption="장바구니부터 결제까지, 금액은 서버가 정한다">결제 도중 정지되어있는 화면이 gif 파일 오류라고 생각하실까봐 마우스를 움직였습니다.</div>
                   <div class="card-body">
-                    <div class="ft">PortOne V2 결제 — 서버 검증 + 재고 동기화 + 자동 환불</div>
-                    <div class="fd">장바구니에서 주문을 생성하면 PortOne V2 SDK가 결제창을 열고, 결제 완료 후 서버가 PortOne API를 직접 호출해 금액·상태를 검증합니다. 결제 성공 시 주문이 확정되고 재고가 차감되며, 실패·취소·30분 초과 시 자동으로 재고가 복원됩니다.</div>
+                    <div class="ft">장바구니부터 결제까지, 금액은 서버가 정한다</div>
+                    <div class="fd">주문 생성 → PortOne 결제창 → 서버 검증 → 주문 확정. 결제 완료 후 서버가 PortOne API를 직접 조회해 금액·상태를 다시 대조하고, 실패·취소·30분 초과 시 재고를 되돌립니다.</div>
                     <ul>
-                      <li><b>3단계 결제 흐름</b> — 주문 생성(Order PENDING_PAYMENT + Payment READY) → PortOne SDK 결제창 → 서버 검증(POST /payments/verify) 순서로 처리. 프론트와 백엔드가 각각 독립적으로 결제 사실을 확인.</li>
-                      <li><b>금액 위변조 방지</b> — verifyPayment에서 DB에 저장된 주문 금액과 PortOne API 조회 결과를 비교. 불일치 시 즉시 PortOne에 취소 요청을 보내고 BadRequestException 반환.</li>
-                      <li><b>주문 자동 만료 Cron</b> — 10분마다 실행. 30분 이상 PENDING_PAYMENT인 주문을 CANCELLED로 전환하고 재고를 복원. 이후 웹훅이 뒤늦게 도착해도 자동 환불 로직이 처리.</li>
-                      <li><b>자동 환불</b> — 웹훅 도착 시점에 주문이 이미 만료·취소 상태이면 PortOne 취소 API를 즉시 호출해 유령 결제를 차단. 금액 위변조 감지 시에도 동일 경로로 자동 취소.</li>
-                      <br><br>
+                      <li><b>금액</b> — 결제창에 넘기는 금액은 화면에서 계산한 값이 아니라 서버가 만든 주문의 <span class="kpi">totalAmount</span>. 서버는 결제 후 PortOne 조회 금액과 한 번 더 대조하고, 불일치하면 즉시 PortOne 취소를 요청합니다.</li>
+                      <li><b>중복 클릭</b> — 결제 중에는 <span class="kpi">isProcessingRef</span>로 두 번째 제출을 막고, 끝나면 cleanup으로 풉니다. state가 아니라 ref라서 리렌더를 기다리지 않고 바로 막힙니다.</li>
+                      <li><b>확인 실패</b> — 돈은 빠져나갔는데 서버 검증만 실패했을 수 있어서, 결제가 실패했다고 단정하지 않고 주문 상세로 보내 실제 상태를 보게 합니다. 결제창을 닫거나 SDK 오류가 나도 같습니다.</li>
+                      <li><b>미결제 · 자동 환불</b> — 30분 넘게 결제되지 않은 주문은 10분 주기 작업이 취소하고 재고를 되돌립니다. 이후 웹훅이 뒤늦게 도착하면 PortOne 취소 API를 호출해 유령 결제를 막습니다. 두 결제 경로의 동시성은 트러블슈팅 ③.</li>
+                    </ul>
+                    <div class="src-links">
+                      <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/app/(main)/checkout/page.tsx#L74-L88" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">checkout/page.tsx</span><span class="code-src-lines">L74–88</span><span class="code-src-arr">↗</span></a>
+                      <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/app/(main)/checkout/page.tsx#L107-L115" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">checkout/page.tsx</span><span class="code-src-lines">L107–115</span><span class="code-src-arr">↗</span></a>
+                      <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/hooks/useOrder.ts#L35-L39" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">useOrder.ts</span><span class="code-src-lines">L35–39</span><span class="code-src-arr">↗</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card wide lr">
+                <div class="card-inner">
+                  <div class="ph-img media"><img src="public/images/func/E-commerce_ai_assistant.jpg" alt="관리자 AI 어시스턴트 — 사내 운영 데이터를 자연어로 묻고 분석을 받는 SSE 스트리밍 채팅" data-full="public/images/func/E-commerce_ai_assistant.jpg" data-caption="관리자 AI 어시스턴트 — SSE 스트리밍 채팅"></div>
+                  <div class="card-body">
+                    <div class="ft">관리자 AI 어시스턴트 — 사내 데이터를 자연어로</div>
+                    <div class="fd">"최근 일주일간의 보안 차트를 분석해줘", "요즘 문제 있어 보이는 카테고리를 리뷰 기준으로 짚어줘" 같은 즉석 질문에, 관리자 화면을 새로 만들지 않고 답합니다.</div>
+                    <ul>
+                      <li><b>SQL 대신 기존 서비스 6종을 도구로</b> — LLM에 SQL을 맡기지 않고 이미 있는 NestJS 서비스를 도구로 노출해 권한·검증 로직을 그대로 재사용.</li>
+                      <li><b>개인정보 가리기</b> — 도구 결과는 직렬화 인터셉터를 거치지 않아 <span class="kpi">@Exclude</span>가 무력했습니다. 필드를 골라 새 객체로 만들고 이메일·IP를 가린 뒤 LLM에 넘깁니다(화면의 <span class="kpi">n***@***</span>).</li>
+                      <li><b>SSE 스트리밍 채팅</b> — 답변이 생성되는 대로 화면에 흘려 보여주고, 새 대화로 맥락을 끊을 수 있습니다.</li>
+                      <li><b>연결 품질은 숫자로</b> — 골든셋 20문항을 규칙과 LLM-judge로 채점. 과정은 트러블슈팅 ①.</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
             <div class="feat-more">
-              <div class="row"><div class="ft">3-Role(역할) 멀티 셀러 오픈마켓</div><div class="fd">구매자·판매자·관리자를 Route Group 3개((auth) / (main) / (admin))로 분리. 상품 등록 → 관리자 승인 검수 → 노출, 한 주문의 여러 판매자 상품을 배송 단위로 분리.</div></div>
-              <div class="row"><div class="ft">SSR/ISR + React Query Hydration</div><div class="fd">상품 상세는 ISR(revalidate)로 TTFB를 낮추고, isServer 분기 QueryClient + prefetch → dehydrate → HydrationBoundary로 초기 로딩 깜빡임 제거. queryOptions 팩토리로 쿼리 키·옵션을 한 곳에서 관리.</div></div>
+              <div class="row"><div class="ft">3개 역할이 하나의 주문 흐름을 나눠 씀</div><div class="fd"><b>구매자</b> — 이메일 인증 회원가입, 카테고리·키워드 검색과 커서 페이지네이션, 상품 상세와 AI 리뷰 요약, 장바구니 → 주문 → PortOne 결제, 주문 취소·구매 확정·리뷰, 판매자 신청. <b>판매자</b> — 상품 등록·이미지 업로드, 승인 상태 탭과 반려 후 재제출, 게시·숨김 전환, 주문·배송과 운송장 입력, 정산 요약과 내역. <b>관리자</b> — KPI 대시보드, 판매자·상품 승인, 주문·정산 관리와 감사 로그, AI 어시스턴트, 전 화면 모바일 대응. Route Group 3개((auth) / (main) / (admin))로 분리.</div></div>
+              <div class="row"><div class="ft">SSR/ISR + React Query Hydration</div><div class="fd">상품 상세는 ISR(revalidate)로 TTFB를 낮추고(캐시 HIT ~80ms), isServer 분기 QueryClient + prefetch → dehydrate → HydrationBoundary로 초기 로딩 깜빡임 제거. queryOptions 팩토리로 쿼리 키·옵션을 한 곳에서 관리.</div></div>
               <div class="row"><div class="ft">통합 검색 (키워드 + 카테고리 + 정렬)</div><div class="fd">태그가 M:N으로 연결된 상품 검색에서 JOIN 행 중복을 DISTINCT로 제거하고, 정렬 컬럼을 addSelect로 끌어와 정렬과 distinct를 양립. 페이지네이션은 커서 방식.</div></div>
             </div>
           </div>
 
           <div class="panel" role="tabpanel">
             <div class="ts-case">
-              <div class="ts-title">① axios 401 race condition → 강제 로그아웃 <span class="tag">프론트 시그니처</span></div>
+              <div class="ts-title">① SQL 대신 기존 서비스 6종으로 LLM을 사내 데이터에 연결 <span class="tag">사내 데이터 × LLM</span></div>
               <div class="ts-grid">
                 <div>
-                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>일정 시간 뒤 마이페이지를 새로고침하면 사용자가 갑자기 로그인 페이지로 튕겼습니다. 여러 API(주문·장바구니·유저)가 동시에 401을 받고 각자 <span class="kpi">/auth/refresh</span>를 중복 호출 → 1회용 Refresh Token 회전 정책과 충돌해 "재사용 시도"로 판정 → 세션 전체 무효화.</span></div>
-                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>"세션 만료"가 아니라 "동시 401을 하나의 refresh로 합치지 못한 인터셉터 동기화 부재"라고 가설을 세우고, Network 탭에서 refresh가 실제 여러 번 나가는 것을 확인. 대안(각자 refresh / 큐 직렬화 / 선제 갱신) 중 추가 인프라가 필요 없는 큐 직렬화 선택.</span></div>
-                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>모듈 전역 <span class="kpi">isRefreshing</span> 플래그와 공유 <span class="kpi">refreshPromise</span>로 refresh를 1회만 호출하고, 나머지 401은 같은 Promise를 await한 뒤 새 토큰으로 재시도. <span class="kpi">_retry</span> 카운터로 무한 재시도 차단, <span class="kpi">isLoggingOut</span>로 로그아웃 중 루프 차단.</span></div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>"요즘 문제 있어 보이는 카테고리를 리뷰 기준으로 짚어줘" 같은 즉석 질문마다 관리자 화면을 만들 수는 없었습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>LLM에 SQL을 맡기지 않고 <b>기존 NestJS 서비스 6종을 도구로 노출</b>해 권한·검증을 재사용하기로 했습니다. "연결이 잘 됐다"는 감이 아니라 <b>골든셋 20문항</b>으로 재기로 했습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>도구 결과는 직렬화 인터셉터를 거치지 않아 <span class="kpi">@Exclude</span>가 무력했습니다. 필드를 골라 새 객체로 만들고 이메일·IP를 가린 뒤 LLM에 넘겼습니다. 채점은 기계로 판정 가능한 것(도구 선택·PII)은 <b>규칙</b>으로, 의미 판단이 필요한 것(충실성·함정 질문)은 <b>LLM-judge</b>로 나눴습니다.</span></div>
                   <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
-                  <div class="result">동시 401이 다발로 발생해도 <b>/auth/refresh는 1회만</b> 호출되고, 강제 로그아웃이 재현되지 않음(Network 탭 검증). </div>
-                  <div class="reflect"><b>배운 점</b> · 정상 흐름만 보면 멀쩡한 코드도 동시 요청이라는 경계 조건에서 깨진다. 클라이언트도 race condition을 설계 대상으로 다뤄야 한다.</div>
+                  <div class="result">유일한 오답이 2회 모두 같아 모델의 우연이 아니라 <b>프롬프트 원인으로 확정</b>. system 프롬프트 1줄 수정으로 도구 선택 <b>16/17 → 17/17</b>, 나머지 지표는 떨어지지 않았습니다.</div>
+                  <div class="reflect"><b>배운 점</b> · LLM 연결의 품질도 테스트처럼 재야 고칠 수 있다. 한 지표를 올린 수정이 다른 지표를 떨어뜨리지 않았는지까지 같이 봐야 한다.</div>
                 </div>
                 <div>
-                  <div class="ph-code">
-                    <button class="copy" type="button">복사</button>
-                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드 스니펫: 401 응답 인터셉터]</div>
-                    <pre><code class="language-tsx">// 이미 refresh 중이면 기존 Promise 반환
-if (isRefreshing && refreshPromise) {
-  return refreshPromise;
-}
-isRefreshing = true;
-refreshPromise = (async () => {
-  try {
-    const response =
-      await publicClient.post(REFRESH_API_ENDPOINT);
-
-// 새 토큰으로 원래 요청 재시도
-Return authClient(originalRequest);</code></pre>
+                  <div class="tbl-box">
+                    <div class="tbl-cap">골든셋 20문항 · 수정 전후</div>
+                    <div class="tbl-wrap"><table class="tbl">
+                      <thead><tr><th>지표</th><th>무엇을 재나</th><th>전</th><th>후</th></tr></thead>
+                      <tbody>
+                        <tr class="hl"><td><b>도구 선택</b> · 규칙</td><td>맞는 사내 데이터를 불렀나</td><td class="num">16/17</td><td class="num">17/17</td></tr>
+                        <tr><td><b>충실성</b> · judge</td><td>데이터에 없는 수치를 지어내지 않았나</td><td class="num">15/15</td><td class="num">15/15</td></tr>
+                        <tr><td><b>함정 질문</b> · judge</td><td>PII 요청·인젝션을 거절했나</td><td class="num">5/5</td><td class="num">5/5</td></tr>
+                        <tr><td><b>PII</b> · 정규식</td><td>응답에 이메일·전화가 새지 않았나</td><td class="num">0</td><td class="num">0</td></tr>
+                      </tbody>
+                    </table></div>
                   </div>
-                  <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/main/frontend/src/lib/axios/axios-http-client.ts#L59-L107" target="_blank" rel="noopener noreferrer">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-                    <span class="code-src-file">axios-http-client.ts</span>
-                    <span class="code-src-lines">L59–107</span>
-                    <span class="code-src-arr">↗</span>
-                  </a>
+                  <div class="src-links">
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/14010146f68f44167896fd9aeaf979b249cac194/backend/src/admin/assistant/assistant-tools.ts" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">assistant-tools.ts</span><span class="code-src-lines">도구 6종</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/14010146f68f44167896fd9aeaf979b249cac194/backend/eval/run-eval.ts#L235" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">run-eval.ts</span><span class="code-src-lines">L235 채점 러너</span><span class="code-src-arr">↗</span></a>
+                    <a class="post-src" href="https://velog.io/@tkdans312/A-Menu-Instead-of-SQL-for-LLMs-Three-Companies-That-Stumbled-When-Connecting-Internal-Data" target="_blank" rel="noopener noreferrer">velog 회고 ↗</a>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="ts-case">
-              <div class="ts-title">② 결제 동시성 "유령 결제" 방어 <span class="tag">도메인 깊이</span></div>
+              <div class="ts-title">② 콘솔엔 17건, Sentry엔 0건이던 장애 <span class="tag">관측 · 프론트</span></div>
               <div class="ts-grid">
                 <div>
-                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>결제 완료(verify/웹훅)와 주문 취소가 같은 결제건을 동시에 건드리면 "결제는 PAID인데 주문은 CANCELLED"인 모순 상태가 생길 수 있었습니다. 결제는 사후 복구 비용이 사전 방어 비용보다 커, 확률이 낮아도 방어가 필수인 영역입니다.</span></div>
-                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>DB 트랜잭션은 한 트랜잭션 내부 원자성만 보장할 뿐 두 트랜잭션의 동시 쓰기 충돌은 못 막는다고 판단 → 명시적 락 필요. <span class="kpi">Promise.all</span>로 결제 완료·취소를 동시 호출해 모순 상태를 실제로 재현한 뒤 방어를 설계.</span></div>
-                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>① 진입 전 멱등 체크 + 외부 PG(PortOne) 호출은 트랜잭션 외부로 빼 락 보유 시간 최소화 ② <span class="kpi">setLock('pessimistic_write')</span>(SELECT FOR UPDATE)로 직렬화 후 상태 재검증 ③ 이벤트는 실제 상태 전이일 때만 발행, 리스너도 SELECT FOR UPDATE로 재고 중복 차감 차단.</span></div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>백엔드를 16분 내렸더니 콘솔엔 연결 거부 17건, Sentry 프론트 이슈는 <b>0건</b>. 사용자에겐 상품 목록이 안 뜨는 완전한 장애였습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>SDK 설정을 하나씩 배제한 뒤, 관찰만으론 원인을 못 정한다고 보고 <b>대조군</b>을 세웠습니다(헤드리스 Chrome). B와 C가 같으니 SDK는 정상. axios의 reject를 <b>TanStack Query가 받는 순간 "처리된 예외"</b>가 되어 SDK 시야 밖으로 나갑니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>인터셉터에서 <span class="kpi">reportApiError</span>로 직접 보고. 네트워크 실패·5xx만 보내고 4xx는 제외, 엔드포인트별 fingerprint, 같은 에러 60초 1건·탭당 10건 상한. 상한은 첫 재현에서 화면 한 번에 16건이 쌓이는 것을 보고 정했습니다.</span></div>
                   <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
-                  <div class="result">반복 재현에서 <b>모순 상태가 사라짐</b>, 회귀 방지 테스트 추가.</div>
-                  <div class="reflect"><b>배운 점</b> · 정상 흐름뿐 아니라 중복·순서 뒤바뀜·동시 요청까지 멱등하게 설계해야 한다(재현 → 락 → 재검증).</div>
+                  <div class="result">운영에서 같은 조건으로 3회 반복해 <b>보낸 6건 = 받은 6건</b>. 회당 2건(/categories, /products)이 기존 이슈 2개로 묶였고, 마지막 이벤트 1분 40초 뒤 운영 앱 푸시가 폰에 왔습니다. 정상 화면 대조군은 0건.</div>
+                  <div class="reflect"><b>배운 점</b> · "에러 모니터링을 붙였다"와 "장애가 보인다"는 다르다. 일부러 장애를 내 봐야 사각지대가 드러난다.</div>
+                </div>
+                <div>
+                  <div class="tbl-box">
+                    <div class="tbl-cap">대조군 실험 · 헤드리스 Chrome</div>
+                    <table class="tbl">
+                      <thead><tr><th>시나리오</th><th>이벤트</th></tr></thead>
+                      <tbody>
+                        <tr><td>A · 잡히지 않은 에러 발생</td><td class="num">1</td></tr>
+                        <tr class="hl"><td>B · API 요청 전부 차단</td><td class="num">0</td></tr>
+                        <tr class="hl"><td>C · 아무 조작 없음</td><td class="num">0</td></tr>
+                      </tbody>
+                    </table>
+                    <div class="tbl-note">B = C: 백엔드가 죽은 상황이 정상과 같아 보였음</div>
+                  </div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[report-api-error.ts · 4xx는 보내지 않음]</div>
+                    <pre><code class="language-ts">const isNetworkFailure = !error.response;
+const isServerFailure =
+  (status ?? 0) &gt;= 500;
+if (!isNetworkFailure &amp;&amp;
+    !isServerFailure) return;</code></pre>
+                  </div>
+                  <div class="src-links">
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/lib/axios/report-api-error.ts#L49-L55" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">report-api-error.ts</span><span class="code-src-lines">L49–55</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/lib/axios/report-api-error.ts#L62-L75" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">억제</span><span class="code-src-lines">L62–75</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/14010146f68f44167896fd9aeaf979b249cac194/scripts/probe/api-down.mjs#L90-L108" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">재현 api-down.mjs</span><span class="code-src-lines">L90–108</span><span class="code-src-arr">↗</span></a>
+                    <a class="post-src" href="https://velog.io/@tkdans312/17-errors-in-the-console-0-in-Sentry-Why-Axios-errors-werent-being-captured-by-Sentry" target="_blank" rel="noopener noreferrer">velog 회고 ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-case">
+              <div class="ts-title">③ 결제 7건 모두에서 웹훅과 verify가 경합 <span class="tag">결제 동시성</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>결제 확정이 브라우저 verify와 PortOne 웹훅 두 경로로 들어옵니다. 운영 테스트 결제 7건 모두 웹훅이 먼저 도착했고, verify는 매번 웹훅 처리 도중에 들어왔습니다. <b>경합이 예외가 아니라 기본값</b>이었습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>웹훅은 nginx로 직행하고 verify는 Vercel을 한 번 더 거쳐 <b>구조적으로 늦습니다</b>(로컬에선 verify가 27:3으로 이겨 정반대). 버튼 잠금은 브라우저 안에서만 유효하므로 <b>프론트는 진입 구간을, 서버는 최종 상태를</b> 책임지게 나눴습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>verify와 웹훅은 각자 트랜잭션을 열고 <b>같은 결제 행</b>에 <span class="kpi">SELECT … FOR UPDATE</span>를 겁니다. 락을 잡은 뒤 상태를 다시 확인해 이미 PAID면 멈추고, 실제로 바뀐 경우에만 이벤트를 1회 냅니다. 외부 PG 호출은 트랜잭션 밖으로 빼 락 보유 시간을 줄였습니다.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">통합 테스트 <b>30라운드 모두 단일 전이·이벤트 1회</b>. 운영 7건 모두 verify가 락을 기다린 뒤 한 상태로 정착(nginx 밀리초 로그·백엔드 로그·감사 로그 대조).</div>
+                  <div class="reflect"><b>배운 점</b> · 로컬과 운영은 도착 순서부터 다르다. 경합은 확률로 다루지 말고, 두 경로가 모두 먼저 올 수 있다고 보고 서버에서 직렬화해야 한다.</div>
+                </div>
+                <div>
+                  <div class="tbl-box">
+                    <div class="tbl-cap">한 결제 안에서 벌어지는 일 (운영 7건)</div>
+                    <table class="tbl">
+                      <thead><tr><th>경로</th><th>타이밍</th></tr></thead>
+                      <tbody>
+                        <tr><td><b>웹훅</b> · nginx 직행</td><td>처리하며 락 보유 · 103~133ms</td></tr>
+                        <tr class="hl"><td><b>verify</b> · Vercel 경유</td><td>44~69ms 도착 → 락 대기 → 재검증</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[payment.service.ts · verify 쪽]</div>
+                    <pre><code class="language-ts">const locked = await manager
+  .createQueryBuilder(PaymentEntity, 'p')
+  .setLock('pessimistic_write')
+  .where('p.id = :id', { id: payment.id })
+  .getOne();
+// 락 후 재검증: 웹훅이 먼저 처리했을 수 있음
+if (locked.status === PaymentStatus.PAID)
+  return null;
+// ...
+if (updated) {
+  this.eventEmitter.emit('order.paid', /* ... */);
+}</code></pre>
+                  </div>
+                  <div class="src-links">
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/backend/src/payment/payment.service.ts#L214-L228" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">verify</span><span class="code-src-lines">L214–228</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/backend/src/payment/payment.service.ts#L252-L257" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">이벤트</span><span class="code-src-lines">L252–257</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/backend/src/payment/payment.service.ts#L456-L468" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">웹훅</span><span class="code-src-lines">L456–468</span><span class="code-src-arr">↗</span></a>
+                    <a class="post-src" href="https://velog.io/@tkdans312/A-Near-Miss-with-Double-Payment-Race-Condition-Between-Webhook-and-Verify" target="_blank" rel="noopener noreferrer">velog 회고 ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-case">
+              <div class="ts-title">④ axios 401 race condition → 강제 로그아웃 <span class="tag">인증 · 프론트</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>일정 시간 뒤 마이페이지를 새로고침하면 사용자가 갑자기 로그인 페이지로 튕겼습니다. 여러 API(주문·장바구니·유저)가 동시에 401을 받고 각자 <span class="kpi">/auth/refresh</span>를 중복 호출 → 1회용 Refresh Token 회전 정책과 충돌해 "재사용 시도"로 판정 → 세션 전체 무효화.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>"세션 만료"가 아니라 "동시 401을 하나의 refresh로 합치지 못한 인터셉터 동기화 부재"라고 가설을 세우고, Network 탭에서 refresh가 실제 여러 번 나가는 것을 확인. 대안(각자 refresh / 큐 직렬화 / 선제 갱신) 중 추가 인프라가 필요 없는 큐 직렬화 선택.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>모듈 전역 <span class="kpi">isRefreshing</span> 플래그와 공유 <span class="kpi">refreshPromise</span>로 refresh를 1회만 호출하고, 나머지 401은 같은 Promise를 await한 뒤 새 토큰으로 재시도. <span class="kpi">_retry</span>로 무한 재시도 차단, <span class="kpi">isLoggingOut</span>로 로그아웃 중 루프 차단.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">동시 401이 다발로 발생해도 <b>/auth/refresh는 1회만</b> 호출되고 강제 로그아웃이 재현되지 않음. 이후 <b>Jest spec 5케이스</b>로 고정 — 동시 401 두 건에서 refresh 1회, 원 요청 2 + 재시도 2 = 4회를 단언.</div>
+                  <div class="reflect"><b>배운 점</b> · 정상 흐름만 보면 멀쩡한 코드도 동시 요청이라는 경계 조건에서 깨진다. 클라이언트도 race condition을 설계 대상으로 다뤄야 한다.</div>
                 </div>
                 <div>
                   <div class="ph-code">
                     <button class="copy" type="button">복사</button>
-                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드 스니펫: 결제 확정 트랜잭션]</div>
-                    <pre><code class="language-tsx">// 수정 전:  update 만 호출 -> verify와 webhook이 동시 PAID 처리
-// 수정 후: 락 + 재검증으로 한 번만 PAID
-const updated = await this.dataSource.transaction(
-  async (manager) => {
-    const locked = await manager
-      .createQueryBuilder(PaymentEntity, 'p')
-      .setLock('pessimistic_write')
-      .where('p.id = :id', { id: payment.id })
-      .getOne();
-    // 트랜잭션 내 재검증: 웹훅이 먼저 처리했을 수 있음
-    if (locked.status === PaymentStatus.PAID)
-      return null;
-                    </code></pre>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[axios-http-client.ts · refresh는 한 번만]</div>
+                    <pre><code class="language-ts">// 이미 refresh 중이면 기존 Promise 반환
+if (isRefreshing &amp;&amp; refreshPromise) {
+  return refreshPromise;
+}
+// ...
+isRefreshing = true;
+refreshPromise = (async () =&gt; {
+  // ... refresh 1회 → 새 토큰으로 원 요청 재시도</code></pre>
                   </div>
-                  <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/main/backend/src/payment/payment.service.ts#L205-L222" target="_blank" rel="noopener noreferrer">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-                    <span class="code-src-file">payment.service.ts</span>
-                    <span class="code-src-lines">L205–222</span>
-                    <span class="code-src-arr">↗</span>
-                  </a>
+                  <div class="src-links">
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/lib/axios/axios-http-client.ts#L93-L102" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">axios-http-client.ts</span><span class="code-src-lines">L93–102</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/lib/axios/axios-http-client.spec.ts#L83-L99" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">테스트 spec</span><span class="code-src-lines">L83–99</span><span class="code-src-arr">↗</span></a>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="blk" style="margin-top:34px;">
+              <div class="h">본문에 싣지 않은 사례</div>
+              <div class="feat-more" style="margin-top:0;">
+                <div class="row"><div class="ft">Server Component 토큰 회전</div><div class="fd">RSC는 쿠키를 쓸 수 없어 회전한 토큰이 반영되지 않고 로그인 루프가 생김 → 검증을 클라이언트 가드로 옮김.</div></div>
+                <div class="row"><div class="ft">access 토큰 jti 부재</div><div class="fd">같은 초에 발급된 토큰이 문자열까지 같아, 로그아웃 직후 재로그인하면 401이 나던 문제.</div></div>
+                <div class="row"><div class="ft">웹훅 발신자 확인</div><div class="fd">서명 검증(앱)과 nginx IP 제한(네트워크) 두 겹으로 막고, 본문은 PortOne 재조회로 대조.</div></div>
+                <div class="row"><div class="ft">관측 지도</div><div class="fd">장애 10개 시나리오를 정리하고 일부를 직접 내 봐서 사각지대 3건 · 끊긴 알림 통로 2건 발견.</div></div>
+                <div class="row"><div class="ft">운영 DB 드리프트</div><div class="fd">2개월 뒤처진 운영 스키마를 발견 → 이후 스키마는 마이그레이션으로만 바꾸도록 전환.</div></div>
               </div>
             </div>
           </div>
@@ -275,20 +400,290 @@ const updated = await this.dataSource.transaction(
           <div class="panel" role="tabpanel">
             <div class="blk">
               <div class="h">대표 성과 — 홈 LCP 최적화</div>
-              <p class="lead">Lighthouse 점검 중 홈만 LCP가 Slow 4G에서 33.7s(Performance 66)임을 발견 → <span class="kpi">lcp-discovery-insight</span>로 CSS background-image의 2.9MB PNG 히어로 배경을 병목으로 특정(FCP 2s vs LCP 35s 격차가 곧 이미지 다운로드 시간) → sharp로 WebP 변환 + next/image fill priority로 교체해 preload fetchpriority 자동 적용.</p>
+              <p class="lead">Lighthouse 점검 중 홈만 LCP가 Slow 4G에서 33.7s(Performance 66)임을 발견 → <span class="kpi">lcp-discovery-insight</span>로 LCP 요소가 <b>CSS 배경의 2.9MB PNG</b>임을 특정(FCP 2s vs LCP 35s 격차가 곧 이미지 다운로드 시간). 프리로드 스캐너가 CSS 배경을 못 본다는 점을 확인하고 sharp로 WebP 변환 + next/image priority로 교체해 preload fetchpriority가 자동으로 붙게 했습니다. <span style="color:var(--hint)">측정: 2026-05, Chrome DevTools 모바일·Slow 4G. TTFB는 ISR 캐시 HIT, curl 3회.</span></p>
             </div>
             <div class="metrics">
-              <div class="m"><div class="mv">66 → 93</div><div class="ml">Lighthouse Performance</div><div class="mh">Chrome DevTools, 모바일 Slow 4G 실측</div></div>
-              <div class="m"><div class="mv">33.7s → 3.0s</div><div class="ml">홈 LCP (−91%)</div><div class="mh">동일 측정</div></div>
-              <div class="m"><div class="mv">−96.5%</div><div class="ml">배너 페이로드</div><div class="mh">7,090KB→246KB · fs.statSync</div></div>
+              <div class="m"><div class="mv">33.7s → 3.0s</div><div class="ml">홈 LCP (−91%)</div><div class="mh">Chrome DevTools, 모바일 Slow 4G</div></div>
+              <div class="m"><div class="mv">66 → 93</div><div class="ml">홈 Lighthouse 성능</div><div class="mh">동일 측정</div></div>
+              <div class="m"><div class="mv">−96.5%</div><div class="ml">배너 이미지 7,090 → 246KB</div><div class="mh">WebP 변환 · fs.statSync</div></div>
               <div class="m"><div class="mv">~80ms</div><div class="ml">상품 상세 TTFB (ISR)</div><div class="mh">curl 3회, x-vercel-cache HIT</div></div>
             </div>
-            <div class="blk">
-              <div class="h">규모 · 구조 (실측)</div>
+
+            <div class="blk" style="margin-top:30px;">
+              <div class="h">구매 흐름 접근성 — 측정 → 수정 → 재측정</div>
+              <p class="lead">홈·목록·상세·로그인·장바구니·주문서 <b>6페이지</b>를 axe-core + Playwright 키보드 스크립트로, <b>수정 전후 같은 스크립트</b>로 쟀습니다. 공용 컴포넌트 중심으로 고쳤습니다 — 건너뛰기 링크와 main 영역 추가, 하위 카테고리는 disclosure 패턴, 공용 모달에 포커스 관리, 동작 줄이기 설정이면 배너가 처음부터 멈춥니다.</p>
+              <div class="tbl-box" style="margin-top:12px;">
+                <div class="tbl-wrap"><table class="tbl">
+                  <thead><tr><th>항목</th><th>수정 전</th><th>수정 후</th></tr></thead>
+                  <tbody>
+                    <tr class="hl"><td><b>axe WCAG 2.1 A/AA 위반</b></td><td>24곳</td><td><b>0</b></td></tr>
+                    <tr><td><b>본문 첫 요소까지 Tab</b></td><td>15회</td><td><b>2회</b></td></tr>
+                    <tr class="hl"><td><b>모달 포커스</b></td><td>Tab 8회 모두 밖으로 이탈</td><td>이동 · 가두기 · 복귀</td></tr>
+                    <tr><td><b>하위 카테고리</b></td><td>hover로만 열림</td><td>키보드로 도달</td></tr>
+                    <tr><td><b>자동 넘김 배너</b></td><td>hover로만 멈춤</td><td>멈춤 버튼 · 포커스 시 멈춤</td></tr>
+                  </tbody>
+                </table></div>
+              </div>
               <ul class="factlist">
-                <li>모노레포 약 <b>32500줄</b> (frontend 9,424 / backend 22,092 / shared 989)</li>
-                <li>frontend/src <b>TypeScript 100%</b> (.js/.jsx 0개), Next.js <b>34페이지</b>를 3 route group으로 분리</li>
-                <li>컴포넌트 axios 직접 호출 <b>0건</b>(service 10개 모듈 경유), staleTime 4단계 차등, First Load JS ≤ 183kB</li>
+                <li><b>ARIA는 있었지만 쓸 수 없던 곳</b> — 장바구니의 고정 aria-label이 화면의 "1개 담음·12,000원"을 덮어써 개수를 못 읽음 / 주문서 label이 입력칸과 연결되지 않아 placeholder를 이름으로 읽음(axe도 못 잡음) / 모달에 role·aria-modal은 있었지만 포커스 관리가 없음</li>
+                <li><b>검증</b> — 모달 포커스 규칙을 단위 테스트 5건으로 고정(수정 전 코드에서 3건 실패). 장바구니 담기·수량 변경 안내 3곳은 <b>NVDA로 직접 들어</b> 확인</li>
+                <li><b>남은 한계</b> — 배너 이미지 속 글자에 대체 텍스트 없음, 푸터 링크가 href="#"</li>
+              </ul>
+              <div class="src-links">
+                <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/components/common/Modal/Modal.spec.tsx" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">Modal.spec.tsx</span><span class="code-src-arr">↗</span></a>
+                <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/scripts/a11y/axe-audit.mjs" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">axe-audit.mjs</span><span class="code-src-arr">↗</span></a>
+                <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/scripts/a11y/keyboard-walk.mjs" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">keyboard-walk.mjs</span><span class="code-src-arr">↗</span></a>
+                <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/scripts/a11y/modal-focus.mjs" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">modal-focus.mjs</span><span class="code-src-arr">↗</span></a>
+              </div>
+            </div>
+
+            <div class="blk" style="margin-top:30px;">
+              <div class="h">번들 — dynamic import 효과를 실제로 재기</div>
+              <ul class="factlist">
+                <li>관리자 대시보드 First Load JS <b>598 → 261 kB (−56%)</b> — ECharts(gzip 337 kB)를 next/dynamic으로 분리한 효과를, 정적 import로 바꾼 빌드와 라우트 표를 비교해 쟀습니다(2026-09-29). 바뀐 라우트는 이 한 페이지뿐입니다.</li>
+                <li>frontend/src <b>TypeScript 100%</b>, 3개 Route Group 분리, 컴포넌트 axios 직접 호출 <b>0건</b>(service 모듈 경유)</li>
+              </ul>
+              <div class="src-links">
+                <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/docs/roadmap/ex-a11y-bundle.md" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">ex-a11y-bundle.md</span><span class="code-src-lines">번들 §1 · 접근성 §2</span><span class="code-src-arr">↗</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="retro">
+              <div class="retro-col">
+                <div class="retro-h good">잘한 점</div>
+                <ul>
+                  <li>결제·인증의 <b>동시성 문제를 재현 → 분석 → 방어 → 테스트</b>까지 닫음</li>
+                  <li>배포 후 <b>일부러 깨뜨려 보는 실험</b>(백엔드 16분 중단, 운영 결제 7건 실측)으로 사각지대를 찾음</li>
+                  <li>모든 성능·접근성 수치를 <b>측정 방법과 함께 기록</b></li>
+                  <li>LLM 연결 품질을 <b>골든셋으로 재고</b> 고침</li>
+                </ul>
+              </div>
+              <div class="retro-col">
+                <div class="retro-h bad">아쉬웠던 점 → 개선</div>
+                <ul>
+                  <li>프론트 테스트가 1개뿐 → <b>5개 파일 40건</b>, 401 인터셉터부터</li>
+                  <li>동시성 코드에 테스트 없음 → <b>401 spec 5케이스, 결제 통합 테스트 30라운드</b></li>
+                  <li>nginx 없이 Next.js 프록시 → <b>nginx + Let's Encrypt 도입</b>, 프론트 변경 없음</li>
+                  <li>dynamic import 효과를 잰 적 없음 → <b>First Load JS 598 → 261 kB</b></li>
+                  <li>접근성이 ARIA 속성 수준 → <b>axe 위반 24 → 0, 본문까지 Tab 15 → 2회</b></li>
+                </ul>
+              </div>
+              <div class="retro-col">
+                <div class="retro-h next">남은 한계 · 다음</div>
+                <ul>
+                  <li>배너 이미지 속 글자에 <b>대체 텍스트</b> 없음, 푸터 링크 href="#"</li>
+                  <li>관리자 대시보드에 <b>최근 인시던트 위젯</b>(Ops Companion과 연결)</li>
+                  <li>디자인 토큰을 <b>Storybook 카탈로그</b>로 정리</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="links" style="margin-top:26px;">
+          <a class="btn dark" href="https://github.com/ansm0403/E-commerce_shopping_mall" target="_blank" rel="noopener noreferrer">GitHub README →</a>
+          <a class="btn soft" href="https://shopping-mall-frontend-dusky.vercel.app" target="_blank" rel="noopener noreferrer">배포 데모 ↗ · "관리자 페이지 체험하기"</a>
+        </div>
+      </div>
+    </details>
+
+    <!-- PROJECT 2 -->
+    <details class="proj orange">
+      <summary>
+        <div class="sum-top">
+          <span class="sum-num">02</span>
+          <span class="sum-name">Ops Companion</span>
+          <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="sum-one">E-커머스의 Sentry 이슈를 푸시로 받아, AI가 소스 코드를 읽고 원인·조치를 정리하면 사람이 폰에서 스와이프로 채점하는 React Native 운영 앱. 푸시·딥링크·생체 잠금·제스처처럼 웹으로는 안 되는 것만 담았습니다.</div>
+        <div class="sum-meta">
+          <span class="pill">React Native (Expo)</span><span class="pill">Expo Router</span><span class="pill">Reanimated</span><span class="pill">AI 평가 설계</span>
+          <span class="kpi">지어낸 이름 적발 <b>4/7 : 0/7</b> · 버그 <b>5/5 깨짐 → 5/5 정상</b></span>
+        </div>
+        <div class="expand-hint">▾ 클릭해서 개요 · 기능 · 트러블슈팅 · 성능 펼쳐 보기</div>
+      </summary>
+
+      <div class="body">
+        <div class="tabs" role="tablist" aria-label="Ops Companion 상세">
+          <button class="tab-btn active" role="tab" type="button">개요</button>
+          <button class="tab-btn" role="tab" type="button">기능</button>
+          <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
+          <button class="tab-btn" role="tab" type="button">성능 · 결과</button>
+          <button class="tab-btn" role="tab" type="button">회고</button>
+        </div>
+        <div class="panels">
+
+          <div class="panel active" role="tabpanel">
+            <div class="blk">
+              <div class="h">Overview</div>
+              <p class="lead">운영 중인 E-커머스에서 에러가 나면 <b>폰으로 알림을 받고, AI가 소스 코드를 읽어 원인과 조치를 정리하고, 사람이 그 분석을 스와이프로 채점</b>합니다. 채점 결과는 프롬프트·도구 구성별로 비교되고, 승인된 분석대로 실제 코드를 고친 뒤 재현 스크립트와 Sentry로 다시 확인하는 데까지 이어집니다. 앱에는 푸시·딥링크·생체 잠금·제스처처럼 <b>웹으로는 안 되는 것만</b> 담았고, 같은 RN 코드의 웹 빌드로 설치 없이 체험할 수 있게 했습니다. <span style="color:var(--hint)">인시던트 7건 · 평가자 1명인 작은 표본이라, 결과는 "증명"이 아니라 "확인"으로 적습니다.</span></p>
+            </div>
+            <div class="blk">
+              <div class="h">구조와 흐름 — 에러가 폰에 도착해 채점되기까지</div>
+              <p class="lead"><b>1 수집</b> 백엔드가 2분마다 Sentry API를 읽습니다(웹훅 대신 폴링이라 공개 엔드포인트가 필요 없음). → <b>2 알림</b> 앱이 꺼져 있을 때·백그라운드·열려 있을 때 모두 딥링크로 같은 상세 화면에 도착. → <b>3 분석</b> 스택의 파일을 읽는 도구(허용 폴더만, 80줄씩)와 배포 사실 4줄로 원인·조치를 JSON으로. → <b>4 채점</b> 어떤 프롬프트 버전인지 API 응답에서 지워 평가자가 모르게. → <b>5 비교</b> 같은 이슈를 4가지 구성으로 분석해 버전별 승인율·별점 비교. → <b>6 수정</b> 승인된 분석대로 고치고 재현 스크립트와 Sentry로 확인. <b>LLM 키·Sentry 토큰·GitHub 접근은 모두 백엔드에만</b> 두고, 앱은 백엔드 API만 부릅니다.</p>
+              <figure class="arch">
+                <img src="public/images/architec/ops_아키텍쳐_요약.svg" alt="Ops Companion 흐름 요약도 — 수집, 알림, 분석, 채점, 비교, 수정 6단계" data-full="public/images/architec/ops_아키텍쳐.svg" data-caption="Ops Companion — 상세 아키텍처">
+                <figcaption>🔍 클릭하면 상세 아키텍처를 크게 볼 수 있습니다</figcaption>
+              </figure>
+            </div>
+            <div class="meta">
+              <div class="mi"><div class="k">PERIOD</div><div class="v">설계 2026.08 / 구현 2026.09 (약 2주)</div></div>
+              <div class="mi"><div class="k">ROLE</div><div class="v">1인 단독 (앱 · 백엔드 ops 모듈)</div></div>
+              <div class="mi"><div class="k">STACK</div><div class="v">React Native(Expo) · Expo Router · Reanimated · NestJS</div></div>
+              <div class="mi"><div class="k">PLATFORM</div><div class="v">Android APK · 웹 체험판</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="feat">
+              <div class="card">
+                <div class="ph-img media phone"><img src="public/images/func/ops_swipe_review.jpg" alt="스와이프 채점 카드 — 카드를 밀어 승인·반려" data-full="public/images/func/ops_swipe_review.jpg" data-caption="스와이프 채점 카드 — 실패하면 그 카드 한 장만 복귀"></div>
+                <div class="ft">스와이프 채점 카드</div>
+                <div class="fd">연달아 채점해도 하던 일이 끊기지 않게.</div>
+                <ul>
+                  <li><b>Pan 제스처 + Reanimated</b> — 카드를 밀면 승인·반려. 서버 응답을 기다리지 않고 다음 카드로 넘깁니다.</li>
+                  <li><b>버린 방식</b> · 실패하면 목록 전체를 롤백 → <b>고른 방식</b> · 실패한 카드 한 장만 맨 앞으로 복귀. 연달아 넘긴 다른 카드의 채점은 그대로 남습니다.</li>
+                  <li><b>블라인드</b> — 카드에 어떤 프롬프트 버전인지 표시하지 않습니다(버전은 API 응답에서 제거).</li>
+                </ul>
+                <div class="src-links">
+                  <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/ops-companion/src/features/review/queries.ts#L46-L63" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">review/queries.ts</span><span class="code-src-lines">L46–63</span><span class="code-src-arr">↗</span></a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="ph-img media phone"><img src="public/images/func/ops_review_checklist.jpg" alt="채점 화면 — 확인 항목 4개와 별점" data-full="public/images/func/ops_review_checklist.jpg" data-caption="채점 · 확인 항목 4개"></div>
+                <div class="ft">채점 기준 — 사실 메모 + 확인 항목 4개</div>
+                <div class="fd">메모를 읽고 → AI 답을 읽고 → 확인 항목에 답하면 승인·반려를 제안합니다.</div>
+                <ul>
+                  <li>① 원인으로 짚은 파일·함수가 메모의 "원인 위치"와 같은가? ② 조치 코드의 이름(변수·함수·환경변수)이 모두 메모의 실제 코드에 있는가?</li>
+                  <li>③ 조치를 그대로 붙여 넣어도 되는가? ④ 확신도가 근거에 비해 과하지 않은가?</li>
+                  <li><b>①② 중 하나라도 ✗면 반려를 제안</b>, ③④는 별점에 반영. 제안과 다르게 스와이프해도 됩니다.</li>
+                  <li>사람이 놓치는 이름 대조는 <b>규칙 기반 "코드에 없는 이름" 칩</b>이 보조(트러블슈팅 ①).</li>
+                </ul>
+              </div>
+              <div class="card wide lr">
+                <div class="card-inner">
+                  <div class="ph-img media phone"><img src="public/images/func/ops_ai_analysis.jpg" alt="AI 분석 화면 — 원인과 추천 조치, 확신도" data-full="public/images/func/ops_ai_analysis.jpg" data-caption="AI 분석 · 원인과 추천 조치"></div>
+                  <div class="card-body">
+                    <div class="ft">AI 분석 — 소스를 읽고 원인과 조치를 정리</div>
+                    <div class="fd">Sentry 이슈의 스택만 보고 추측하지 않도록, AI가 스택에 나온 파일을 직접 읽게 했습니다.</div>
+                    <ul>
+                      <li><b>코드 읽기 도구</b> — 스택의 파일을 읽되 허용 폴더만, 한 번에 80줄씩. 여기에 배포 사실 4줄(어디에 어떻게 배포되는지)을 붙여 원인·추천 조치·확신도를 JSON으로 받습니다.</li>
+                      <li><b>화면</b> — 확신도 배지, 원인과 추천 조치를 나눠 보여주고 각각 복사할 수 있습니다. 예시 코드가 길어도 화면을 넘치지 않게 스크롤.</li>
+                      <li><b>4가지 구성 비교</b> — 같은 이슈를 프롬프트·도구 유무가 다른 4가지 구성으로 분석하고, 블라인드 채점 결과로 버전별 승인율·별점을 비교합니다.</li>
+                      <li><b>정답 메모는 LLM에 넣지 않음</b> — 채점용 사실 메모가 분석 입력에 섞이지 않는다는 것을 테스트로 고정했습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feat-more">
+              <div class="row"><div class="ft">생체 잠금과 딥링크</div><div class="fd">잠긴 상태에서 푸시를 누르면, 잠금을 푼 뒤 알림이 가리킨 이슈가 바로 보여야 합니다. <b>버린 방식</b> · 잠금 화면을 라우트로 만들고 해제 후 다시 이동 → <b>고른 방식</b> · 화면 스택 위에 덮개로 올림. 덮개 아래에서 딥링크 이동이 먼저 끝나 있으므로 잠금을 풀면 곧바로 목적지입니다. 로그인 분기는 Expo Router의 <span class="kpi">Stack.Protected</span>로 처리했습니다(조건부 Stack.Screen은 동작하지 않음).</div></div>
+              <div class="row"><div class="ft">푸시 → 이슈 상세</div><div class="fd">앱이 꺼져 있을 때 · 백그라운드일 때 · 열려 있을 때 세 상태 모두 딥링크로 같은 상세 화면에 도착하도록 연결.</div></div>
+              <div class="row"><div class="ft">Sentry 이슈 폴링</div><div class="fd">백엔드가 2분마다 Sentry API를 읽습니다. 웹훅 대신 폴링을 택해 외부에 공개 엔드포인트를 열 필요가 없습니다.</div></div>
+              <div class="row"><div class="ft">웹 → 앱 연동 확인 페이지</div><div class="fd">운영 앱이 목업이 아니라는 것을 보여 주려고, 웹에서 진짜 에러를 보내 앱에 20초 이내로 뜨는 것까지 확인하는 페이지를 만들었습니다. Claude Code와 만든 과정은 <a href="#ai" style="color:var(--o);font-weight:600;">AI 활용</a>에 정리했습니다.</div></div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="ts-case">
+              <div class="ts-title">① 승인 14/14라는 좋은 숫자를 의심하기 <span class="tag">평가 설계</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>코드 읽기 도구 유무만 다른 AI 분석 7건 × 2를 블라인드로 채점했더니 <b>전부 승인</b>. 채점자인 제가 정답을 모른 채 그럴듯하면 승인하고 있었습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>정답 없는 채점은 그럴듯함을 잽니다. 사실 메모와 확인 항목 4개를 붙여 다시 채점하자 방향 오류는 반려로 바뀌었지만, <b>코드에 없는 이름을 쓴 답은 여전히 통과</b>했습니다. 사람은 방향은 잡고 이름 대조는 놓칩니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span><b>이름 대조만 규칙 기반 코드로.</b> AI 조치 코드에서 뽑은 이름을 실제 소스의 이름 집합과 대조해 "코드에 없는 이름" 칩을 카드에 표시하고, 판정은 사람에게 남겼습니다. 라이브러리처럼 보이는 이름은 따로 분류합니다.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">코드를 안 읽은 분석 7건 중 <b>4건 적발</b>, 읽은 분석은 <b>0건</b>. 표본 7건 · 평가자 1명이고, 이름은 맞는데 코드를 새로 쓴 답은 칩이 못 잡는 한계도 기록했습니다.</div>
+                  <div class="reflect"><b>배운 점</b> · 좋은 숫자일수록 채점 도구부터 의심한다. 사람이 잘하는 판단(방향)과 기계가 잘하는 판단(이름 대조)을 나눠 맡긴다.</div>
+                </div>
+                <div>
+                  <div class="tbl-box">
+                    <div class="tbl-cap">채점 방식을 두 번 고친 기록</div>
+                    <table class="tbl">
+                      <thead><tr><th>채점 방식</th><th>결과</th></tr></thead>
+                      <tbody>
+                        <tr><td>1차 · 블라인드 채점</td><td>승인 14/14</td></tr>
+                        <tr><td>2차 · 사실 메모 + 확인 항목 4개</td><td>지어낸 이름 적발 0건</td></tr>
+                        <tr class="hl"><td>3차 · 이름 대조 칩 (규칙)</td><td><b>4/7 : 0/7</b></td></tr>
+                      </tbody>
+                    </table>
+                    <div class="tbl-note">4/7 : 0/7 = 코드를 안 읽은 분석 : 읽은 분석</div>
+                  </div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[identifier-check.ts · 소스에 없는 이름 분류]</div>
+                    <pre><code class="language-ts">for (const name of checked) {
+  if (index.has(name)) continue;
+  if (LIBRARY_LIKE_RE.test(name))
+    maybeLibrary.push(name);
+  else unknown.push(name);
+}</code></pre>
+                  </div>
+                  <div class="src-links">
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/backend/src/ops/identifier-check.ts#L321-L332" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">identifier-check.ts</span><span class="code-src-lines">L321–332</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/backend/src/ops/identifier-check.ts#L12-L27" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">규칙 6가지</span><span class="code-src-lines">L12–27</span><span class="code-src-arr">↗</span></a>
+                    <a class="post-src" href="https://velog.io/@tkdans312/1414-Approvals-Questioning-Good-Numbers-The-Story-of-Revising-an-AI-Grading-Tool-Twice" target="_blank" rel="noopener noreferrer">velog 회고 ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-case">
+              <div class="ts-title">② "고쳤다"를 증명하려면 깨지는 것부터 찍는다 <span class="tag">프론트 버그 수정</span></div>
+              <div class="ts-grid">
+                <div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>운영 앱이 찾고 사람이 승인한 홈·상품 화면 버그 5건. 배열 자리에 객체·문자열이 오거나 배열 안에 null이 섞이면 렌더 중 예외로 <b>홈 전체가 흰 화면</b>이 됐습니다. 기존 <span class="kpi">?? []</span>는 null·undefined만 걸렀습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>고친 뒤 "이제 안 난다"만으로는 증명이 안 됩니다. 서버는 그대로 두고 Playwright <span class="kpi">page.route</span>로 브라우저가 받는 응답만 같은 모양으로 깨뜨리는 <b>재현 스크립트를 먼저</b> 만들어 수정 전 5/5 깨짐을 기록했습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>4개 파일에 <span class="kpi">Array.isArray</span> 검사와 null 제거를 넣었는데 <b>2건이 여전히 깨졌습니다</b>. API 요청이 3 → 4로 늘어난 것이 단서였습니다 — 첫 컴포넌트의 예외로 React가 트리를 내려, 같은 응답을 읽는 형제 컴포넌트는 마운트조차 안 됐던 것. <b>Sentry 스택에도 AI 분석에도 없던 다섯 번째 파일</b>까지 고쳤습니다.</span></div>
+                  <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
+                  <div class="result">재현 스크립트 <b>5/5 정상</b>, 화면 5/5 확인(빈 목록 문구·기본 이미지 카드). 운영 배포 후 기존 이슈 이벤트 수 불변, <b>새 이슈 0</b>.</div>
+                  <div class="reflect"><b>배운 점</b> · AI 분석과 에러 스택은 출발점일 뿐이다. 깨지는 것을 먼저 기록해 두어야 "고쳤다"를 숫자로 말할 수 있고, 놓친 파일도 드러난다.</div>
+                </div>
+                <div>
+                  <div class="tbl-box">
+                    <div class="tbl-cap">수정 과정</div>
+                    <table class="tbl">
+                      <tbody>
+                        <tr><td class="num">5/5 깨짐</td><td>수정 전, 재현 스크립트로 먼저 기록</td></tr>
+                        <tr class="hl"><td class="num">2건 남음</td><td>가드 4개 파일 후. API 요청 3 → 4가 단서</td></tr>
+                        <tr><td class="num">5/5 정상</td><td>형제 컴포넌트까지 수정, 운영 새 이슈 0</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="ph-code">
+                    <button class="copy" type="button">복사</button>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[CategoryTabSection.tsx · 다섯 번째 파일]</div>
+                    <pre><code class="language-tsx">const products =
+  Array.isArray(result?.data)
+    ? result.data.filter((p) =&gt; p != null)
+    : [];</code></pre>
+                  </div>
+                  <div class="src-links">
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/frontend/src/components/home/CategoryTabSection.tsx#L44-L47" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">CategoryTabSection.tsx</span><span class="code-src-lines">L44–47</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/E-commerce_shopping_mall/blob/7763efca84256f44a0990a877dda5cf9437eaadf/scripts/probe/probe.mjs#L139-L148" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">재현 probe.mjs</span><span class="code-src-lines">L139–148</span><span class="code-src-arr">↗</span></a>
+                    <a class="post-src" href="https://velog.io/@tkdans312/To-prove-its-fixed-start-by-capturing-the-moment-it-breaks" target="_blank" rel="noopener noreferrer">velog 회고 ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="metrics">
+              <div class="m"><div class="mv">20초 이내</div><div class="ml">웹 → 앱 노출</div><div class="mh">웹에서 보낸 에러가 앱에 뜨기까지</div></div>
+              <div class="m"><div class="mv">4개 버전</div><div class="ml">분석 구성 비교</div><div class="mh">프롬프트 · 코드 읽기 도구 유무</div></div>
+              <div class="m"><div class="mv">단위 213</div><div class="ml">백엔드 ops 테스트</div><div class="mh">백엔드 ops 모듈 단위 테스트</div></div>
+              <div class="m"><div class="mv">약 2주</div><div class="ml">구현 기간</div><div class="mh">설계 2026.08 / 구현 2026.09</div></div>
+            </div>
+            <div class="blk" style="margin-top:26px;">
+              <div class="h">작은 표본이라 "증명"이 아니라 "확인"입니다</div>
+              <ul class="factlist">
+                <li>이름 대조 칩: 코드를 안 읽은 분석 <b>4/7 적발</b> vs 읽은 분석 <b>0/7</b> — 인시던트 7건 · 평가자 1명 기준</li>
+                <li>승인된 분석으로 고친 버그 5건: 재현 스크립트 <b>5/5 깨짐 → 5/5 정상</b>, 운영 배포 후 새 이슈 0</li>
+                <li>E-커머스 장애 실험에서 마지막 Sentry 이벤트 <b>1분 40초 뒤</b> 운영 앱 푸시가 폰에 도착</li>
               </ul>
             </div>
           </div>
@@ -298,25 +693,25 @@ const updated = await this.dataSource.transaction(
               <div class="retro-col">
                 <div class="retro-h good">잘한 점</div>
                 <ul>
-                  <li>결제·인증의 <b>동시성·보안 문제를 재현→분석→방어→회귀 테스트</b>까지 닫음</li>
-                  <li>모든 성능 수치를 <b>측정 방법과 함께 기록</b></li>
+                  <li>좋은 숫자를 의심하고 <b>채점 도구 자체를 고침</b></li>
+                  <li>AI 분석을 <b>실제 수정과 운영 확인까지</b> 이어 감</li>
+                  <li>정답 메모가 LLM 입력에 들어가지 않음을 <b>테스트로 고정</b></li>
                 </ul>
               </div>
               <div class="retro-col">
-                <div class="retro-h bad">아쉬운 점</div>
+                <div class="retro-h bad">한계</div>
                 <ul>
-                  <li>프론트 테스트가 얇음 (<b>FE 1 vs BE 21</b>)</li>
-                  <li>접근성이 기본 ARIA 수준</li>
-                  <li>dynamic import 전후 번들 정량 비교 미측정</li>
-                  <li>Nginx 미도입으로 Next.js 프록시 사용</li>
+                  <li>인시던트 <b>7건</b>, 평가자 <b>1명</b></li>
+                  <li>예시를 넣은 프롬프트는 효과가 없어 운영에 미사용</li>
+                  <li>안드로이드만 지원, 네이티브 모듈은 쓰지 않음</li>
                 </ul>
               </div>
               <div class="retro-col">
-                <div class="retro-h next">지금 더 한다면</div>
+                <div class="retro-h next">다음</div>
                 <ul>
-                  <li><b>401 인터셉터·결제 멱등</b> 등 동시성 경계 코드부터 테스트로 박제</li>
-                  <li>디자인 토큰을 <b>Storybook 카탈로그</b>로 정리</li>
-                  <li>Nginx 도입으로 리버스 프록시 계층 분리</li>
+                  <li>평가자를 <b>2명 이상</b>으로 늘려 표본 확대</li>
+                  <li>같은 에러 유형이면 <b>이전 채점을 힌트</b>로 표시</li>
+                  <li>관리자 대시보드에 <b>최근 인시던트 위젯</b></li>
                 </ul>
               </div>
             </div>
@@ -325,31 +720,32 @@ const updated = await this.dataSource.transaction(
         </div>
 
         <div class="links" style="margin-top:26px;">
-          <a class="btn dark" href="https://github.com/ansm0403/Shopping-mall" target="_blank" rel="noopener noreferrer">GitHub README →</a>
-          <a class="btn soft" href="https://shopping-mall-frontend-dusky.vercel.app" target="_blank" rel="noopener noreferrer">배포 데모 ↗</a>
-          <!-- <a class="btn" href="#"><span class="ph">상세 과정 (블로그) — [링크]</span></a> -->
+          <a class="btn dark" href="https://github.com/ansm0403/E-commerce_shopping_mall/tree/7763efca84256f44a0990a877dda5cf9437eaadf/ops-companion" target="_blank" rel="noopener noreferrer">GitHub (ops-companion) →</a>
+          <a class="btn soft" href="https://e-commerce-ops-companion.vercel.app/android" target="_blank" rel="noopener noreferrer">Android 앱 (APK) ↗</a>
+          <a class="btn soft" href="https://e-commerce-ops-companion.vercel.app" target="_blank" rel="noopener noreferrer">iPhone · PC 웹 체험판 ↗</a>
         </div>
+        <div class="callout orange"><b>Android 앱</b>은 APK 설치로 푸시·생체 잠금까지 포함하고, <b>웹 체험판</b>은 설치 없이 같은 RN 코드의 웹 빌드로 동작합니다(푸시·생체 잠금 제외). 데모 계정으로 실제 운영 데이터(최근 14일)를 조회·AI 분석·채점할 수 있습니다.<br><b>Android 설치:</b> 다운로드가 100%에서 멈춘 것처럼 보이면 Chrome으로 돌아가 보안 경고의 "보안을 무시하고 설치"(또는 "그래도 설치")를 누르세요. 스토어 밖 앱이라 뜨는 경고입니다.</div>
       </div>
     </details>
 
-    <!-- PROJECT 2 -->
+    <!-- PROJECT 3 -->
     <details class="proj teal">
       <summary>
         <div class="sum-top">
-          <span class="sum-num">02</span>
-          <span class="sum-name">AI Object Detection Viewer</span>
+          <span class="sum-num">03</span>
+          <span class="sum-name">AI 객체 탐지 뷰어</span>
           <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </div>
-        <div class="sum-one">AI 객체 탐지(COCO) 결과를 2D·3D에서 동시에 탐색하고, 4개 뷰가 단일 선택 상태를 공유하는 멀티뷰 동기화 시각화 뷰어.</div>
+        <div class="sum-one">AI 객체 탐지(COCO·YOLOv8) 결과를 2D 이미지와 3D 공간에서 동시에 탐색합니다. 2D·3D·객체 리스트·분석 패널 4개 뷰가 선택 상태 하나를 공유하고, nuScenes 실측 3D를 스위처로 붙여 "추정"과 "실측"을 한 화면에서 비교합니다.</div>
         <div class="sum-meta">
-          <span class="pill">Three.js + R3F</span><span class="pill">Zustand</span><span class="pill">Vitest</span>
-          <span class="kpi">GPU 누수 <b>49 → 누적 0</b></span>
+          <span class="pill">Three.js + R3F</span><span class="pill">Zustand</span><span class="pill">Vitest</span><span class="pill">TS strict</span>
+          <span class="kpi">GPU geometry <b>49 → 4~12 (누적 0)</b> · Lighthouse <b>98.8</b></span>
         </div>
         <div class="expand-hint">▾ 클릭해서 개요 · 기능 · 트러블슈팅 · 성능 펼쳐 보기</div>
       </summary>
 
       <div class="body">
-        <div class="tabs" role="tablist" aria-label="AID 상세">
+        <div class="tabs" role="tablist" aria-label="AI 객체 탐지 뷰어 상세">
           <button class="tab-btn active" role="tab" type="button">개요</button>
           <button class="tab-btn" role="tab" type="button">기능</button>
           <button class="tab-btn" role="tab" type="button">트러블슈팅</button>
@@ -361,21 +757,31 @@ const updated = await this.dataSource.transaction(
           <div class="panel active" role="tabpanel">
             <div class="blk">
               <div class="h">Overview</div>
-              <p class="lead">객체 탐지 결과(COCO)를 보통 2D 박스로만 보는 것과 달리, 같은 결과를 <b>2D 이미지와 3D 공간에서 동시에</b> 탐색합니다. 한 객체를 어느 뷰에서 선택하든 <b>4개 뷰(2D·3D·리스트·분석)가 동시에</b> 같은 객체를 가리키도록 설계했습니다. <span style="color:var(--hint)">데이터 소스가 정적 JSON 1개인 클라이언트 SPA입니다 — R3F Canvas가 SSR 불가라 전 페이지 클라이언트 렌더.</span></p>
+              <p class="lead">객체 탐지 결과(COCO·YOLOv8)를 보통 2D 박스로만 보는 것과 달리, 같은 결과를 <b>2D 이미지와 3D 공간에서 동시에</b> 탐색합니다. 한 객체를 어느 뷰에서 선택하든 <b>4개 뷰(2D·3D·리스트·분석)가 동시에</b> 같은 객체를 가리키도록 설계했고, <b>nuScenes 실측 3D</b>를 데이터 스위처로 붙여 이미지에서 추정한 3D와 실제 측정된 3D를 한 화면에서 비교합니다. <span style="color:var(--hint)">데이터 소스가 정적 JSON인 클라이언트 SPA입니다 — R3F Canvas라 전 페이지가 클라이언트 렌더링이며, SSR 경험으로는 적지 않습니다.</span></p>
             </div>
             <div class="blk">
               <div class="h">시스템 구조</div>
-              <p class="lead">정적 COCO JSON → <b>lib/ 순수 함수 계층</b>(parser·estimator·selector)이 외부 입력을 <span class="kpi">unknown</span>으로 받아 <span class="kpi">isCocoDataset</span> 타입 술어로 검증 후 내부 <span class="kpi">Frame[]</span>로 변환 → <b>Zustand store</b>(단일 선택 상태)를 4뷰가 각자 필요한 slice만 구독. lib/와 components/를 분리해 React 밖에서 JSDOM 없이 테스트하고 변경 영향을 격리했습니다.</p>
+              <p class="lead">정적 JSON → <b>lib/ 순수 함수 계층</b>(parser·estimator·selector)이 외부 입력을 <span class="kpi">unknown</span>으로 받아 <span class="kpi">isCocoDataset</span> 타입 술어로 검증 후 내부 <span class="kpi">Frame[]</span>로 변환 → <b>Zustand store</b>(단일 선택 상태) → 스토어를 구독하는 곳은 <b>page 하나</b>로 두고, slice selector로 필요한 조각만 읽어 <span class="kpi">selectedId</span>·<span class="kpi">onSelect</span>를 props로 내려줍니다. lib/와 components/를 분리해 좌표 변환(global → ego → three)까지 React 밖에서 JSDOM 없이 테스트했습니다.</p>
               <figure class="arch" style="max-width:470px;">
-                <img src="public/images/architec/AID_아키텍쳐_요약.svg" alt="AID 시스템 아키텍처 요약도" data-full="public/images/architec/AID_아키텍쳐.svg" data-caption="AID — 상세 아키텍처">
+                <img src="public/images/architec/AID_아키텍쳐_요약.svg" alt="AI 객체 탐지 뷰어 시스템 아키텍처 요약도" data-full="public/images/architec/AID_아키텍쳐.svg" data-caption="AI 객체 탐지 뷰어 — 상세 아키텍처">
                 <figcaption>🔍 클릭하면 상세 아키텍처를 크게 볼 수 있습니다</figcaption>
               </figure>
             </div>
+            <div class="blk">
+              <div class="h">기술 선택 — 정적 JSON 하나에 맞춰 도구를 덜어냈습니다</div>
+              <ul class="factlist">
+                <li><b>Three.js + React Three Fiber + drei</b> — 2D와 같은 데이터를 3D 공간에 선언적으로 렌더링</li>
+                <li><b>Zustand 5</b> — 4개 뷰가 공유하는 상태를 미들웨어 없는 76줄 단일 스토어로</li>
+                <li><b>Vitest</b> — 파서·좌표 변환·셀렉터를 React 밖 순수 함수로 두고 JSDOM 없이 검증</li>
+                <li><b>TypeScript strict</b> — 외부 입력은 unknown으로 받아 타입 술어로 좁힘, <span class="kpi">as any</span> 0건</li>
+                <li><b>쓰지 않은 것</b> — TanStack Query(데이터가 정적 JSON이라 캐싱·재시도·무효화가 필요 없음) · Zod(외부 입력 지점이 파서 한 곳뿐이라 타입 술어로 충분) · 차트 라이브러리(차트 요소가 5개 이하라 SVG·CSS로 직접) · 폼 라이브러리(입력이 슬라이더 하나라 스토어 액션의 숫자 검사로 대신)</li>
+              </ul>
+            </div>
             <div class="meta">
-              <div class="mi"><div class="k">PERIOD</div><div class="v">2026.04 ~ 2026.05 </div></div>
+              <div class="mi"><div class="k">PERIOD</div><div class="v">2026.05 ~ 2026.06</div></div>
               <div class="mi"><div class="k">ROLE</div><div class="v">1인 단독 (기획·설계·구현·배포)</div></div>
-              <div class="mi"><div class="k">STACK</div><div class="v">Three.js+R3F · Zustand · Vitest · TS(strict)</div></div>
-              <div class="mi"><div class="k">TYPE</div><div class="v">클라이언트 SPA (정적 COCO JSON)</div></div>
+              <div class="mi"><div class="k">STACK</div><div class="v">Next.js 16 · React 19 · Three.js+R3F · Zustand · Vitest</div></div>
+              <div class="mi"><div class="k">TYPE</div><div class="v">3D 데이터 시각화 · 클라이언트 SPA</div></div>
             </div>
           </div>
 
@@ -391,6 +797,11 @@ const updated = await this.dataSource.transaction(
 </li>
                   <li><b>프레임 전환 합성은 page 레이어에서</b>handleSelectFrame: 같은 id면 early-return(no-op), 다르면 프레임 set — 추적이 없는 COCO만 선택 해제, 추적되는 nuScenes는 선택 유지. store 액션은 단일 책임으로 두고 "언제 지울지"만 page가 합성</li>
                 </ul>
+                <div class="src-links">
+                  <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/a7038d086c135b71a58e8691acfd1ccaef68407e/apps/ai_detection_viewer_client/src/app/page.tsx#L66-L69" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">구독 page.tsx</span><span class="code-src-lines">L66–69</span><span class="code-src-arr">↗</span></a>
+                  <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/a7038d086c135b71a58e8691acfd1ccaef68407e/apps/ai_detection_viewer_client/src/app/page.tsx#L219-L226" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">프레임 전환</span><span class="code-src-lines">L219–226</span><span class="code-src-arr">↗</span></a>
+                  <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/a7038d086c135b71a58e8691acfd1ccaef68407e/apps/ai_detection_viewer_client/src/store/viewer-store.ts#L40-L43" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">viewer-store.ts</span><span class="code-src-lines">L40–43</span><span class="code-src-arr">↗</span></a>
+                </div>
               </div>
               <div class="card">
                 <div class="ph-img media"><img src="public/images/func/AID_3D_viewer.gif" alt="3D 뷰 — bbox + 포인트클라우드, 카메라 회전" data-full="public/images/func/AID_3D_viewer.gif" data-caption="3D 공간 렌더링 — Three.js + R3F, OrbitControls"></div>
@@ -428,100 +839,110 @@ const updated = await this.dataSource.transaction(
 
           <div class="panel" role="tabpanel">
             <div class="ts-case">
-              <div class="ts-title">① Three.js GPU 메모리 누수 audit <span class="tag">시그니처</span></div>
+              <div class="ts-title">① 필터를 만질수록 느려지는 WebGL 메모리 누수 <span class="tag">렌더링 자원</span></div>
               <div class="ts-grid">
                 <div>
-                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>같은 프레임을 고정한 채 클래스 필터·confidence 슬라이더를 반복 조작하면 GPU geometry가 정상 12개 대비 <b>49개까지 단조 증가</b>하는 WebGL 메모리 누수를 발견. 단일 프레임에선 타입당 1건이라 체감이 없었지만, 필터 조작이 잦은 후속 단계에서 누적 위험으로 식별.</span></div>
-                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>WebGL 버퍼는 JS GC가 회수하지 못한다는 점이 출발점. R3F는 <b>JSX 자식으로 선언한 geometry만 자동 dispose</b>하고, 명령형으로 만들어 prop으로 주입한 것은 사용자 책임이라는 비자명한 경계를 파악. Canvas remount가 프레임 전환 시 GPU를 정리하므로 누수는 "같은 Canvas 안 geometry 교체" 경로에서만 관찰됨을 실측으로 보정.</span></div>
-                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span><span class="kpi">WebGLRenderer.info.memory.geometries</span>를 1초 간격 콘솔로 직접 측정해 누적을 확인 → BBox3D·PointCloud에 useEffect cleanup으로 <span class="kpi">geometry.dispose()</span> 추가.</span></div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>클래스 필터·confidence 슬라이더를 반복 조작하면 GPU geometry가 정상 12개에서 <b>49개까지 계속</b> 늘었습니다. 단일 프레임에선 체감이 없었지만, 필터 조작이 잦은 화면이라 누적 위험으로 봤습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>프레임 전환 때 쌓인다고 의심했지만, <span class="kpi">WebGLRenderer.info</span>를 1초 간격으로 찍어 보니 <b>필터 경로에서만</b> 샜습니다. WebGL 버퍼는 JS 가비지 컬렉터가 회수하지 않고, R3F의 자동 정리는 <b>JSX 자식 geometry에만</b> 적용됩니다. useMemo로 만들어 prop으로 넘긴 geometry는 직접 치워야 합니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>PointCloud와 BBox3D에서 geometry가 바뀌거나 사라질 때 useEffect cleanup으로 <span class="kpi">geometry.dispose()</span>를 호출.</span></div>
                   <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
-                  <div class="result">geometry 누적 <b>49 → dispose 후 4~12로 안정(누적 0)</b>. (WebGLRenderer.info 콘솔 1초 간격 측정 · 순수함수 테스트로 못 잡는 영역이라 콘솔 수동 측정으로 대체)</div>
+                  <div class="result">geometry <b>49 → 4~12 사이에서 안정, 누적 0</b>. 순수 함수 테스트로는 GPU 해제를 검증할 수 없어 콘솔 실측을 택했습니다.</div>
                   <div class="reflect"><b>배운 점</b> · WebGL 리소스는 GC가 회수하지 않아 명시적 dispose가 필요하고, 프레임워크의 자동 정리 경계(JSX 자식 vs prop)를 정확히 알아야 한다.</div>
                 </div>
                 <div>
+                  <div class="tbl-box">
+                    <div class="tbl-cap">geometry 개수 · 필터 반복 조작 중</div>
+                    <table class="tbl">
+                      <tbody>
+                        <tr><td>수정 전</td><td>12에서 49까지 계속 증가</td></tr>
+                        <tr class="hl"><td>수정 후</td><td><b>4~12 사이에서 오르내림</b></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
                   <div class="ph-code">
                     <button class="copy" type="button">복사</button>
-                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드 스니펫: dispose cleanup]</div>
-                    <pre><code class="language-tsx">// PointCloud.tsx — 명령형 BufferGeometry는 R3F 자동 dispose 대상이 아님
-                      // (JSX 자식이 아니라 prop 주입).
-const geometry = useMemo(() => {
-  const geom = new THREE.BufferGeometry();
-  geom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  return geom;
-}, [visiblePoints]); 
-// 필터(visibleIds) 변경 → geometry 재생성 
-// → 이전 인스턴스가 GPU에 잔존
-
-// WebGL 버퍼는 JS GC가 회수 못 함 
-// → cleanup에서 명시 해제. 누적 12→49가 4~12로 안정.
-useEffect(() => () => geometry.dispose(), [geometry]);
-
-return <points geometry={geometry}><pointsMaterial size={size} color={color} /></points>;</code></pre>
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[PointCloud.tsx · 만들고, 바뀌면 해제]</div>
+                    <pre><code class="language-tsx">// 명령형 BufferGeometry는 R3F 자동 dispose 대상이 아님
+// (JSX 자식이 아니라 prop 주입)
+const geometry = useMemo(() =&gt; {
+  // ...
+}, [visiblePoints, zMin, zMax]);
+// ...
+// WebGL 버퍼는 JS GC가 회수 못 함 → cleanup에서 명시 해제
+useEffect(
+  () =&gt; () =&gt; geometry.dispose(),
+  [geometry],
+);</code></pre>
                   </div>
-                  <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/main/apps/ai_detection_viewer_client/src/components/viewer-3d/PointCloud.tsx#L22-L43" target="_blank" rel="noopener noreferrer">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-                    <span class="code-src-file">PointCloud.tsx</span>
-                    <span class="code-src-lines">L22–43</span>
-                    <span class="code-src-arr">↗</span>
-                  </a>
+                  <div class="src-links">
+                    <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/a7038d086c135b71a58e8691acfd1ccaef68407e/apps/ai_detection_viewer_client/src/components/viewer-3d/PointCloud.tsx#L33-L65" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">PointCloud.tsx</span><span class="code-src-lines">L33–65</span><span class="code-src-arr">↗</span></a>
+                    <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/a7038d086c135b71a58e8691acfd1ccaef68407e/apps/ai_detection_viewer_client/src/components/viewer-3d/BBox3D.tsx#L64-L69" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">BBox3D.tsx</span><span class="code-src-lines">L64–69</span><span class="code-src-arr">↗</span></a>
+                    <a class="post-src" href="https://velog.io/@tkdans312/Geometry-accumulating-on-the-GPU-each-time-the-filter-is-clicked-things-R3F-doesnt-clean-up" target="_blank" rel="noopener noreferrer">velog 회고 ↗</a>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="ts-case">
-              <div class="ts-title">② 겹친 2D bbox 클릭 우선순위 제어 <span class="tag">렌더링 규칙 활용</span></div>
+              <div class="ts-title">② 겹친 박스에서 눈에 보이는 앞 객체가 클릭되게 <span class="tag">인터랙션</span></div>
               <div class="ts-grid">
                 <div>
-                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>겹친 영역을 클릭하면 시각적으로 앞에 보이는 객체가 아니라 annotation 배열의 마지막 객체가 선택되어 사용자 직관과 어긋났습니다.</span></div>
-                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>SVG는 CSS z-index를 무시하고 <b>paint order(배열 순서)</b>대로 hit-test하며 <span class="kpi">fill="transparent"</span>도 클릭을 받는다는 점을 확인. 그렇다면 정렬 순서만 바꾸면 이벤트 핸들러를 늘리지 않고 해결할 수 있다고 판단.</span></div>
-                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>detections를 <b>bbox 면적 오름차순 정렬</b>(<span class="kpi">.slice().sort()</span>)해 큰 bbox가 마지막에 paint → hit-test 최상단이 되게 함.</span></div>
+                  <div class="step"><span class="k">P</span><span class="txt"><span class="lab">Problem</span>겹친 영역을 클릭하면 앞에 보이는 객체가 아니라 데이터 배열의 마지막 객체가 선택되어 직관과 어긋났습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Analyze</span>SVG는 CSS z-index를 무시하고 <b>그린 순서(paint order)대로</b> 클릭을 받으며, <span class="kpi">fill="transparent"</span>도 클릭을 받습니다. 클릭 핸들러를 늘리는 대신 그리는 순서만 바꾸면 된다고 봤습니다.</span></div>
+                  <div class="step"><span class="k">A</span><span class="txt"><span class="lab">Action</span>박스를 <b>면적 오름차순</b>으로 정렬해 큰 박스가 마지막에 그려지고 클릭의 맨 위가 되게 했습니다. 원본 배열은 <span class="kpi">slice()</span>로 복사해 건드리지 않습니다.</span></div>
                   <div class="step r"><span class="k">R</span><span class="txt"><span class="lab">Result</span></span></div>
-                  <div class="result">겹침 영역에서 <b>시각적으로 앞에 보이는(큰) 객체가 선택</b>되도록 정상화. estimator의 "큰 면적=가까운 z"와 같은 proxy라 2D/3D가 단일 깊이 모델을 공유하는 일관성도 확보.</div>
+                  <div class="result">겹친 영역에서 <b>큰(가까운) 객체가 선택</b>됩니다. 3D 추정기의 "면적이 클수록 가깝다"와 같은 기준이라 2D와 3D가 하나의 깊이 모델을 씁니다.</div>
                   <div class="reflect"><b>배운 점</b> · DOM/SVG의 렌더링 규칙(paint order)을 정확히 알면, 로직을 늘리지 않고 데이터 정렬 한 번으로 푸는 최소 침습 해법이 보인다.</div>
                 </div>
                 <div>
                   <div class="ph-code">
                     <button class="copy" type="button">복사</button>
-                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[코드 스니펫: 면적 정렬 hit-test]</div>
-                    <pre><code class="language-tsx">// SVG는 CSS z-index 무시 -> paint order = hit-test 순서
-// 면적 오름차순 정렬 -> 큰 bbox가 마지막에 paint -> 클릭 우선
+                    <div class="cap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>[Viewer2D.tsx · 면적 오름차순 = 클릭 순서]</div>
+                    <pre><code class="language-tsx">// SVG는 CSS z-index 무시 -&gt; paint order = hit-test 순서
+// 작은 박스부터 그림 -&gt; 큰 박스가 맨 위
 const detections = (
   visibleIds
     ? frame.detections2D.filter(
-        (d) => visibleIds.has(d.id))
+        (d) =&gt; visibleIds.has(d.id))
     : frame.detections2D
 )
   .slice()
   .sort(
-    (a, b) =>
+    (a, b) =&gt;
       a.bbox.width * a.bbox.height
       - b.bbox.width * b.bbox.height,
   );</code></pre>
                   </div>
-                  <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/main/apps/ai_detection_viewer_client/src/components/viewer-2d/Viewer2D.tsx#L25-L34" target="_blank" rel="noopener noreferrer">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-                    <span class="code-src-file">Viewer2D.tsx</span>
-                    <span class="code-src-lines">L25–34</span>
-                    <span class="code-src-arr">↗</span>
-                  </a>
+                  <div class="src-links">
+                    <a class="code-src" href="https://github.com/ansm0403/AI_Object_Detection_Viewer/blob/a7038d086c135b71a58e8691acfd1ccaef68407e/apps/ai_detection_viewer_client/src/components/viewer-2d/Viewer2D.tsx#L25-L34" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><span class="code-src-file">Viewer2D.tsx</span><span class="code-src-lines">L25–34</span><span class="code-src-arr">↗</span></a>
+                    <a class="post-src" href="https://velog.io/@tkdans312/Making-two-views-different-in-the-same-direction-2D-3D-click-consistency" target="_blank" rel="noopener noreferrer">velog 회고 ↗</a>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="blk" style="margin-top:34px;">
+              <div class="h">본문에 싣지 않은 사례</div>
+              <div class="feat-more" style="margin-top:0;">
+                <div class="row"><div class="ft">3D 깊이 반전</div><div class="fd">3D 뷰에서 앞뒤가 뒤집혀 보이던 문제를 카메라 위치 한 줄로 해결. 좌표 변환을 순수 함수로 분리해 둔 덕분에 기존 테스트는 그대로 통과했습니다.</div></div>
               </div>
             </div>
           </div>
 
           <div class="panel" role="tabpanel">
             <div class="metrics">
-              <div class="m"><div class="mv">98.8</div><div class="ml">Lighthouse Performance</div><div class="mh">모바일 Slow 4G, 5회 평균</div></div>
-              <div class="m"><div class="mv">0.8s</div><div class="ml">LCP</div><div class="mh">Lighthouse Diagnostics</div></div>
-              <div class="m"><div class="mv">테스트</div><div class="ml">단위 테스트 (순수함수)</div><div class="mh">엣지케이스 문서와 1:1 매핑 · 9개 파일</div></div>
-              <div class="m"><div class="mv">100%</div><div class="ml">TypeScript 비율</div><div class="mh">src 50개 파일, JS 0건</div></div>
+              <div class="m"><div class="mv">98.8</div><div class="ml">Lighthouse 성능</div><div class="mh">모바일 Slow 4G, 5회 평균</div></div>
+              <div class="m"><div class="mv">0.8s</div><div class="ml">LCP</div><div class="mh">Lighthouse 진단값</div></div>
+              <div class="m"><div class="mv">203개</div><div class="ml">Vitest 테스트</div><div class="mh">파서 · 좌표 변환 · 투영 · 셀렉터</div></div>
+              <div class="m"><div class="mv">76줄</div><div class="ml">공유 상태 스토어</div><div class="mh">미들웨어 없음</div></div>
             </div>
             <div class="blk">
-              <div class="h">차별점</div>
+              <div class="h">좌표 계산을 화면 밖으로 빼서 테스트했습니다</div>
               <ul class="factlist">
-                <li>테스트 코드가 프로덕션 코드와 거의 <b>동량(34.5% · 1,021/2,962줄)</b></li>
-                <li>그 테스트가 <span class="kpi">docs/edgecases/Edge_#N.md</span> 문서와 <b>1:1로 매핑</b> — 발견한 엣지케이스가 잊히지 않는 시스템</li>
-                <li>GPU geometry 누수 <b>49 → 누적 0</b> (WebGLRenderer.info 콘솔 1초 간격 측정)</li>
+                <li>global → ego → three <b>좌표 변환을 순수 함수로</b> 분리해 React·Three.js 없이 검증</li>
+                <li>테스트가 <span class="kpi">docs/edgecases/Edge_#N.md</span> 문서와 <b>1:1로 매핑</b> — 발견한 엣지케이스가 잊히지 않는 구조</li>
+                <li>GPU geometry 누수 <b>49 → 4~12, 누적 0</b> (WebGLRenderer.info 콘솔 1초 간격 측정)</li>
+                <li>외부 입력은 unknown + 타입 술어로 좁혀 <span class="kpi">as any</span> <b>0건</b></li>
               </ul>
             </div>
           </div>
@@ -531,25 +952,25 @@ const detections = (
               <div class="retro-col">
                 <div class="retro-h good">잘한 점</div>
                 <ul>
-                  <li>GPU 메모리 누수를 직접 측정·audit해 <b>누적 0</b>으로 (README·Edge·커밋 3중 기록)</li>
-                  <li>4뷰 선택을 <b>단일 source of truth</b>로 설계</li>
-                  <li><b>순수 함수 분리</b>로 테스트성·변경 격리 확보</li>
+                  <li>GPU 누수를 <b>실측으로 찾고</b> 문서·커밋에 기록</li>
+                  <li>선택 상태를 처음부터 <b>한 필드로</b> 설계</li>
+                  <li>global → ego → three 좌표 변환을 <b>순수 함수로</b></li>
                 </ul>
               </div>
               <div class="retro-col">
                 <div class="retro-h bad">아쉬운 점</div>
                 <ul>
-                  <li>단일 source of truth라면서 <b>키보드 객체 선택 불가</b>(접근성 모순)</li>
-                  <li>자주 고친 page.tsx·Viewer2D에 <b>RTL 테스트 0</b></li>
-                  <li>데이터 수천 개면 eager-enrich 블로킹 · 가상화/InstancedMesh 부재</li>
+                  <li><b>키보드로 객체를 고를 수 없음</b></li>
+                  <li>가장 자주 고친 page.tsx·Viewer2D에 <b>컴포넌트 테스트 없음</b></li>
+                  <li>데이터가 수천 개면 전처리가 화면을 막음</li>
                 </ul>
               </div>
               <div class="retro-col">
-                <div class="retro-h next">지금 더 한다면</div>
+                <div class="retro-h next">다음</div>
                 <ul>
-                  <li><b>지금 당장</b>: Error Boundary·키보드 선택 / <b>데이터 커지면</b>: lazy enrich·InstancedMesh·가상화 (우선순위 구분)</li>
+                  <li><b>지금</b>: Error Boundary, 키보드 선택</li>
+                  <li><b>데이터가 커지면</b>: 지연 전처리, InstancedMesh, 목록 가상화</li>
                   <li>자주 바뀌는 <b>page.tsx·Viewer2D부터 RTL 테스트</b>로 보강</li>
-                  <li>KITTI 데이터셋 연동</li>
                 </ul>
               </div>
             </div>
@@ -559,13 +980,12 @@ const detections = (
 
         <div class="links" style="margin-top:26px;">
           <a class="btn dark" href="https://github.com/ansm0403/AI_Object_Detection_Viewer" target="_blank" rel="noopener noreferrer">GitHub README →</a>
-          <a class="btn soft" style="background:var(--tl);color:var(--td);" href="https://ai-object-detection-viewer-ai-detec.vercel.app" target="_blank" rel="noopener noreferrer">배포 데모 ↗</a>
-          <!-- <a class="btn" href="#"><span class="ph">상세 과정 (블로그) — [링크]</span></a> -->
+          <a class="btn soft" href="https://ai-object-detection-viewer-ai-detec.vercel.app" target="_blank" rel="noopener noreferrer">배포 데모 ↗ · 로그인 없이 바로</a>
         </div>
       </div>
     </details>
 
-    <!-- PROJECT 3 -->
+    <!-- PROJECT (주석 처리) — JAPAN HOTEL RESERVATION : 새 포트폴리오(2026.09)에서 제외
     <details class="proj">
       <summary>
         <div class="sum-top">
@@ -789,10 +1209,10 @@ const { from: startDate, to: endDate, nights, roomId, hotelId }
         <div class="links" style="margin-top:26px;">
           <a class="btn dark" href="https://github.com/ansm0403/Hotel_Reservation_App" target="_blank" rel="noopener noreferrer">GitHub README →</a>
           <a class="btn soft" href="https://hotels-app-sage.vercel.app" target="_blank" rel="noopener noreferrer">배포 데모 ↗</a>
-          <!-- <a class="btn" href="#"><span class="ph">상세 과정 (블로그) — [링크]</span></a> -->
         </div>
       </div>
     </details>
+    -->
 
     <!-- PROJECT 4 -->
     <!-- <details class="proj teal">
@@ -951,15 +1371,129 @@ const [client] = useState(() =>
       </div>
     </details> -->
 
+    <div class="blk" style="margin-top:34px;">
+      <div class="h">협업 경험</div>
+      <div class="feat-more" style="margin-top:0;">
+        <div class="row"><div class="ft">WebtoonWebService — 졸업 프로젝트 · 3인 팀 리더</div><div class="fd">경험 영역이 다른 백엔드(Spring)·크롤러(Python) 팀원과 UML 3종·Swagger 명세로 인터페이스를 먼저 합의하고 병렬로 작업했습니다. enum 직렬화·CORS처럼 명세와 구현이 어긋난 곳을 직접 찾아 맞췄습니다. <a href="https://webtoon-web-service-renew.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--p);font-weight:600;">webtoon-web-service-renew.vercel.app ↗</a></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="divider" id="ai">
+  <div class="wrap">
+    <h2 class="sec">AI 활용 / Working with AI</h2>
+    <p class="tag" style="font-size:clamp(18px,2.4vw,22px); font-weight:700; line-height:1.5; margin:0 0 12px;">AI가 "됐다"고 한 것을, AI가 아닌 근거로 확인합니다.</p>
+    <p class="ai-lead">세 프로젝트 모두 Claude Code와 함께 만들었고, <b>코드의 대부분은 AI가 썼습니다.</b> 저는 문제 정의·제약·검증·재지시를 맡았습니다. AI를 쓰는 것 자체보다, AI가 만든 결과를 <b>무엇으로 믿을지</b>를 먼저 정하는 데 시간을 썼습니다 — 실기기에서 끝까지 밟아 보기, 평가 스크립트, 재현 스크립트, 규칙 기반 대조처럼 AI 바깥의 근거입니다. 설명하지 못하는 것은 포트폴리오에 적지 않았습니다.</p>
+
+    <div class="ai-case">
+      <div class="ts-title">대표 사례 · 웹 → 앱 연동 확인 페이지를 Claude Code와 만든 과정 <span class="tag">Ops Companion</span></div>
+      <div class="ts-grid">
+        <div>
+          <div class="step"><span class="k">1</span><span class="txt"><span class="lab">문제</span>운영 앱이 목업처럼 보였습니다. 보는 사람이 웹에서 <b>진짜 에러를 보내고, 그것이 앱에 뜨는 것까지</b> 직접 확인할 수 있어야 했습니다.</span></div>
+          <div class="step"><span class="k">2</span><span class="txt"><span class="lab">내 지시</span>목적(증명) · 품질 · 복잡도 상한을 한 문장에 담고, 바로 구현시키지 않고 <b>구현 전에 재검토부터</b> 요청했습니다.</span></div>
+          <div class="step"><span class="k">3</span><span class="txt"><span class="lab">AI 산출물</span>테스트 에러 버튼, 20초 간격으로 앱과 같은 API를 읽는 추적기, 앱 딥링크.</span></div>
+          <div class="step"><span class="k">4</span><span class="txt"><span class="lab">내 검증</span><b>운영 실기기에서 끝까지 밟았습니다.</b> 광고 차단기가 켜진 브라우저에서 "보냄 ✓"가 뜨는데 앱에는 아무것도 없었습니다. 브라우저가 만든 event id는 <b>전송의 증거가 아니었습니다</b> — 요청이 차단돼도 id는 만들어집니다.</span></div>
+          <div class="step r"><span class="k">5</span><span class="txt"><span class="lab">수정 지시</span>Sentry가 실제로 응답한 뒤(<span class="kpi">afterSendEvent</span>)에만 ✓를 띄우고, 8초 안에 응답이 없으면 실패와 함께 광고 차단기 안내를 보여 주도록 다시 지시했습니다.</span></div>
+        </div>
+        <div>
+          <div class="result" style="margin-top:0;"><b>결과</b> — 웹에서 보낸 에러가 앱에 <b>20초 이내</b>로 뜨는 것을 보는 사람이 직접 확인할 수 있게 됐고, "보냄 ✓"는 이제 Sentry가 받았다는 뜻입니다.</div>
+          <div class="reflect"><b>배운 점</b> · AI 산출물의 "성공 표시"가 무엇을 근거로 뜨는지부터 확인해야 한다. 코드 리뷰로는 보이지 않았고, 실제 환경(광고 차단기)에서 끝까지 밟아야 드러났다.</div>
+          <div class="tbl-box" style="margin-top:16px;">
+            <div class="tbl-cap">성공 표시의 근거</div>
+            <table class="tbl">
+              <thead><tr><th></th><th>✓를 띄운 근거</th></tr></thead>
+              <tbody>
+                <tr><td>AI 첫 산출물</td><td>브라우저가 만든 event id</td></tr>
+                <tr class="hl"><td>수정 후</td><td><b>Sentry의 응답 (afterSendEvent)</b>, 8초 타임아웃</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-sub">AI 산출물을 AI 밖의 근거로 확인한 다른 장면</div>
+    <div class="feat">
+      <div class="card">
+        <div class="ft">LLM 연결 품질을 골든셋으로</div>
+        <div class="fd">E-커머스 · 관리자 AI 어시스턴트</div>
+        <ul>
+          <li>"대답을 잘하는 것 같다" 대신 <b>골든셋 20문항</b>으로 도구 선택·충실성·함정 질문·PII를 채점.</li>
+          <li>기계로 판정할 수 있는 것은 <b>규칙</b>, 의미 판단이 필요한 것만 <b>LLM-judge</b>.</li>
+          <li>유일한 오답이 2회 모두 같아 프롬프트 원인으로 확정 → system 프롬프트 1줄로 <b>16/17 → 17/17</b>, 다른 지표 하락 없음.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ft">좋은 숫자(14/14)를 의심해 채점 도구를 고침</div>
+        <div class="fd">Ops Companion · AI 분석 채점</div>
+        <ul>
+          <li>블라인드 채점에서 <b>승인 14/14</b> — 채점자가 정답을 모른 채 그럴듯함을 재고 있었음.</li>
+          <li>사실 메모 + 확인 항목 4개로 방향 오류는 잡았지만, <b>지어낸 이름</b>은 사람이 계속 놓침.</li>
+          <li>이름 대조만 규칙 코드로 → 코드를 안 읽은 분석 <b>4/7 적발, 읽은 분석 0/7</b>. 판정은 사람에게 남김.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ft">AI 분석에 없던 다섯 번째 파일</div>
+        <div class="fd">Ops Companion → E-커머스 화면 버그 5건</div>
+        <ul>
+          <li>운영 앱의 AI가 찾고 사람이 승인한 버그를, 고치기 전에 <b>재현 스크립트로 5/5 깨짐</b>부터 기록.</li>
+          <li>AI 분석대로 4개 파일을 고쳤는데 2건이 남음 → <b>Sentry 스택에도 AI 분석에도 없던</b> 형제 컴포넌트를 직접 찾아 수정.</li>
+          <li>5/5 정상, 운영 배포 후 새 이슈 0.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ft">정답이 AI에 새지 않게 테스트로 고정</div>
+        <div class="fd">Ops Companion · 평가 설계</div>
+        <ul>
+          <li>채점용 사실 메모(정답)가 분석 입력에 섞이면 평가가 무의미해짐.</li>
+          <li>정답 메모가 <b>LLM 입력에 들어가지 않는다는 것을 테스트로</b> 고정하고, 프롬프트 버전은 API 응답에서 지워 평가자도 모르게.</li>
+          <li>예시를 넣은 프롬프트는 채점 결과 효과가 없어 <b>운영에 쓰지 않음</b> — 결과로 결정.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ai-sub">일하는 방식</div>
+    <div class="retro">
+      <div class="retro-col">
+        <div class="retro-h plain">작업 방식</div>
+        <ul>
+          <li><b>파일 수정마다 tsc를 돌리는 훅</b> — AI가 타입을 깨뜨리면 그 자리에서 드러나게</li>
+          <li><b>CLAUDE.md로 이어지는 맥락</b> — 세션이 바뀌어도 규칙·제약이 유지되게</li>
+          <li><b>단계마다 인수인계 문서</b> — 설계 → 체크리스트 → 구현 → 검증 → 문서화 순서로 진행</li>
+          <li>서브에이전트 병렬화, Playwright MCP로 화면을 직접 보고 검증</li>
+        </ul>
+      </div>
+      <div class="retro-col">
+        <div class="retro-h plain">기록</div>
+        <ul>
+          <li>위 대표 사례와 <b>같은 형식(문제 · 내 지시 · AI 산출물 · 내 검증 · 수정 지시)의 사례 6건</b>을 워크로그로 남김</li>
+          <li>처음 써 본 <b>React Native · nginx</b>는 AI가 만든 코드를 그대로 두지 않고 <b>학습 노트 9편</b>으로 다시 풀어 씀</li>
+          <li>도전 사례는 velog 회고로 공개 (<a href="https://velog.io/@tkdans312/posts" target="_blank" rel="noopener noreferrer" style="color:var(--p);font-weight:600;">velog ↗</a>)</li>
+        </ul>
+      </div>
+      <div class="retro-col">
+        <div class="retro-h plain">내 몫</div>
+        <ul>
+          <li>코드의 대부분은 AI가 썼습니다</li>
+          <li>저는 <b>문제 정의 · 제약 · 검증 · 재지시</b>를 맡았습니다</li>
+          <li>AI가 "됐다"고 한 것은 실기기 · 평가 스크립트 · 재현 스크립트 · 운영 로그로 다시 확인했습니다</li>
+          <li><b>설명하지 못하는 것은 적지 않았습니다</b></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer id="contact">
   <div class="wrap">
-    <div class="eyebrow">Contact</div>
-    <div class="big" style="margin-top:10px;">함께 만들고 싶습니다.</div>
-    <p class="note">상세한 결정은 각 프로젝트의 GitHub README와 블로그에 정리되어 있습니다. 편하게 연락 주세요.</p>
-    <div class="contact-line"><b>[이메일]</b> &nbsp;·&nbsp; <a href="https://github.com/ansm0403" style="color:var(--p);font-weight:600;">github.com/ansm0403</a> &nbsp;·&nbsp; <b>[블로그 링크]</b><a href="https://velog.io/@tkdans312/posts" style="color:var(--p);font-weight:600;"> · velog.io/@tkdans312</a></div>
+    <div class="eyebrow">Contact · Thank you</div>
+    <div class="big" style="margin-top:10px;">문제를 재현하고, 고친 결과를<br>숫자로 확인하는 프론트엔드 개발자 안상문입니다.</div>
+    <p class="note">상세한 결정은 각 프로젝트의 GitHub README와 velog 회고에 정리되어 있습니다. 편하게 연락 주세요.</p>
+    <div class="contact-line"><b>연락처</b> &nbsp;·&nbsp; <a href="mailto:tkdans312@gmail.com" style="color:var(--p);font-weight:600;">tkdans312@gmail.com</a> &nbsp;·&nbsp; 010-4165-0073</div>
+    <div class="contact-line" style="margin-top:8px;"><b>코드와 기록</b> &nbsp;·&nbsp; <a href="https://github.com/ansm0403" target="_blank" rel="noopener noreferrer" style="color:var(--p);font-weight:600;">github.com/ansm0403</a> &nbsp;·&nbsp; <a href="https://velog.io/@tkdans312/posts" target="_blank" rel="noopener noreferrer" style="color:var(--p);font-weight:600;">velog.io/@tkdans312</a></div>
+    <div class="contact-line" style="margin-top:8px;"><b>직접 써 보기</b> &nbsp;·&nbsp; <a href="https://shopping-mall-frontend-dusky.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--p);font-weight:600;">E-커머스</a> "관리자 페이지 체험하기" &nbsp;·&nbsp; <a href="https://e-commerce-ops-companion.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--o);font-weight:600;">운영 앱</a> APK + 데모 계정 &nbsp;·&nbsp; <a href="https://ai-object-detection-viewer-ai-detec.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--t);font-weight:600;">AI 객체 탐지 뷰어</a> 로그인 없이 바로</div>
   </div>
 </footer>
 

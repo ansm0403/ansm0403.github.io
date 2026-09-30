@@ -17,7 +17,8 @@
 | 기능 | 설명 |
 |---|---|
 | 고정 헤더 내비게이션 | 스크롤 위치 기반으로 현재 섹션 자동 활성화 (active bar) |
-| 프로젝트 카드 아코디언 | `<details>` / `<summary>` 로 개요·기능·트러블슈팅·성능 탭 전환 |
+| 프로젝트 카드 아코디언 | `<details>` / `<summary>` 로 개요·기능·트러블슈팅·성능·회고 탭 전환 (E-커머스 · Ops Companion · AI 객체 탐지 뷰어) |
+| AI 활용 섹션 | Claude Code 협업 사례(문제 · 내 지시 · AI 산출물 · 내 검증 · 수정 지시)와 검증 방식 |
 | 라이트박스 모달 | 아키텍처 다이어그램·GIF 클릭 시 확대 (Vanilla JS, ESC/backdrop 닫기) |
 | 코드 구문 강조 | Prism.js (`language-tsx`) — 코드 블록 복사 버튼 포함 |
 | 반응형 레이아웃 | 620 px 이하 모바일 대응 |
@@ -43,22 +44,29 @@ portfolio_page/
 └── public/
     └── images/
         ├── favicon.ico
-        ├── 안상문_이력서사진.png
-        ├── architec/               # 프로젝트 아키텍처 다이어그램
-        │   ├── E-commerce_아키텍쳐.png
-        │   ├── E-commerce_아키텍쳐_요약.png
-        │   ├── AID_아키텍쳐.png
-        │   └── AID_아키텍쳐_요약.png
-        │   ├── hotel_reservation_아키텍쳐.png
-        │   └── hotel_reservation_아키텍쳐_요약.png
-        └── func/                   # 기능 GIF 스크린샷
+        ├── 안상문_이력서.png
+        ├── architec/               # 프로젝트 아키텍처 다이어그램 (요약본 클릭 → 상세본 라이트박스)
+        │   ├── E-commerce_아키텍쳐.svg / _요약.svg
+        │   ├── ops_아키텍쳐.svg / _요약.svg
+        │   ├── AID_아키텍쳐.svg / _요약.svg
+        │   └── hotel_아키텍쳐.svg / _요약.svg   # 호텔 프로젝트는 주석 처리됨
+        └── func/                   # 기능 GIF · 스크린샷
             ├── E-commerce_dashboard_screenshot.gif
             ├── E-commerce-login-sync.gif
+            ├── E-commerce-payment.gif
+            ├── E-commerce_ai_assistant.jpg
+            ├── ops_swipe_review.jpg
+            ├── ops_review_checklist.jpg
+            ├── ops_ai_analysis.jpg
             ├── AID_source_of_truth.gif
             ├── AID_3D_viewer.gif
+            ├── AID_sequence_play.gif
             ├── hotel_reservation.gif
             └── hotel_detail.gif
 ```
+
+> 프로젝트 색상: E-커머스 보라(`--p`) · Ops Companion 주황(`--o`, `details.proj.orange`) · AI 객체 탐지 뷰어 초록(`--t`, `details.proj.teal`)
+
 ---
 
 ## 색상 변수 (CSS Custom Properties)
@@ -67,6 +75,7 @@ portfolio_page/
 |---|---|---|
 | `--p` | `#534AB7` | 주 포인트 (보라) |
 | `--t` | `#0F6E56` | 보조 포인트 (초록) |
+| `--o` | `#B85420` | 보조 포인트 (주황, Ops Companion) |
 | `--ink` | `#1A1A19` | 본문 텍스트 |
 | `--sub` | `#5C5B55` | 보조 텍스트 |
 | `--hint` | `#908F86` | 힌트·레이블 |
