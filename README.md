@@ -54,10 +54,10 @@ portfolio_page/
             ├── E-commerce_dashboard_screenshot.gif
             ├── E-commerce-login-sync.gif
             ├── E-commerce-payment.gif
-            ├── E-commerce_ai_assistant.jpg
-            ├── ops_swipe_review.jpg
-            ├── ops_review_checklist.jpg
-            ├── ops_ai_analysis.jpg
+            ├── E-commerce_ai_assistant.gif
+            ├── ops_ai_swipe.gif
+            ├── ops_ai_eval.gif
+            ├── ops_ai_analyze.gif
             ├── AID_source_of_truth.gif
             ├── AID_3D_viewer.gif
             ├── AID_sequence_play.gif
