@@ -1,10 +1,9 @@
-# 안상문 · Frontend Engineer Portfolio
+# 안상문 · Frontend Engineer Portfolio 
 
 신입 프론트엔드 개발자 안상문의 포트폴리오 페이지입니다.  
 프레임워크 없이 **Vanilla HTML · CSS · JS** 만으로 구현했습니다.
 
 ---
-
 
 ## 주소
 
@@ -81,3 +80,5 @@ portfolio_page/
 | `--hint` | `#908F86` | 힌트·레이블 |
 | `--line` | `#E7E6E0` | 구분선·테두리 |
 | `--code-bg` | `#201F1D` | 코드 블록 배경 |
+
+(ver.09/30)
